@@ -1,0 +1,242 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:forru:extraction-benchmark:annotation:v1",
+  "title": "Private benchmark annotation",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "annotationStatus",
+    "caseId",
+    "page",
+    "script",
+    "elements",
+    "boundaryOpportunities"
+  ],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "annotationStatus": {
+      "enum": ["pending", "oracle-complete", "structure-partial", "complete"]
+    },
+    "caseId": { "type": "string", "pattern": "^F[0-9]{3,}$" },
+    "page": { "type": "integer", "minimum": 1 },
+    "script": { "enum": ["pending", "english", "thai", "mixed", "other"] },
+    "elements": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "type", "text", "readingOrder"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "type": { "enum": ["heading", "table-cell", "caption", "reference", "body"] },
+          "text": { "type": "string" },
+          "readingOrder": { "type": "integer", "minimum": 0 },
+          "region": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["x", "y", "width", "height"],
+            "properties": {
+              "x": { "type": "number", "minimum": 0 },
+              "y": { "type": "number", "minimum": 0 },
+              "width": { "type": "number", "exclusiveMinimum": 0 },
+              "height": { "type": "number", "exclusiveMinimum": 0 }
+            }
+          }
+        }
+      }
+    },
+    "boundaryOpportunities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "type", "expectedAction", "beforeElementId", "afterElementId"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "type": { "enum": ["heading-body", "table-cell", "caption", "reference"] },
+          "expectedAction": { "enum": ["break", "join"] },
+          "beforeElementId": { "type": "string", "minLength": 1 },
+          "afterElementId": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "lowestUsableTier": { "enum": ["T0", "T1", "T2", "T3", "unusable"] },
+    "usableTiers": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "enum": ["T0", "T1", "T2", "T3"] }
+    },
+    "lowestStructurallyAdequateTier": {
+      "enum": ["T0", "T1", "T2", "T3", "unusable"]
+    },
+    "structurallyAdequateTiers": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "enum": ["T0", "T1", "T2", "T3"] }
+    },
+    "structuralAssessmentConfirmed": { "const": true },
+    "higherTierDegraded": { "type": "boolean" },
+    "degradedTiers": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "enum": ["T0", "T1", "T2", "T3"] }
+    },
+    "acceptanceCriterionId": { "const": "reading-sufficiency-v1" },
+    "structuralCriterionId": { "const": "structural-adequacy-v1" },
+    "annotator": { "type": "string", "minLength": 1 },
+    "judgedAt": { "type": "string", "minLength": 1 },
+    "reviewedBy": { "type": "string", "minLength": 1 },
+    "structuralScope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "ruleId", "description"],
+      "properties": {
+        "status": { "enum": ["unavailable", "partial", "complete"] },
+        "ruleId": {
+          "enum": [
+            "not-annotated-v1",
+            "table-header-first-five-rows-and-all-non-body-v1",
+            "full-page-v1"
+          ]
+        },
+        "description": { "type": "string", "minLength": 1 }
+      }
+    },
+    "textReference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status"],
+      "properties": {
+        "status": { "enum": ["unavailable", "complete"] },
+        "reason": { "type": "string", "minLength": 1 },
+        "transcription": { "type": "string" }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": { "status": { "const": "unavailable" } },
+            "required": ["status"]
+          },
+          "then": {
+            "required": ["reason"],
+            "not": { "required": ["transcription"] }
+          },
+          "else": {
+            "required": ["transcription"],
+            "not": { "required": ["reason"] }
+          }
+        }
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": { "annotationStatus": { "const": "pending" } },
+        "required": ["annotationStatus"]
+      },
+      "then": {
+        "properties": {
+          "script": { "const": "pending" },
+          "elements": { "type": "array", "maxItems": 0 },
+          "boundaryOpportunities": { "type": "array", "maxItems": 0 }
+        },
+        "not": {
+          "anyOf": [
+            { "required": ["lowestUsableTier"] },
+            { "required": ["usableTiers"] },
+            { "required": ["lowestStructurallyAdequateTier"] },
+            { "required": ["structurallyAdequateTiers"] },
+            { "required": ["structuralAssessmentConfirmed"] },
+            { "required": ["higherTierDegraded"] },
+            { "required": ["degradedTiers"] },
+            { "required": ["acceptanceCriterionId"] },
+            { "required": ["structuralCriterionId"] },
+            { "required": ["annotator"] },
+            { "required": ["judgedAt"] },
+            { "required": ["reviewedBy"] },
+            { "required": ["structuralScope"] },
+            { "required": ["textReference"] }
+          ]
+        }
+      },
+      "else": {
+        "required": [
+          "lowestUsableTier",
+          "usableTiers",
+          "lowestStructurallyAdequateTier",
+          "structurallyAdequateTiers",
+          "structuralAssessmentConfirmed",
+          "higherTierDegraded",
+          "degradedTiers",
+          "acceptanceCriterionId",
+          "structuralCriterionId",
+          "annotator",
+          "judgedAt",
+          "structuralScope",
+          "textReference"
+        ],
+        "properties": {
+          "script": { "enum": ["english", "thai", "mixed", "other"] }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": { "annotationStatus": { "const": "oracle-complete" } },
+        "required": ["annotationStatus"]
+      },
+      "then": {
+        "properties": {
+          "elements": { "type": "array", "maxItems": 0 },
+          "boundaryOpportunities": { "type": "array", "maxItems": 0 },
+          "structuralScope": {
+            "type": "object",
+            "properties": {
+              "status": { "const": "unavailable" },
+              "ruleId": { "const": "not-annotated-v1" }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": { "annotationStatus": { "const": "structure-partial" } },
+        "required": ["annotationStatus"]
+      },
+      "then": {
+        "properties": {
+          "elements": { "type": "array", "minItems": 1 },
+          "structuralScope": {
+            "type": "object",
+            "properties": {
+              "status": { "const": "partial" },
+              "ruleId": {
+                "const": "table-header-first-five-rows-and-all-non-body-v1"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": { "annotationStatus": { "const": "complete" } },
+        "required": ["annotationStatus"]
+      },
+      "then": {
+        "properties": {
+          "structuralScope": {
+            "type": "object",
+            "properties": {
+              "status": { "const": "complete" },
+              "ruleId": { "const": "full-page-v1" }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

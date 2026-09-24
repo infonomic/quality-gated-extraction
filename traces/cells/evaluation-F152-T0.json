@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "caseId": "F152",
+  "tier": "T0",
+  "provider": {
+    "id": "apache-tika",
+    "version": "Apache Tika 3.3.0",
+    "execution": "local"
+  },
+  "status": "succeeded",
+  "cache": {
+    "hit": false,
+    "key": "27dae2067a5fc5cca5d4a8dddf11326080cfe0cee809b18cfd4239e0c09d5bb0",
+    "lookupMs": 0.06754100000034668
+  },
+  "startedAt": "2026-08-05T12:27:21.374Z",
+  "finishedAt": "2026-08-05T12:27:21.383Z",
+  "artifactKey": "27dae2067a5fc5cca5d4a8dddf11326080cfe0cee809b18cfd4239e0c09d5bb0",
+  "wallMs": 2.2091249999994034
+}

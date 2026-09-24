@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "status": "sampled-human-audit",
+  "scope": "Held-out evaluation pages reviewed during the two-axis oracle pass.",
+  "t2PageOutput": {
+    "numerator": 28,
+    "denominator": 32,
+    "excludedCount": 4,
+    "description": "Evaluation pages with page-attributable T2 text."
+  },
+  "thaiShortRunDensity": {
+    "metric": "whitespace-bounded-one-or-two-codepoint-Thai-runs-per-Thai-codepoint",
+    "selection": {
+      "oracleThaiOrMixedPages": 13,
+      "auditedSubstantiveThaiPages": 7,
+      "outsideShortRunSubset": 6,
+      "description": "The short-run subset contains pages with enough substantive T2 Thai output for this density measure; it is not every oracle-labelled Thai/mixed page."
+    },
+    "pages": [
+      {
+        "caseId": "F023",
+        "page": 10,
+        "thaiCodePoints": 115,
+        "shortRuns": 101,
+        "value": 0.8782608695652174
+      },
+      {
+        "caseId": "F003",
+        "page": 38,
+        "thaiCodePoints": 2149,
+        "shortRuns": 1834,
+        "value": 0.8534201954397394
+      },
+      {
+        "caseId": "F003",
+        "page": 40,
+        "thaiCodePoints": 2196,
+        "shortRuns": 1904,
+        "value": 0.8670309653916211
+      },
+      {
+        "caseId": "F314",
+        "page": 5,
+        "thaiCodePoints": 2366,
+        "shortRuns": 1999,
+        "value": 0.8448858833474218
+      },
+      {
+        "caseId": "F314",
+        "page": 6,
+        "thaiCodePoints": 2302,
+        "shortRuns": 1919,
+        "value": 0.8336238053866203
+      },
+      {
+        "caseId": "F273",
+        "page": 3,
+        "thaiCodePoints": 65,
+        "shortRuns": 54,
+        "value": 0.8307692307692308
+      },
+      {
+        "caseId": "F148",
+        "page": 3,
+        "thaiCodePoints": 1553,
+        "shortRuns": 1280,
+        "value": 0.824211204121056
+      }
+    ],
+    "aggregate": {
+      "numerator": 9091,
+      "denominator": 10746,
+      "excludedCount": 0,
+      "value": 0.8459892052856877
+    },
+    "accountingCorrection": "The original reviewer note printed 10,868 as the denominator; its seven page rows sum to 10,746.",
+    "interpretation": "The 0.824–0.878 page band is consistent with a systematic pinned-engine/script interaction. This is short-run density, not a fraction of glyphs."
+  },
+  "latinLigatureSplits": {
+    "pagesWithObservedT2Split": {
+      "numerator": 0,
+      "denominator": 28,
+      "excludedCount": 4,
+      "value": 0
+    },
+    "interpretation": "Observed split Latin ligature tokens belong to T1 text-layer extraction; forced T2 OCR removes that defect."
+  },
+  "shortChartTextItems": {
+    "metric": "page-attributable-Docling-text-items-with-at-most-two-codepoints",
+    "pages": [
+      { "caseId": "F300", "page": 54, "count": 201 },
+      { "caseId": "F196", "page": 5, "count": 87 },
+      { "caseId": "F227", "page": 46, "count": 38 },
+      { "caseId": "F300", "page": 50, "count": 22 }
+    ],
+    "interpretation": "Chart-axis and legend fragments are a separate forced-OCR failure mode from Thai short-run fragmentation."
+  },
+  "routingInterpretation": "Policy v1 remains frozen. Phase 7 should condition the escalation target on page script: a failed T1 result on substantive Thai should bypass T2 when calibrated evidence supports T3. The current inspection context records expected script, but scriptConsistency alone does not detect whitespace fragmentation because the Thai codepoints remain present."
+}

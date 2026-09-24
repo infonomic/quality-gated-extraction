@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "status": "sampled",
+  "provider": {
+    "id": "paddleocr-vl",
+    "version": "paddleocr@3.7.0;paddlepaddle@3.2.1;paddlex@3.7.2;api@0.1.0",
+    "model": "PaddleOCR-VL-0.9B",
+    "execution": "local"
+  },
+  "rasterDpi": 128,
+  "policyHash": "c1f14b50218c6ccb242af166ad660ea1bcb9af64e8b9f86d0c9c30985e9976fb",
+  "denominators": {
+    "expectedPages": 48,
+    "observedPages": 48,
+    "calibrationPages": 16,
+    "evaluationPages": 32
+  },
+  "statuses": {
+    "succeeded": 48,
+    "failed": 0,
+    "unavailable": 0,
+    "censored": 0
+  },
+  "wallMs": 3846886.050168001,
+  "limitation": "Independent 128-DPI page-image submissions; not full-document T3 duration or provider-reported compute."
+}

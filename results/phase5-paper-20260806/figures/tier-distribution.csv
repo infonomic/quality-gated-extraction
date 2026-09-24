@@ -1,0 +1,13 @@
+policy,tier,documents,denominator,label
+allT0,T0,16,16,sampled
+allT0,T1,0,16,sampled
+allT0,T2,0,16,sampled
+allT0,T3,0,16,sampled
+staticInspection,T0,4,16,sampled
+staticInspection,T1,4,16,sampled
+staticInspection,T2,8,16,sampled
+staticInspection,T3,0,16,sampled
+gated,T0,4,16,sampled
+gated,T1,0,16,sampled
+gated,T2,3,16,sampled
+gated,T3,9,16,sampled

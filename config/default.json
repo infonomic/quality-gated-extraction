@@ -1,0 +1,66 @@
+{
+  "$schema": "../schemas/benchmark-config.schema.json",
+  "schemaVersion": 1,
+  "experimentId": "icadl-2026-extraction-routing-v1",
+  "seed": "forru-icadl-2026-v1",
+  "sample": {
+    "strata": [
+      "born-digital-en",
+      "layout-heavy-born-digital",
+      "scanned-degraded-en",
+      "scanned-degraded-thai-mixed"
+    ],
+    "calibrationPerStratum": 2,
+    "evaluationPerStratum": 4,
+    "annotatedPagesPerDocument": 2
+  },
+  "inspection": {
+    "minimumTextCharsPerPage": 32,
+    "fullPageImageAreaRatio": 0.8,
+    "mixedScriptMinimumRatio": 0.1
+  },
+  "routing": {
+    "defaults": {
+      "minimumTextLayerCoverage": 0.5,
+      "maximumFullPageImageRatio": 0.5,
+      "maximumEncodingAnomalyRatio": 0.02
+    },
+    "thresholdGrid": {
+      "minimumTextLayerCoverage": [0.25, 0.5, 0.75],
+      "maximumFullPageImageRatio": [0.25, 0.5, 0.75],
+      "maximumEncodingAnomalyRatio": [0.01, 0.02, 0.05]
+    },
+    "tuning": {
+      "recordAllCandidates": true,
+      "tieBreak": "conservative"
+    },
+    "maxEscalations": 2
+  },
+  "metrics": {
+    "textNormalisation": {
+      "contractVersion": "text-comparison-v2",
+      "markup": "strip-html-tags-and-unwrap-paired-math-delimiters",
+      "unicodeForm": "NFC",
+      "cerWhitespace": "strip-all-unicode-whitespace",
+      "cerPunctuation": "preserve",
+      "thaiWerWhitespace": "strip-all-before-segmentation",
+      "englishWerWhitespace": "collapse-and-trim",
+      "mixedWerWhitespace": "collapse-and-trim",
+      "thaiWerSegmenter": "Intl.Segmenter:th:word:isWordLike",
+      "englishWerSegmenter": "Intl.Segmenter:en:word:isWordLike",
+      "mixedWerSegmenter": "Intl.Segmenter:th:word:isWordLike",
+      "werPunctuation": "exclude-non-word-like-segments",
+      "case": "preserve"
+    }
+  },
+  "execution": {
+    "concurrency": 1,
+    "timeoutMs": 7200000
+  },
+  "cost": {
+    "currency": "USD",
+    "cpuMachineHour": 0.1,
+    "gpuMachineHour": 1,
+    "basis": "Declared benchmark proxy tariffs; not billed spend or an energy measurement."
+  }
+}

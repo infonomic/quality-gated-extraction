@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "status": "projected",
+  "scope": "T3 page-subset execution budget; not a full-document runtime estimate",
+  "labels": {
+    "densePageRate": "observed",
+    "sparsePageRate": "observed",
+    "fullDocumentDuration": "censored",
+    "subsetDurations": "projected"
+  },
+  "provider": {
+    "id": "paddleocr-vl",
+    "version": "paddleocr@3.7.0;paddlepaddle@3.2.1;paddlex@3.7.2;api@0.1.0",
+    "model": "PaddleOCR-VL-0.9B",
+    "execution": "local",
+    "device": "cpu"
+  },
+  "observed": {
+    "densePage": {
+      "runId": "dense-page-F129-p2-20260805",
+      "caseId": "F129",
+      "page": 2,
+      "contentHash": "c159f82af15dbe664bfbb20c4c34f5b506dc89a25ee866fa852d18702ade204f",
+      "wallMs": 39432.782458,
+      "recognitionRegions": 11,
+      "wallMsPerRecognitionRegion": 3584.7984052727275
+    },
+    "historicalWarmSparsePageMs": 7532.3226245
+  },
+  "censored": {
+    "caseId": "F129",
+    "pageCount": 10,
+    "observedMinimumWallMs": 1461000,
+    "observedMinimumMeanMsPerPage": 146100,
+    "lowerBoundMultipleOfLinearDensePageEstimate": 3.705039078984894
+  },
+  "subset": {
+    "calibrationDocuments": 8,
+    "calibrationPages": 16,
+    "evaluationDocuments": 16,
+    "evaluationPages": 32,
+    "totalDocuments": 24,
+    "totalPages": 48
+  },
+  "projections": {
+    "denseWarm": {
+      "pageCount": 48,
+      "wallMs": 1892773.557984,
+      "minutes": 31.5462259664
+    },
+    "denseWarmPlusHistoricalColdStart": {
+      "pageCount": 48,
+      "wallMs": 1923741.2353595002,
+      "minutes": 32.06235392265834
+    },
+    "sensitivity2x": {
+      "pageCount": 48,
+      "wallMs": 3785547.115968,
+      "minutes": 63.0924519328
+    }
+  },
+  "allowance": {
+    "wallMs": 7200000,
+    "hours": 2,
+    "permittedMeanMsPerPage": 150000,
+    "multipleOfObservedDensePageRate": 3.803941559532745,
+    "denseWarmFits": true,
+    "sensitivity2xFits": true
+  },
+  "decision": "Retain all 16 evaluation documents and predeclare two T3 pages per calibration and evaluation document. Report document-level T3 as censored and page-subset results as sampled raw counts with their denominators.",
+  "limitations": [
+    "The dense one-page observation is a local CPU wall-time measurement, not provider-reported duration.",
+    "The 48-page duration assumes independent page-image submissions and linear scaling; the two-times scenario is a sensitivity check, not a confidence interval.",
+    "The historical cold-start surcharge is retained only as an explicitly inferred comparison and is not described as conservative.",
+    "The censored ten-page request demonstrates strong full-document nonlinearity and is not folded into the completed page-rate estimate.",
+    "Per-stratum outcomes will be reported as raw counts over four evaluation documents and eight pages, not as population rates."
+  ]
+}

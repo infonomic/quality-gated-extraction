@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "contractId": "quality-gate-calibration-v1",
+  "scope": "document-artifacts-with-two-page-oracle-intersection",
+  "tiers": ["T0", "T1", "T2"],
+  "thresholdGrid": {
+    "characterSanity": [0.9, 0.95, 0.99],
+    "textRetention": [0.25, 0.5, 0.75],
+    "usablePageRatio": [0.25, 0.5, 0.75],
+    "structuralYield": [1],
+    "scriptConsistency": [0.5, 0.8, 0.95]
+  },
+  "gridBasis": "Symmetric coarse candidates around the pre-evaluation synthetic-fixture thresholds 0.95, 0.50, 0.50, 1.00 and 0.80. Structural yield is binary and therefore fixed at 1.00.",
+  "oracleAggregation": "A tier is accepted for a calibration document on an axis only when both predeclared pages accept it on that axis.",
+  "objective": [
+    "minimise-total-false-accepts-across-both-axes",
+    "minimise-worst-axis-false-accepts",
+    "minimise-total-false-rejects-across-both-axes",
+    "minimise-worst-axis-false-rejects"
+  ],
+  "tieBreak": "higher-thresholds-in-component-order",
+  "componentOrder": [
+    "characterSanity",
+    "textRetention",
+    "usablePageRatio",
+    "structuralYield",
+    "scriptConsistency"
+  ],
+  "limitations": [
+    "Calibration and evaluation documents are disjoint, but evaluation examples were inspected before the final quality-gate contract was frozen.",
+    "Only two calibration pages are oracle-labelled Thai; script-conditioned gate behaviour is weakly determined.",
+    "T3 consists of independent page submissions and is terminal, so it is excluded from document-artifact threshold fitting."
+  ]
+}

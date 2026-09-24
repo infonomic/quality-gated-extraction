@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:forru:extraction-benchmark:provider-probe:v1",
+  "title": "Provider availability probe",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "tier", "id", "execution", "status", "checkedAt"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "tier": { "enum": ["T0", "T1", "T2", "T3"] },
+    "id": { "type": "string", "minLength": 1 },
+    "execution": { "enum": ["local", "private", "hosted"] },
+    "status": { "enum": ["available", "unavailable"] },
+    "version": { "type": "string", "minLength": 1 },
+    "checkedAt": { "type": "string", "minLength": 1 },
+    "error": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["code", "message"],
+      "properties": {
+        "code": { "type": "string", "minLength": 1 },
+        "message": { "type": "string", "minLength": 1 }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "status": { "const": "available" } } },
+      "then": { "required": ["version"], "not": { "required": ["error"] } },
+      "else": { "required": ["error"], "not": { "required": ["version"] } }
+    }
+  ]
+}

@@ -1,0 +1,231 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:forru:extraction-benchmark:run:v1",
+  "title": "Private benchmark run manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "runId",
+    "experimentId",
+    "seed",
+    "configHash",
+    "git",
+    "runtime",
+    "system",
+    "providers",
+    "limitations",
+    "startedAt"
+  ],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "runId": { "type": "string", "pattern": "^[a-zA-Z0-9][a-zA-Z0-9._-]*$" },
+    "experimentId": { "type": "string", "minLength": 1 },
+    "seed": { "type": "string", "minLength": 1 },
+    "configHash": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "git": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["commit", "dirty"],
+      "properties": {
+        "commit": { "type": "string", "pattern": "^[a-f0-9]{40}$" },
+        "dirty": { "type": "boolean" }
+      }
+    },
+    "runtime": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["node", "pnpm"],
+      "properties": {
+        "node": { "type": "string", "minLength": 1 },
+        "pnpm": { "type": "string", "minLength": 1 },
+        "java": { "type": ["string", "null"] },
+        "tika": { "type": ["string", "null"] },
+        "docling": { "type": ["string", "null"] }
+      }
+    },
+    "system": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "platform",
+        "release",
+        "architecture",
+        "cpuModel",
+        "cpuCount",
+        "totalMemoryBytes"
+      ],
+      "properties": {
+        "platform": { "type": "string", "minLength": 1 },
+        "release": { "type": "string", "minLength": 1 },
+        "architecture": { "type": "string", "minLength": 1 },
+        "cpuModel": { "type": "string", "minLength": 1 },
+        "cpuCount": { "type": "integer", "minimum": 1 },
+        "totalMemoryBytes": { "type": "integer", "minimum": 1 },
+        "accelerator": { "type": ["string", "null"] }
+      }
+    },
+    "providers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["tier", "id", "status", "execution"],
+        "properties": {
+          "tier": { "enum": ["T0", "T1", "T2", "T3"] },
+          "id": { "type": "string", "minLength": 1 },
+          "version": { "type": ["string", "null"] },
+          "model": { "type": ["string", "null"] },
+          "status": { "enum": ["planned", "available", "unavailable"] },
+          "execution": { "enum": ["local", "private", "hosted"] }
+        }
+      }
+    },
+    "timingCalibrations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "providerId",
+          "tiers",
+          "method",
+          "calibrationControl",
+          "sampleCount",
+          "fixedOverheadMs",
+          "providerTimingStatus",
+          "marginalTimeBasis",
+          "samples",
+          "limitation"
+        ],
+        "properties": {
+          "providerId": { "type": "string", "minLength": 1 },
+          "tiers": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": { "enum": ["T0", "T1", "T2", "T3"] }
+          },
+          "method": {
+            "enum": ["wall-minus-provider", "endpoint-round-trip"]
+          },
+          "calibrationControl": {
+            "enum": ["T1-born-digital", "version-endpoint", "health-endpoint"]
+          },
+          "sampleCount": { "type": "integer", "minimum": 1 },
+          "fixedOverheadMs": { "type": "number", "minimum": 0 },
+          "providerTimingStatus": { "enum": ["observed", "unavailable"] },
+          "marginalTimeBasis": {
+            "enum": ["provider-reported", "client-wall-minus-fixed-overhead"]
+          },
+          "samples": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["wallMs", "providerMs"],
+              "properties": {
+                "wallMs": { "type": "number", "minimum": 0 },
+                "providerMs": { "type": ["number", "null"], "minimum": 0 }
+              }
+            }
+          },
+          "limitation": { "type": "string", "minLength": 1 }
+        },
+        "allOf": [
+          {
+            "if": { "properties": { "method": { "const": "wall-minus-provider" } } },
+            "then": {
+              "properties": {
+                "calibrationControl": { "const": "T1-born-digital" },
+                "sampleCount": { "const": 1 },
+                "providerTimingStatus": { "const": "observed" },
+                "marginalTimeBasis": { "const": "provider-reported" },
+                "samples": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": { "providerMs": { "type": "number" } }
+                  }
+                }
+              }
+            },
+            "else": {
+              "properties": {
+                "calibrationControl": { "enum": ["version-endpoint", "health-endpoint"] },
+                "providerTimingStatus": { "const": "unavailable" },
+                "marginalTimeBasis": { "const": "client-wall-minus-fixed-overhead" },
+                "samples": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": { "providerMs": { "type": "null" } }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "evidence": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["phase", "authoritative", "providerProbeFile"],
+          "properties": {
+            "phase": { "const": "phase-1-provider-spike" },
+            "authoritative": { "const": true },
+            "providerProbeFile": { "const": "provider-probe.json" }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "phase",
+            "authoritative",
+            "corpusFile",
+            "corpusHash",
+            "inspectionFile",
+            "inspectionHash",
+            "sampleFile",
+            "sampleHash",
+            "sampleSummaryFile",
+            "t3BudgetFile",
+            "fallbackApplied"
+          ],
+          "properties": {
+            "phase": { "const": "phase-2-corpus-sample" },
+            "authoritative": { "const": true },
+            "corpusFile": { "const": "corpus.jsonl" },
+            "corpusHash": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+            "inspectionFile": { "const": "inspection.jsonl" },
+            "inspectionHash": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+            "sampleFile": { "const": "sample.json" },
+            "sampleHash": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+            "sampleSummaryFile": { "type": "string", "minLength": 1 },
+            "t3BudgetFile": { "type": "string", "minLength": 1 },
+            "fallbackApplied": { "type": "boolean" }
+          }
+        }
+      ]
+    },
+    "tariffs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["currency", "cpuMachineHour", "gpuMachineHour", "basis"],
+      "properties": {
+        "currency": { "type": "string", "pattern": "^[A-Z]{3}$" },
+        "cpuMachineHour": { "type": "number", "exclusiveMinimum": 0 },
+        "gpuMachineHour": { "type": "number", "exclusiveMinimum": 0 },
+        "basis": { "type": "string", "minLength": 1 }
+      }
+    },
+    "limitations": { "type": "array", "items": { "type": "string" } },
+    "startedAt": { "type": "string", "minLength": 1 },
+    "finishedAt": { "type": "string", "minLength": 1 }
+  }
+}

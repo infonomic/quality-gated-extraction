@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "status": "projected",
+  "model": "actual page count multiplied by the observed warm scanned rate, plus at most one inferred cold-start surcharge per service process",
+  "rates": {
+    "bornDigitalMsPerPage": 2856.500583,
+    "scannedWarmMsPerPage": 7532.3226245,
+    "scannedColdStartWallMs": 38500,
+    "coldStartSurchargeMs": 30967.6773755,
+    "fixedTransportBaselineMs": 1.78,
+    "providerTimingStatus": "unavailable",
+    "planningScenario": "scannedWarmPlusOneColdStartHours",
+    "provenance": {
+      "bornDigitalMsPerPage": "Phase 1 authoritative one-page born-digital control.",
+      "scannedWarmMsPerPage": "Mean of two repeatable Phase 1 authoritative one-page scanned controls after model load.",
+      "scannedColdStartWallMs": "Earlier one-page scanned observation, reclassified as cold start because the repeatable warm measurement is 5.1 times faster.",
+      "coldStartSurchargeMs": "Inferred one-time model-load surcharge: cold one-page wall time minus warm one-page wall time."
+    }
+  },
+  "corpus": {
+    "documents": 341,
+    "totalPages": 19559,
+    "pageCountDistribution": {
+      "minimum": 1,
+      "median": 18,
+      "p75": 73,
+      "p90": 178,
+      "p95": 212,
+      "maximum": 450,
+      "mean": 57.35777126099707
+    },
+    "fullMatrixT3": {
+      "pageCount": 19559,
+      "bornDigitalWarmHours": 15.519526361915833,
+      "scannedWarmHours": 40.92352728127653,
+      "scannedWarmPlusOneColdStartHours": 40.93212941388083
+    }
+  },
+  "sampled": {
+    "calibrationDocuments": 8,
+    "evaluationDocuments": 16,
+    "fallback": {
+      "applied": false,
+      "originalEvaluationPerStratum": 4,
+      "selectedEvaluationPerStratum": 4
+    },
+    "calibration": {
+      "pageCount": 812,
+      "bornDigitalWarmHours": 0.6442995759433333,
+      "scannedWarmHours": 1.6989572141927778,
+      "scannedWarmPlusOneColdStartHours": 1.7075593467970833
+    },
+    "evaluation": {
+      "pageCount": 1242,
+      "bornDigitalWarmHours": 0.985492701135,
+      "scannedWarmHours": 2.5986513054525,
+      "scannedWarmPlusOneColdStartHours": 2.607253438056805
+    },
+    "matrixTotal": {
+      "pageCount": 2054,
+      "bornDigitalWarmHours": 1.6297922770783333,
+      "scannedWarmHours": 4.297608519645277,
+      "scannedWarmPlusOneColdStartHours": 4.306210652249582
+    }
+  },
+  "decision": "The configured eight-calibration plus sixteen-evaluation sample is retained; the warm-plus-one-cold-start projection fits an unattended run.",
+  "limitations": [
+    "These are planning projections, not observed corpus provider timings.",
+    "One-page controls do not measure document-level startup, batching, caching or nonlinear page effects.",
+    "PaddleOCR-VL exposes no provider-side duration; rates are client-observed wall time.",
+    "Cold-start classification is an inference from the observed 5.1-fold cold/warm gap and must be confirmed in the matrix run."
+  ]
+}

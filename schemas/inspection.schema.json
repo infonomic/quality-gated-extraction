@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:forru:extraction-benchmark:inspection:v1",
+  "title": "Cheap PDF inspection record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "caseId",
+    "contentHash",
+    "pageCount",
+    "pages",
+    "signals",
+    "metadata",
+    "warnings"
+  ],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "caseId": { "type": "string", "pattern": "^F[0-9]{3,}$" },
+    "contentHash": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "pageCount": { "type": "integer", "minimum": 1 },
+    "pages": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["page", "textChars", "imageAreaRatio"],
+        "properties": {
+          "page": { "type": "integer", "minimum": 1 },
+          "textChars": { "type": "integer", "minimum": 0 },
+          "imageAreaRatio": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+          "encodingAnomalyCount": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Per-page count of replacement characters, disallowed controls and Private Use Area code points. Prospectively emitted after the policy-v1 freeze; earlier frozen v1 records may omit it."
+          },
+          "thaiChars": { "type": "integer", "minimum": 0 },
+          "latinChars": { "type": "integer", "minimum": 0 },
+          "warnings": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+    "signals": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "totalTextChars",
+        "charsPerPage",
+        "textLayerCoverage",
+        "charsPerPageCv",
+        "meanImageAreaRatio",
+        "fullPageImageRatio",
+        "encodingAnomalyRatio",
+        "thaiCharRatio",
+        "latinCharRatio",
+        "mixedScript"
+      ],
+      "properties": {
+        "totalTextChars": { "type": "integer", "minimum": 0 },
+        "charsPerPage": { "type": "number", "minimum": 0 },
+        "textLayerCoverage": { "$ref": "#/$defs/nullableRatio" },
+        "charsPerPageCv": { "type": ["number", "null"], "minimum": 0 },
+        "meanImageAreaRatio": { "$ref": "#/$defs/nullableRatio" },
+        "fullPageImageRatio": { "$ref": "#/$defs/nullableRatio" },
+        "encodingAnomalyRatio": { "$ref": "#/$defs/nullableRatio" },
+        "thaiCharRatio": { "$ref": "#/$defs/nullableRatio" },
+        "latinCharRatio": { "$ref": "#/$defs/nullableRatio" },
+        "mixedScript": { "type": ["boolean", "null"] }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "producer": { "type": "string" },
+        "creator": { "type": "string" }
+      }
+    },
+    "warnings": { "type": "array", "items": { "type": "string" } }
+  },
+  "$defs": {
+    "nullableRatio": {
+      "type": ["number", "null"],
+      "minimum": 0,
+      "maximum": 1
+    }
+  }
+}

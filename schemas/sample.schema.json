@@ -1,0 +1,158 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:forru:extraction-benchmark:sample:v1",
+  "title": "Frozen benchmark sample",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "runId",
+    "seed",
+    "configHash",
+    "inspectionHash",
+    "stratumRules",
+    "orderedCorpusCaseIds",
+    "calibration",
+    "evaluation",
+    "manualReview",
+    "fallback",
+    "denominators"
+  ],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "runId": { "type": "string", "minLength": 1 },
+    "seed": { "type": "string", "minLength": 1 },
+    "configHash": { "$ref": "#/$defs/sha256" },
+    "inspectionHash": { "$ref": "#/$defs/sha256" },
+    "stratumRules": {
+      "type": "array",
+      "minItems": 4,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["stratum", "rule"],
+        "properties": {
+          "stratum": { "$ref": "#/$defs/stratum" },
+          "rule": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "orderedCorpusCaseIds": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "$ref": "#/$defs/caseId" }
+    },
+    "calibration": {
+      "type": "array",
+      "minItems": 4,
+      "uniqueItems": true,
+      "items": { "$ref": "#/$defs/sampleItem" }
+    },
+    "evaluation": {
+      "type": "array",
+      "minItems": 4,
+      "uniqueItems": true,
+      "items": { "$ref": "#/$defs/evaluationItem" }
+    },
+    "manualReview": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "reviewedCaseIds", "adjustments"],
+      "properties": {
+        "status": { "enum": ["pending", "complete"] },
+        "reviewedCaseIds": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "$ref": "#/$defs/caseId" }
+        },
+        "adjustments": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["caseId", "from", "to", "reasonCode"],
+            "properties": {
+              "caseId": { "$ref": "#/$defs/caseId" },
+              "from": { "$ref": "#/$defs/stratum" },
+              "to": { "$ref": "#/$defs/stratum" },
+              "reasonCode": { "type": "string", "pattern": "^[A-Z0-9_]+$" }
+            }
+          }
+        }
+      }
+    },
+    "fallback": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["applied", "originalEvaluationPerStratum", "selectedEvaluationPerStratum"],
+      "properties": {
+        "applied": { "type": "boolean" },
+        "reasonCode": { "type": "string", "pattern": "^[A-Z0-9_]+$" },
+        "originalEvaluationPerStratum": { "type": "integer", "minimum": 1 },
+        "selectedEvaluationPerStratum": { "type": "integer", "minimum": 1 }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "applied": { "const": true } }, "required": ["applied"] },
+          "then": { "required": ["reasonCode"] }
+        }
+      ]
+    },
+    "denominators": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "corpusDocuments",
+        "calibrationDocuments",
+        "evaluationDocuments",
+        "annotationPages"
+      ],
+      "properties": {
+        "corpusDocuments": { "type": "integer", "minimum": 1 },
+        "calibrationDocuments": { "type": "integer", "minimum": 1 },
+        "evaluationDocuments": { "type": "integer", "minimum": 1 },
+        "annotationPages": { "type": "integer", "minimum": 1 }
+      }
+    }
+  },
+  "$defs": {
+    "caseId": { "type": "string", "pattern": "^F[0-9]{3,}$" },
+    "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "stratum": {
+      "enum": [
+        "born-digital-en",
+        "layout-heavy-born-digital",
+        "scanned-degraded-en",
+        "scanned-degraded-thai-mixed"
+      ]
+    },
+    "sampleItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["caseId", "stratum", "pageCount"],
+      "properties": {
+        "caseId": { "$ref": "#/$defs/caseId" },
+        "stratum": { "$ref": "#/$defs/stratum" },
+        "pageCount": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "evaluationItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["caseId", "stratum", "pageCount", "pages"],
+      "properties": {
+        "caseId": { "$ref": "#/$defs/caseId" },
+        "stratum": { "$ref": "#/$defs/stratum" },
+        "pageCount": { "type": "integer", "minimum": 1 },
+        "pages": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "type": "integer", "minimum": 1 }
+        }
+      }
+    }
+  }
+}

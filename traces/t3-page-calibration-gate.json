@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "status": "frozen",
+  "declaredAt": "2026-08-05",
+  "scope": "T3 page-wise evaluation viability after completion of all predeclared calibration pages",
+  "labels": {
+    "calibrationDurations": "observed",
+    "evaluationDuration": "projected",
+    "fullDocumentDuration": "censored"
+  },
+  "provider": {
+    "id": "paddleocr-vl",
+    "version": "paddleocr@3.7.0;paddlepaddle@3.2.1;paddlex@3.7.2;api@0.1.0",
+    "model": "PaddleOCR-VL-0.9B",
+    "execution": "local",
+    "device": "cpu"
+  },
+  "input": {
+    "pageSubsetHash": "ee618cc17acbcc1dd7099f96bdf9b8dfafc35f9024c92a835e02cff9db40c1b6",
+    "policyHash": "c1f14b50218c6ccb242af166ad660ea1bcb9af64e8b9f86d0c9c30985e9976fb",
+    "rasterDpi": 128,
+    "evaluationPageCellsPresentAtGate": 0
+  },
+  "calibration": {
+    "pages": {
+      "numerator": 16,
+      "denominator": 16,
+      "excludedCount": 0
+    },
+    "statusCounts": {
+      "succeeded": 16,
+      "failed": 0,
+      "unavailable": 0,
+      "censored": 0
+    },
+    "totalWallMs": 1800433.24225,
+    "meanWallMsPerPage": 112527.077641,
+    "medianWallMsPerPage": 34479.577417,
+    "minimumWallMsPerPage": 2951.503625,
+    "maximumWallMsPerPage": 649041.120375,
+    "byStratum": {
+      "born-digital-en": {
+        "pages": 4,
+        "totalWallMs": 88564.073792
+      },
+      "layout-heavy-born-digital": {
+        "pages": 4,
+        "totalWallMs": 1470880.082376
+      },
+      "scanned-degraded-en": {
+        "pages": 4,
+        "totalWallMs": 175493.368332
+      },
+      "scanned-degraded-thai-mixed": {
+        "pages": 4,
+        "totalWallMs": 65495.71775
+      }
+    }
+  },
+  "projections": {
+    "evaluationAtCalibrationMean": {
+      "pageCount": 32,
+      "wallMs": 3600866.4845,
+      "minutes": 60.0144414083
+    },
+    "full48AtCalibrationMean": {
+      "pageCount": 48,
+      "wallMs": 5401299.72675,
+      "minutes": 90.0216621125
+    }
+  },
+  "allowance": {
+    "wallMs": 7200000,
+    "hours": 2,
+    "full48ProjectionFits": true,
+    "headroomMs": 1798700.27325
+  },
+  "decision": "Open the 32 predeclared T3 evaluation pages at concurrency one. Preserve raw page counts and observed wall times; do not convert page-wise timing into a completed full-document T3 claim.",
+  "limitations": [
+    "The calibration distribution is strongly right-skewed: the mean is 3.26 times the median and the maximum is 18.82 times the median.",
+    "Layout-heavy born-digital pages account for 81.70% of observed calibration wall time.",
+    "The evaluation projection is a calibration-mean planning estimate, not a confidence interval or observed duration.",
+    "The separate ten-page full-document observation remains censored at a lower bound and is not pooled with page-wise submissions."
+  ]
+}

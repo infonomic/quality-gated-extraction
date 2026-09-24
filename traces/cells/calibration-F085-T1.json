@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "caseId": "F085",
+  "tier": "T1",
+  "provider": {
+    "id": "docling-serve",
+    "version": "docling-serve@1.29.0;docling@2.118.0;docling-core@2.90.0;docling-ibm-models@3.13.3;docling-parse@7.9.0",
+    "execution": "local"
+  },
+  "status": "succeeded",
+  "cache": {
+    "hit": false,
+    "key": "5f055e4291bbae8e768a4f1e5e6ffa68b9e4939c51304fdec5edf685c7e8b3a1",
+    "lookupMs": 0.07558399999106769
+  },
+  "startedAt": "2026-08-05T09:40:24.511Z",
+  "finishedAt": "2026-08-05T09:42:00.755Z",
+  "artifactKey": "5f055e4291bbae8e768a4f1e5e6ffa68b9e4939c51304fdec5edf685c7e8b3a1",
+  "wallMs": 96188.287875
+}

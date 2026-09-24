@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "status": "complete-human-oracle-consistency-audit",
+  "scope": {
+    "judgements": 32,
+    "structuralAssessmentConfirmed": 32,
+    "annotators": 1,
+    "byStratum": {
+      "born-digital-en": 8,
+      "layout-heavy-born-digital": 8,
+      "scanned-degraded-en": 8,
+      "scanned-degraded-thai-mixed": 8
+    },
+    "byPageScript": { "english": 19, "mixed": 7, "thai": 6, "other": 0 }
+  },
+  "derivedHigherTierDegradation": {
+    "rule": "A tier rejected between the lowest and highest accepted tier on either oracle axis is degraded.",
+    "numerator": 7,
+    "denominator": 32,
+    "excludedCount": 0,
+    "value": 0.21875,
+    "degradedTierCounts": { "T0": 0, "T1": 0, "T2": 7, "T3": 0 },
+    "pages": [
+      { "caseId": "F196", "page": 5, "degradedTiers": ["T2"] },
+      { "caseId": "F003", "page": 38, "degradedTiers": ["T2"] },
+      { "caseId": "F314", "page": 5, "degradedTiers": ["T2"] },
+      { "caseId": "F314", "page": 6, "degradedTiers": ["T2"] },
+      { "caseId": "F300", "page": 54, "degradedTiers": ["T2"] },
+      { "caseId": "F313", "page": 16, "degradedTiers": ["T2"] },
+      { "caseId": "F273", "page": 131, "degradedTiers": ["T2"] }
+    ],
+    "interpretation": "The fields are derived from the two tier sets, not entered independently by the annotator. This prevents a stale checkbox from reporting zero non-monotonicity. The denominator is the sampled 32-page oracle, not the corpus."
+  },
+  "axisDivergenceContext": {
+    "caseId": "F023",
+    "page": 15,
+    "readingSufficiency": { "T2": false },
+    "structuralAdequacy": { "T2": true },
+    "interpretation": "T2 preserved recoverable block structure while Thai character fragmentation made the text reading-insufficient. The independent axes may legally diverge."
+  },
+  "nearEmptyAcceptanceContext": {
+    "acceptedTierOutputs": 6,
+    "pages": [
+      { "caseId": "F232", "page": 7, "tiers": ["T1", "T2"] },
+      {
+        "caseId": "F313",
+        "page": 16,
+        "tiers": ["T1", "T3"],
+        "note": "The page carries essentially no substantive text."
+      },
+      { "caseId": "F313", "page": 27, "tiers": ["T1"] },
+      { "caseId": "F273", "page": 131, "tiers": ["T1"] }
+    ],
+    "interpretation": "Criterion B measures material loss relative to visible page content, not an absolute output-length floor; sparse pages can therefore have valid near-empty outputs."
+  }
+}

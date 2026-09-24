@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "runId": "phase2-authoritative-20260805",
+  "sampleHash": "024cdcfeb35fbc0bf1acdb7b2b0b51e0f5a269797c3cdca970a03f1e0a2da3b1",
+  "configHash": "0149dd9809fa448c4d22071208878106bce70251792f2b62a1ffe789905a3516",
+  "inspectionHash": "ce836f0994387d322807e6b8eb44188879ea2ea89df3e4025d547c20f8c17594",
+  "seed": "forru-icadl-2026-v1",
+  "manualReviewStatus": "complete",
+  "manualAdjustments": {
+    "count": 1,
+    "reasonCodeCounts": {
+      "REPEATED_THAI_WATERMARK_ONLY": 1
+    }
+  },
+  "fallback": {
+    "applied": false,
+    "originalEvaluationPerStratum": 4,
+    "selectedEvaluationPerStratum": 4
+  },
+  "denominators": {
+    "corpusDocuments": 341,
+    "calibrationDocuments": 8,
+    "evaluationDocuments": 16,
+    "annotationPages": 32
+  },
+  "countByStratum": {
+    "born-digital-en": {
+      "calibration": 2,
+      "evaluation": 4
+    },
+    "layout-heavy-born-digital": {
+      "calibration": 2,
+      "evaluation": 4
+    },
+    "scanned-degraded-en": {
+      "calibration": 2,
+      "evaluation": 4
+    },
+    "scanned-degraded-thai-mixed": {
+      "calibration": 2,
+      "evaluation": 4
+    }
+  },
+  "calibrationPages": 812,
+  "evaluationPages": 1242
+}

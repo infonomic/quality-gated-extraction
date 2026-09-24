@@ -1,0 +1,1760 @@
+{
+  "schemaVersion": 1,
+  "status": "frozen",
+  "runId": "phase3-matrix-20260805",
+  "contractId": "quality-gate-calibration-v1",
+  "contractHash": "3de5171cf9b78c04431dfb3130c20d5c5422b5b80926959919ec4498c437bdc3",
+  "calibrationOracleHash": "28cdd730f8e3175e560c985028cd4f3d8038cfb790fc388c6f142e6cf0bcd055",
+  "initialRoutingPolicyHash": "c1f14b50218c6ccb242af166ad660ea1bcb9af64e8b9f86d0c9c30985e9976fb",
+  "scope": "document-artifacts-with-two-page-oracle-intersection",
+  "denominators": {
+    "documents": 8,
+    "pages": 16,
+    "documentTierExamples": 24,
+    "axisJudgements": 48
+  },
+  "pageScripts": {
+    "english": 10,
+    "mixed": 4,
+    "thai": 2
+  },
+  "selected": {
+    "thresholds": {
+      "characterSanity": 0.99,
+      "textRetention": 0.75,
+      "usablePageRatio": 0.75,
+      "structuralYield": 1,
+      "scriptConsistency": 0.95
+    },
+    "reading": {
+      "falseAccepts": 1,
+      "falseRejects": 6
+    },
+    "structural": {
+      "falseAccepts": 3,
+      "falseRejects": 6
+    },
+    "totalFalseAccepts": 4,
+    "worstAxisFalseAccepts": 3,
+    "totalFalseRejects": 12,
+    "worstAxisFalseRejects": 6
+  },
+  "candidateCount": 81,
+  "candidates": [
+    {
+      "thresholds": {
+        "characterSanity": 0.99,
+        "textRetention": 0.75,
+        "usablePageRatio": 0.75,
+        "structuralYield": 1,
+        "scriptConsistency": 0.95
+      },
+      "reading": {
+        "falseAccepts": 1,
+        "falseRejects": 6
+      },
+      "structural": {
+        "falseAccepts": 3,
+        "falseRejects": 6
+      },
+      "totalFalseAccepts": 4,
+      "worstAxisFalseAccepts": 3,
+      "totalFalseRejects": 12,
+      "worstAxisFalseRejects": 6
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.99,
+        "textRetention": 0.75,
+        "usablePageRatio": 0.5,
+        "structuralYield": 1,
+        "scriptConsistency": 0.95
+      },
+      "reading": {
+        "falseAccepts": 1,
+        "falseRejects": 6
+      },
+      "structural": {
+        "falseAccepts": 3,
+        "falseRejects": 6
+      },
+      "totalFalseAccepts": 4,
+      "worstAxisFalseAccepts": 3,
+      "totalFalseRejects": 12,
+      "worstAxisFalseRejects": 6
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.99,
+        "textRetention": 0.75,
+        "usablePageRatio": 0.25,
+        "structuralYield": 1,
+        "scriptConsistency": 0.95
+      },
+      "reading": {
+        "falseAccepts": 1,
+        "falseRejects": 6
+      },
+      "structural": {
+        "falseAccepts": 3,
+        "falseRejects": 6
+      },
+      "totalFalseAccepts": 4,
+      "worstAxisFalseAccepts": 3,
+      "totalFalseRejects": 12,
+      "worstAxisFalseRejects": 6
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.99,
+        "textRetention": 0.5,
+        "usablePageRatio": 0.75,
+        "structuralYield": 1,
+        "scriptConsistency": 0.95
+      },
+      "reading": {
+        "falseAccepts": 1,
+        "falseRejects": 6
+      },
+      "structural": {
+        "falseAccepts": 3,
+        "falseRejects": 6
+      },
+      "totalFalseAccepts": 4,
+      "worstAxisFalseAccepts": 3,
+      "totalFalseRejects": 12,
+      "worstAxisFalseRejects": 6
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.99,
+        "textRetention": 0.5,
+        "usablePageRatio": 0.5,
+        "structuralYield": 1,
+        "scriptConsistency": 0.95
+      },
+      "reading": {
+        "falseAccepts": 1,
+        "falseRejects": 6
+      },
+      "structural": {
+        "falseAccepts": 3,
+        "falseRejects": 6
+      },
+      "totalFalseAccepts": 4,
+      "worstAxisFalseAccepts": 3,
+      "totalFalseRejects": 12,
+      "worstAxisFalseRejects": 6
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.99,
+        "textRetention": 0.5,
+        "usablePageRatio": 0.25,
+        "structuralYield": 1,
+        "scriptConsistency": 0.95
+      },
+      "reading": {
+        "falseAccepts": 1,
+        "falseRejects": 6
+      },
+      "structural": {
+        "falseAccepts": 3,
+        "falseRejects": 6
+      },
+      "totalFalseAccepts": 4,
+      "worstAxisFalseAccepts": 3,
+      "totalFalseRejects": 12,
+      "worstAxisFalseRejects": 6
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.99,
+        "textRetention": 0.25,
+        "usablePageRatio": 0.75,
+        "structuralYield": 1,
+        "scriptConsistency": 0.95
+      },
+      "reading": {
+        "falseAccepts": 1,
+        "falseRejects": 6
+      },
+      "structural": {
+        "falseAccepts": 3,
+        "falseRejects": 6
+      },
+      "totalFalseAccepts": 4,
+      "worstAxisFalseAccepts": 3,
+      "totalFalseRejects": 12,
+      "worstAxisFalseRejects": 6
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.99,
+        "textRetention": 0.25,
+        "usablePageRatio": 0.5,
+        "structuralYield": 1,
+        "scriptConsistency": 0.95
+      },
+      "reading": {
+        "falseAccepts": 1,
+        "falseRejects": 6
+      },
+      "structural": {
+        "falseAccepts": 3,
+        "falseRejects": 6
+      },
+      "totalFalseAccepts": 4,
+      "worstAxisFalseAccepts": 3,
+      "totalFalseRejects": 12,
+      "worstAxisFalseRejects": 6
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.99,
+        "textRetention": 0.25,
+        "usablePageRatio": 0.25,
+        "structuralYield": 1,
+        "scriptConsistency": 0.95
+      },
+      "reading": {
+        "falseAccepts": 1,
+        "falseRejects": 6
+      },
+      "structural": {
+        "falseAccepts": 3,
+        "falseRejects": 6
+      },
+      "totalFalseAccepts": 4,
+      "worstAxisFalseAccepts": 3,
+      "totalFalseRejects": 12,
+      "worstAxisFalseRejects": 6
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.95,
+        "textRetention": 0.75,
+        "usablePageRatio": 0.75,
+        "structuralYield": 1,
+        "scriptConsistency": 0.95
+      },
+      "reading": {
+        "falseAccepts": 2,
+        "falseRejects": 4
+      },
+      "structural": {
+        "falseAccepts": 4,
+        "falseRejects": 4
+      },
+      "totalFalseAccepts": 6,
+      "worstAxisFalseAccepts": 4,
+      "totalFalseRejects": 8,
+      "worstAxisFalseRejects": 4
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.95,
+        "textRetention": 0.75,
+        "usablePageRatio": 0.5,
+        "structuralYield": 1,
+        "scriptConsistency": 0.95
+      },
+      "reading": {
+        "falseAccepts": 2,
+        "falseRejects": 4
+      },
+      "structural": {
+        "falseAccepts": 4,
+        "falseRejects": 4
+      },
+      "totalFalseAccepts": 6,
+      "worstAxisFalseAccepts": 4,
+      "totalFalseRejects": 8,
+      "worstAxisFalseRejects": 4
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.95,
+        "textRetention": 0.75,
+        "usablePageRatio": 0.25,
+        "structuralYield": 1,
+        "scriptConsistency": 0.95
+      },
+      "reading": {
+        "falseAccepts": 2,
+        "falseRejects": 4
+      },
+      "structural": {
+        "falseAccepts": 4,
+        "falseRejects": 4
+      },
+      "totalFalseAccepts": 6,
+      "worstAxisFalseAccepts": 4,
+      "totalFalseRejects": 8,
+      "worstAxisFalseRejects": 4
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.95,
+        "textRetention": 0.5,
+        "usablePageRatio": 0.75,
+        "structuralYield": 1,
+        "scriptConsistency": 0.95
+      },
+      "reading": {
+        "falseAccepts": 2,
+        "falseRejects": 4
+      },
+      "structural": {
+        "falseAccepts": 4,
+        "falseRejects": 4
+      },
+      "totalFalseAccepts": 6,
+      "worstAxisFalseAccepts": 4,
+      "totalFalseRejects": 8,
+      "worstAxisFalseRejects": 4
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.95,
+        "textRetention": 0.5,
+        "usablePageRatio": 0.5,
+        "structuralYield": 1,
+        "scriptConsistency": 0.95
+      },
+      "reading": {
+        "falseAccepts": 2,
+        "falseRejects": 4
+      },
+      "structural": {
+        "falseAccepts": 4,
+        "falseRejects": 4
+      },
+      "totalFalseAccepts": 6,
+      "worstAxisFalseAccepts": 4,
+      "totalFalseRejects": 8,
+      "worstAxisFalseRejects": 4
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.95,
+        "textRetention": 0.5,
+        "usablePageRatio": 0.25,
+        "structuralYield": 1,
+        "scriptConsistency": 0.95
+      },
+      "reading": {
+        "falseAccepts": 2,
+        "falseRejects": 4
+      },
+      "structural": {
+        "falseAccepts": 4,
+        "falseRejects": 4
+      },
+      "totalFalseAccepts": 6,
+      "worstAxisFalseAccepts": 4,
+      "totalFalseRejects": 8,
+      "worstAxisFalseRejects": 4
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.95,
+        "textRetention": 0.25,
+        "usablePageRatio": 0.75,
+        "structuralYield": 1,
+        "scriptConsistency": 0.95
+      },
+      "reading": {
+        "falseAccepts": 2,
+        "falseRejects": 4
+      },
+      "structural": {
+        "falseAccepts": 4,
+        "falseRejects": 4
+      },
+      "totalFalseAccepts": 6,
+      "worstAxisFalseAccepts": 4,
+      "totalFalseRejects": 8,
+      "worstAxisFalseRejects": 4
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.95,
+        "textRetention": 0.25,
+        "usablePageRatio": 0.5,
+        "structuralYield": 1,
+        "scriptConsistency": 0.95
+      },
+      "reading": {
+        "falseAccepts": 2,
+        "falseRejects": 4
+      },
+      "structural": {
+        "falseAccepts": 4,
+        "falseRejects": 4
+      },
+      "totalFalseAccepts": 6,
+      "worstAxisFalseAccepts": 4,
+      "totalFalseRejects": 8,
+      "worstAxisFalseRejects": 4
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.95,
+        "textRetention": 0.25,
+        "usablePageRatio": 0.25,
+        "structuralYield": 1,
+        "scriptConsistency": 0.95
+      },
+      "reading": {
+        "falseAccepts": 2,
+        "falseRejects": 4
+      },
+      "structural": {
+        "falseAccepts": 4,
+        "falseRejects": 4
+      },
+      "totalFalseAccepts": 6,
+      "worstAxisFalseAccepts": 4,
+      "totalFalseRejects": 8,
+      "worstAxisFalseRejects": 4
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.9,
+        "textRetention": 0.75,
+        "usablePageRatio": 0.75,
+        "structuralYield": 1,
+        "scriptConsistency": 0.95
+      },
+      "reading": {
+        "falseAccepts": 2,
+        "falseRejects": 4
+      },
+      "structural": {
+        "falseAccepts": 4,
+        "falseRejects": 4
+      },
+      "totalFalseAccepts": 6,
+      "worstAxisFalseAccepts": 4,
+      "totalFalseRejects": 8,
+      "worstAxisFalseRejects": 4
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.9,
+        "textRetention": 0.75,
+        "usablePageRatio": 0.5,
+        "structuralYield": 1,
+        "scriptConsistency": 0.95
+      },
+      "reading": {
+        "falseAccepts": 2,
+        "falseRejects": 4
+      },
+      "structural": {
+        "falseAccepts": 4,
+        "falseRejects": 4
+      },
+      "totalFalseAccepts": 6,
+      "worstAxisFalseAccepts": 4,
+      "totalFalseRejects": 8,
+      "worstAxisFalseRejects": 4
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.9,
+        "textRetention": 0.75,
+        "usablePageRatio": 0.25,
+        "structuralYield": 1,
+        "scriptConsistency": 0.95
+      },
+      "reading": {
+        "falseAccepts": 2,
+        "falseRejects": 4
+      },
+      "structural": {
+        "falseAccepts": 4,
+        "falseRejects": 4
+      },
+      "totalFalseAccepts": 6,
+      "worstAxisFalseAccepts": 4,
+      "totalFalseRejects": 8,
+      "worstAxisFalseRejects": 4
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.99,
+        "textRetention": 0.75,
+        "usablePageRatio": 0.75,
+        "structuralYield": 1,
+        "scriptConsistency": 0.8
+      },
+      "reading": {
+        "falseAccepts": 2,
+        "falseRejects": 6
+      },
+      "structural": {
+        "falseAccepts": 4,
+        "falseRejects": 6
+      },
+      "totalFalseAccepts": 6,
+      "worstAxisFalseAccepts": 4,
+      "totalFalseRejects": 12,
+      "worstAxisFalseRejects": 6
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.99,
+        "textRetention": 0.75,
+        "usablePageRatio": 0.75,
+        "structuralYield": 1,
+        "scriptConsistency": 0.5
+      },
+      "reading": {
+        "falseAccepts": 2,
+        "falseRejects": 6
+      },
+      "structural": {
+        "falseAccepts": 4,
+        "falseRejects": 6
+      },
+      "totalFalseAccepts": 6,
+      "worstAxisFalseAccepts": 4,
+      "totalFalseRejects": 12,
+      "worstAxisFalseRejects": 6
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.99,
+        "textRetention": 0.75,
+        "usablePageRatio": 0.5,
+        "structuralYield": 1,
+        "scriptConsistency": 0.8
+      },
+      "reading": {
+        "falseAccepts": 2,
+        "falseRejects": 6
+      },
+      "structural": {
+        "falseAccepts": 4,
+        "falseRejects": 6
+      },
+      "totalFalseAccepts": 6,
+      "worstAxisFalseAccepts": 4,
+      "totalFalseRejects": 12,
+      "worstAxisFalseRejects": 6
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.99,
+        "textRetention": 0.75,
+        "usablePageRatio": 0.5,
+        "structuralYield": 1,
+        "scriptConsistency": 0.5
+      },
+      "reading": {
+        "falseAccepts": 2,
+        "falseRejects": 6
+      },
+      "structural": {
+        "falseAccepts": 4,
+        "falseRejects": 6
+      },
+      "totalFalseAccepts": 6,
+      "worstAxisFalseAccepts": 4,
+      "totalFalseRejects": 12,
+      "worstAxisFalseRejects": 6
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.99,
+        "textRetention": 0.75,
+        "usablePageRatio": 0.25,
+        "structuralYield": 1,
+        "scriptConsistency": 0.8
+      },
+      "reading": {
+        "falseAccepts": 2,
+        "falseRejects": 6
+      },
+      "structural": {
+        "falseAccepts": 4,
+        "falseRejects": 6
+      },
+      "totalFalseAccepts": 6,
+      "worstAxisFalseAccepts": 4,
+      "totalFalseRejects": 12,
+      "worstAxisFalseRejects": 6
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.99,
+        "textRetention": 0.75,
+        "usablePageRatio": 0.25,
+        "structuralYield": 1,
+        "scriptConsistency": 0.5
+      },
+      "reading": {
+        "falseAccepts": 2,
+        "falseRejects": 6
+      },
+      "structural": {
+        "falseAccepts": 4,
+        "falseRejects": 6
+      },
+      "totalFalseAccepts": 6,
+      "worstAxisFalseAccepts": 4,
+      "totalFalseRejects": 12,
+      "worstAxisFalseRejects": 6
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.99,
+        "textRetention": 0.5,
+        "usablePageRatio": 0.75,
+        "structuralYield": 1,
+        "scriptConsistency": 0.8
+      },
+      "reading": {
+        "falseAccepts": 2,
+        "falseRejects": 6
+      },
+      "structural": {
+        "falseAccepts": 4,
+        "falseRejects": 6
+      },
+      "totalFalseAccepts": 6,
+      "worstAxisFalseAccepts": 4,
+      "totalFalseRejects": 12,
+      "worstAxisFalseRejects": 6
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.99,
+        "textRetention": 0.5,
+        "usablePageRatio": 0.75,
+        "structuralYield": 1,
+        "scriptConsistency": 0.5
+      },
+      "reading": {
+        "falseAccepts": 2,
+        "falseRejects": 6
+      },
+      "structural": {
+        "falseAccepts": 4,
+        "falseRejects": 6
+      },
+      "totalFalseAccepts": 6,
+      "worstAxisFalseAccepts": 4,
+      "totalFalseRejects": 12,
+      "worstAxisFalseRejects": 6
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.99,
+        "textRetention": 0.5,
+        "usablePageRatio": 0.5,
+        "structuralYield": 1,
+        "scriptConsistency": 0.8
+      },
+      "reading": {
+        "falseAccepts": 2,
+        "falseRejects": 6
+      },
+      "structural": {
+        "falseAccepts": 4,
+        "falseRejects": 6
+      },
+      "totalFalseAccepts": 6,
+      "worstAxisFalseAccepts": 4,
+      "totalFalseRejects": 12,
+      "worstAxisFalseRejects": 6
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.99,
+        "textRetention": 0.5,
+        "usablePageRatio": 0.5,
+        "structuralYield": 1,
+        "scriptConsistency": 0.5
+      },
+      "reading": {
+        "falseAccepts": 2,
+        "falseRejects": 6
+      },
+      "structural": {
+        "falseAccepts": 4,
+        "falseRejects": 6
+      },
+      "totalFalseAccepts": 6,
+      "worstAxisFalseAccepts": 4,
+      "totalFalseRejects": 12,
+      "worstAxisFalseRejects": 6
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.99,
+        "textRetention": 0.5,
+        "usablePageRatio": 0.25,
+        "structuralYield": 1,
+        "scriptConsistency": 0.8
+      },
+      "reading": {
+        "falseAccepts": 2,
+        "falseRejects": 6
+      },
+      "structural": {
+        "falseAccepts": 4,
+        "falseRejects": 6
+      },
+      "totalFalseAccepts": 6,
+      "worstAxisFalseAccepts": 4,
+      "totalFalseRejects": 12,
+      "worstAxisFalseRejects": 6
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.99,
+        "textRetention": 0.5,
+        "usablePageRatio": 0.25,
+        "structuralYield": 1,
+        "scriptConsistency": 0.5
+      },
+      "reading": {
+        "falseAccepts": 2,
+        "falseRejects": 6
+      },
+      "structural": {
+        "falseAccepts": 4,
+        "falseRejects": 6
+      },
+      "totalFalseAccepts": 6,
+      "worstAxisFalseAccepts": 4,
+      "totalFalseRejects": 12,
+      "worstAxisFalseRejects": 6
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.99,
+        "textRetention": 0.25,
+        "usablePageRatio": 0.75,
+        "structuralYield": 1,
+        "scriptConsistency": 0.8
+      },
+      "reading": {
+        "falseAccepts": 2,
+        "falseRejects": 6
+      },
+      "structural": {
+        "falseAccepts": 4,
+        "falseRejects": 6
+      },
+      "totalFalseAccepts": 6,
+      "worstAxisFalseAccepts": 4,
+      "totalFalseRejects": 12,
+      "worstAxisFalseRejects": 6
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.99,
+        "textRetention": 0.25,
+        "usablePageRatio": 0.75,
+        "structuralYield": 1,
+        "scriptConsistency": 0.5
+      },
+      "reading": {
+        "falseAccepts": 2,
+        "falseRejects": 6
+      },
+      "structural": {
+        "falseAccepts": 4,
+        "falseRejects": 6
+      },
+      "totalFalseAccepts": 6,
+      "worstAxisFalseAccepts": 4,
+      "totalFalseRejects": 12,
+      "worstAxisFalseRejects": 6
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.99,
+        "textRetention": 0.25,
+        "usablePageRatio": 0.5,
+        "structuralYield": 1,
+        "scriptConsistency": 0.8
+      },
+      "reading": {
+        "falseAccepts": 2,
+        "falseRejects": 6
+      },
+      "structural": {
+        "falseAccepts": 4,
+        "falseRejects": 6
+      },
+      "totalFalseAccepts": 6,
+      "worstAxisFalseAccepts": 4,
+      "totalFalseRejects": 12,
+      "worstAxisFalseRejects": 6
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.99,
+        "textRetention": 0.25,
+        "usablePageRatio": 0.5,
+        "structuralYield": 1,
+        "scriptConsistency": 0.5
+      },
+      "reading": {
+        "falseAccepts": 2,
+        "falseRejects": 6
+      },
+      "structural": {
+        "falseAccepts": 4,
+        "falseRejects": 6
+      },
+      "totalFalseAccepts": 6,
+      "worstAxisFalseAccepts": 4,
+      "totalFalseRejects": 12,
+      "worstAxisFalseRejects": 6
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.99,
+        "textRetention": 0.25,
+        "usablePageRatio": 0.25,
+        "structuralYield": 1,
+        "scriptConsistency": 0.8
+      },
+      "reading": {
+        "falseAccepts": 2,
+        "falseRejects": 6
+      },
+      "structural": {
+        "falseAccepts": 4,
+        "falseRejects": 6
+      },
+      "totalFalseAccepts": 6,
+      "worstAxisFalseAccepts": 4,
+      "totalFalseRejects": 12,
+      "worstAxisFalseRejects": 6
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.99,
+        "textRetention": 0.25,
+        "usablePageRatio": 0.25,
+        "structuralYield": 1,
+        "scriptConsistency": 0.5
+      },
+      "reading": {
+        "falseAccepts": 2,
+        "falseRejects": 6
+      },
+      "structural": {
+        "falseAccepts": 4,
+        "falseRejects": 6
+      },
+      "totalFalseAccepts": 6,
+      "worstAxisFalseAccepts": 4,
+      "totalFalseRejects": 12,
+      "worstAxisFalseRejects": 6
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.95,
+        "textRetention": 0.75,
+        "usablePageRatio": 0.75,
+        "structuralYield": 1,
+        "scriptConsistency": 0.8
+      },
+      "reading": {
+        "falseAccepts": 3,
+        "falseRejects": 4
+      },
+      "structural": {
+        "falseAccepts": 5,
+        "falseRejects": 4
+      },
+      "totalFalseAccepts": 8,
+      "worstAxisFalseAccepts": 5,
+      "totalFalseRejects": 8,
+      "worstAxisFalseRejects": 4
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.95,
+        "textRetention": 0.75,
+        "usablePageRatio": 0.75,
+        "structuralYield": 1,
+        "scriptConsistency": 0.5
+      },
+      "reading": {
+        "falseAccepts": 3,
+        "falseRejects": 4
+      },
+      "structural": {
+        "falseAccepts": 5,
+        "falseRejects": 4
+      },
+      "totalFalseAccepts": 8,
+      "worstAxisFalseAccepts": 5,
+      "totalFalseRejects": 8,
+      "worstAxisFalseRejects": 4
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.95,
+        "textRetention": 0.75,
+        "usablePageRatio": 0.5,
+        "structuralYield": 1,
+        "scriptConsistency": 0.8
+      },
+      "reading": {
+        "falseAccepts": 3,
+        "falseRejects": 4
+      },
+      "structural": {
+        "falseAccepts": 5,
+        "falseRejects": 4
+      },
+      "totalFalseAccepts": 8,
+      "worstAxisFalseAccepts": 5,
+      "totalFalseRejects": 8,
+      "worstAxisFalseRejects": 4
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.95,
+        "textRetention": 0.75,
+        "usablePageRatio": 0.5,
+        "structuralYield": 1,
+        "scriptConsistency": 0.5
+      },
+      "reading": {
+        "falseAccepts": 3,
+        "falseRejects": 4
+      },
+      "structural": {
+        "falseAccepts": 5,
+        "falseRejects": 4
+      },
+      "totalFalseAccepts": 8,
+      "worstAxisFalseAccepts": 5,
+      "totalFalseRejects": 8,
+      "worstAxisFalseRejects": 4
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.95,
+        "textRetention": 0.75,
+        "usablePageRatio": 0.25,
+        "structuralYield": 1,
+        "scriptConsistency": 0.8
+      },
+      "reading": {
+        "falseAccepts": 3,
+        "falseRejects": 4
+      },
+      "structural": {
+        "falseAccepts": 5,
+        "falseRejects": 4
+      },
+      "totalFalseAccepts": 8,
+      "worstAxisFalseAccepts": 5,
+      "totalFalseRejects": 8,
+      "worstAxisFalseRejects": 4
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.95,
+        "textRetention": 0.75,
+        "usablePageRatio": 0.25,
+        "structuralYield": 1,
+        "scriptConsistency": 0.5
+      },
+      "reading": {
+        "falseAccepts": 3,
+        "falseRejects": 4
+      },
+      "structural": {
+        "falseAccepts": 5,
+        "falseRejects": 4
+      },
+      "totalFalseAccepts": 8,
+      "worstAxisFalseAccepts": 5,
+      "totalFalseRejects": 8,
+      "worstAxisFalseRejects": 4
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.95,
+        "textRetention": 0.5,
+        "usablePageRatio": 0.75,
+        "structuralYield": 1,
+        "scriptConsistency": 0.8
+      },
+      "reading": {
+        "falseAccepts": 3,
+        "falseRejects": 4
+      },
+      "structural": {
+        "falseAccepts": 5,
+        "falseRejects": 4
+      },
+      "totalFalseAccepts": 8,
+      "worstAxisFalseAccepts": 5,
+      "totalFalseRejects": 8,
+      "worstAxisFalseRejects": 4
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.95,
+        "textRetention": 0.5,
+        "usablePageRatio": 0.75,
+        "structuralYield": 1,
+        "scriptConsistency": 0.5
+      },
+      "reading": {
+        "falseAccepts": 3,
+        "falseRejects": 4
+      },
+      "structural": {
+        "falseAccepts": 5,
+        "falseRejects": 4
+      },
+      "totalFalseAccepts": 8,
+      "worstAxisFalseAccepts": 5,
+      "totalFalseRejects": 8,
+      "worstAxisFalseRejects": 4
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.95,
+        "textRetention": 0.5,
+        "usablePageRatio": 0.5,
+        "structuralYield": 1,
+        "scriptConsistency": 0.8
+      },
+      "reading": {
+        "falseAccepts": 3,
+        "falseRejects": 4
+      },
+      "structural": {
+        "falseAccepts": 5,
+        "falseRejects": 4
+      },
+      "totalFalseAccepts": 8,
+      "worstAxisFalseAccepts": 5,
+      "totalFalseRejects": 8,
+      "worstAxisFalseRejects": 4
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.95,
+        "textRetention": 0.5,
+        "usablePageRatio": 0.5,
+        "structuralYield": 1,
+        "scriptConsistency": 0.5
+      },
+      "reading": {
+        "falseAccepts": 3,
+        "falseRejects": 4
+      },
+      "structural": {
+        "falseAccepts": 5,
+        "falseRejects": 4
+      },
+      "totalFalseAccepts": 8,
+      "worstAxisFalseAccepts": 5,
+      "totalFalseRejects": 8,
+      "worstAxisFalseRejects": 4
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.95,
+        "textRetention": 0.5,
+        "usablePageRatio": 0.25,
+        "structuralYield": 1,
+        "scriptConsistency": 0.8
+      },
+      "reading": {
+        "falseAccepts": 3,
+        "falseRejects": 4
+      },
+      "structural": {
+        "falseAccepts": 5,
+        "falseRejects": 4
+      },
+      "totalFalseAccepts": 8,
+      "worstAxisFalseAccepts": 5,
+      "totalFalseRejects": 8,
+      "worstAxisFalseRejects": 4
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.95,
+        "textRetention": 0.5,
+        "usablePageRatio": 0.25,
+        "structuralYield": 1,
+        "scriptConsistency": 0.5
+      },
+      "reading": {
+        "falseAccepts": 3,
+        "falseRejects": 4
+      },
+      "structural": {
+        "falseAccepts": 5,
+        "falseRejects": 4
+      },
+      "totalFalseAccepts": 8,
+      "worstAxisFalseAccepts": 5,
+      "totalFalseRejects": 8,
+      "worstAxisFalseRejects": 4
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.95,
+        "textRetention": 0.25,
+        "usablePageRatio": 0.75,
+        "structuralYield": 1,
+        "scriptConsistency": 0.8
+      },
+      "reading": {
+        "falseAccepts": 3,
+        "falseRejects": 4
+      },
+      "structural": {
+        "falseAccepts": 5,
+        "falseRejects": 4
+      },
+      "totalFalseAccepts": 8,
+      "worstAxisFalseAccepts": 5,
+      "totalFalseRejects": 8,
+      "worstAxisFalseRejects": 4
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.95,
+        "textRetention": 0.25,
+        "usablePageRatio": 0.75,
+        "structuralYield": 1,
+        "scriptConsistency": 0.5
+      },
+      "reading": {
+        "falseAccepts": 3,
+        "falseRejects": 4
+      },
+      "structural": {
+        "falseAccepts": 5,
+        "falseRejects": 4
+      },
+      "totalFalseAccepts": 8,
+      "worstAxisFalseAccepts": 5,
+      "totalFalseRejects": 8,
+      "worstAxisFalseRejects": 4
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.95,
+        "textRetention": 0.25,
+        "usablePageRatio": 0.5,
+        "structuralYield": 1,
+        "scriptConsistency": 0.8
+      },
+      "reading": {
+        "falseAccepts": 3,
+        "falseRejects": 4
+      },
+      "structural": {
+        "falseAccepts": 5,
+        "falseRejects": 4
+      },
+      "totalFalseAccepts": 8,
+      "worstAxisFalseAccepts": 5,
+      "totalFalseRejects": 8,
+      "worstAxisFalseRejects": 4
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.95,
+        "textRetention": 0.25,
+        "usablePageRatio": 0.5,
+        "structuralYield": 1,
+        "scriptConsistency": 0.5
+      },
+      "reading": {
+        "falseAccepts": 3,
+        "falseRejects": 4
+      },
+      "structural": {
+        "falseAccepts": 5,
+        "falseRejects": 4
+      },
+      "totalFalseAccepts": 8,
+      "worstAxisFalseAccepts": 5,
+      "totalFalseRejects": 8,
+      "worstAxisFalseRejects": 4
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.95,
+        "textRetention": 0.25,
+        "usablePageRatio": 0.25,
+        "structuralYield": 1,
+        "scriptConsistency": 0.8
+      },
+      "reading": {
+        "falseAccepts": 3,
+        "falseRejects": 4
+      },
+      "structural": {
+        "falseAccepts": 5,
+        "falseRejects": 4
+      },
+      "totalFalseAccepts": 8,
+      "worstAxisFalseAccepts": 5,
+      "totalFalseRejects": 8,
+      "worstAxisFalseRejects": 4
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.95,
+        "textRetention": 0.25,
+        "usablePageRatio": 0.25,
+        "structuralYield": 1,
+        "scriptConsistency": 0.5
+      },
+      "reading": {
+        "falseAccepts": 3,
+        "falseRejects": 4
+      },
+      "structural": {
+        "falseAccepts": 5,
+        "falseRejects": 4
+      },
+      "totalFalseAccepts": 8,
+      "worstAxisFalseAccepts": 5,
+      "totalFalseRejects": 8,
+      "worstAxisFalseRejects": 4
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.9,
+        "textRetention": 0.75,
+        "usablePageRatio": 0.75,
+        "structuralYield": 1,
+        "scriptConsistency": 0.8
+      },
+      "reading": {
+        "falseAccepts": 3,
+        "falseRejects": 4
+      },
+      "structural": {
+        "falseAccepts": 5,
+        "falseRejects": 4
+      },
+      "totalFalseAccepts": 8,
+      "worstAxisFalseAccepts": 5,
+      "totalFalseRejects": 8,
+      "worstAxisFalseRejects": 4
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.9,
+        "textRetention": 0.75,
+        "usablePageRatio": 0.5,
+        "structuralYield": 1,
+        "scriptConsistency": 0.8
+      },
+      "reading": {
+        "falseAccepts": 3,
+        "falseRejects": 4
+      },
+      "structural": {
+        "falseAccepts": 5,
+        "falseRejects": 4
+      },
+      "totalFalseAccepts": 8,
+      "worstAxisFalseAccepts": 5,
+      "totalFalseRejects": 8,
+      "worstAxisFalseRejects": 4
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.9,
+        "textRetention": 0.75,
+        "usablePageRatio": 0.25,
+        "structuralYield": 1,
+        "scriptConsistency": 0.8
+      },
+      "reading": {
+        "falseAccepts": 3,
+        "falseRejects": 4
+      },
+      "structural": {
+        "falseAccepts": 5,
+        "falseRejects": 4
+      },
+      "totalFalseAccepts": 8,
+      "worstAxisFalseAccepts": 5,
+      "totalFalseRejects": 8,
+      "worstAxisFalseRejects": 4
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.9,
+        "textRetention": 0.5,
+        "usablePageRatio": 0.75,
+        "structuralYield": 1,
+        "scriptConsistency": 0.95
+      },
+      "reading": {
+        "falseAccepts": 3,
+        "falseRejects": 4
+      },
+      "structural": {
+        "falseAccepts": 5,
+        "falseRejects": 4
+      },
+      "totalFalseAccepts": 8,
+      "worstAxisFalseAccepts": 5,
+      "totalFalseRejects": 8,
+      "worstAxisFalseRejects": 4
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.9,
+        "textRetention": 0.5,
+        "usablePageRatio": 0.5,
+        "structuralYield": 1,
+        "scriptConsistency": 0.95
+      },
+      "reading": {
+        "falseAccepts": 3,
+        "falseRejects": 4
+      },
+      "structural": {
+        "falseAccepts": 5,
+        "falseRejects": 4
+      },
+      "totalFalseAccepts": 8,
+      "worstAxisFalseAccepts": 5,
+      "totalFalseRejects": 8,
+      "worstAxisFalseRejects": 4
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.9,
+        "textRetention": 0.5,
+        "usablePageRatio": 0.25,
+        "structuralYield": 1,
+        "scriptConsistency": 0.95
+      },
+      "reading": {
+        "falseAccepts": 3,
+        "falseRejects": 4
+      },
+      "structural": {
+        "falseAccepts": 5,
+        "falseRejects": 4
+      },
+      "totalFalseAccepts": 8,
+      "worstAxisFalseAccepts": 5,
+      "totalFalseRejects": 8,
+      "worstAxisFalseRejects": 4
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.9,
+        "textRetention": 0.25,
+        "usablePageRatio": 0.75,
+        "structuralYield": 1,
+        "scriptConsistency": 0.95
+      },
+      "reading": {
+        "falseAccepts": 3,
+        "falseRejects": 4
+      },
+      "structural": {
+        "falseAccepts": 5,
+        "falseRejects": 4
+      },
+      "totalFalseAccepts": 8,
+      "worstAxisFalseAccepts": 5,
+      "totalFalseRejects": 8,
+      "worstAxisFalseRejects": 4
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.9,
+        "textRetention": 0.25,
+        "usablePageRatio": 0.5,
+        "structuralYield": 1,
+        "scriptConsistency": 0.95
+      },
+      "reading": {
+        "falseAccepts": 3,
+        "falseRejects": 4
+      },
+      "structural": {
+        "falseAccepts": 5,
+        "falseRejects": 4
+      },
+      "totalFalseAccepts": 8,
+      "worstAxisFalseAccepts": 5,
+      "totalFalseRejects": 8,
+      "worstAxisFalseRejects": 4
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.9,
+        "textRetention": 0.25,
+        "usablePageRatio": 0.25,
+        "structuralYield": 1,
+        "scriptConsistency": 0.95
+      },
+      "reading": {
+        "falseAccepts": 3,
+        "falseRejects": 4
+      },
+      "structural": {
+        "falseAccepts": 5,
+        "falseRejects": 4
+      },
+      "totalFalseAccepts": 8,
+      "worstAxisFalseAccepts": 5,
+      "totalFalseRejects": 8,
+      "worstAxisFalseRejects": 4
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.9,
+        "textRetention": 0.75,
+        "usablePageRatio": 0.75,
+        "structuralYield": 1,
+        "scriptConsistency": 0.5
+      },
+      "reading": {
+        "falseAccepts": 4,
+        "falseRejects": 4
+      },
+      "structural": {
+        "falseAccepts": 6,
+        "falseRejects": 4
+      },
+      "totalFalseAccepts": 10,
+      "worstAxisFalseAccepts": 6,
+      "totalFalseRejects": 8,
+      "worstAxisFalseRejects": 4
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.9,
+        "textRetention": 0.75,
+        "usablePageRatio": 0.5,
+        "structuralYield": 1,
+        "scriptConsistency": 0.5
+      },
+      "reading": {
+        "falseAccepts": 4,
+        "falseRejects": 4
+      },
+      "structural": {
+        "falseAccepts": 6,
+        "falseRejects": 4
+      },
+      "totalFalseAccepts": 10,
+      "worstAxisFalseAccepts": 6,
+      "totalFalseRejects": 8,
+      "worstAxisFalseRejects": 4
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.9,
+        "textRetention": 0.75,
+        "usablePageRatio": 0.25,
+        "structuralYield": 1,
+        "scriptConsistency": 0.5
+      },
+      "reading": {
+        "falseAccepts": 4,
+        "falseRejects": 4
+      },
+      "structural": {
+        "falseAccepts": 6,
+        "falseRejects": 4
+      },
+      "totalFalseAccepts": 10,
+      "worstAxisFalseAccepts": 6,
+      "totalFalseRejects": 8,
+      "worstAxisFalseRejects": 4
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.9,
+        "textRetention": 0.5,
+        "usablePageRatio": 0.75,
+        "structuralYield": 1,
+        "scriptConsistency": 0.8
+      },
+      "reading": {
+        "falseAccepts": 4,
+        "falseRejects": 4
+      },
+      "structural": {
+        "falseAccepts": 6,
+        "falseRejects": 4
+      },
+      "totalFalseAccepts": 10,
+      "worstAxisFalseAccepts": 6,
+      "totalFalseRejects": 8,
+      "worstAxisFalseRejects": 4
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.9,
+        "textRetention": 0.5,
+        "usablePageRatio": 0.5,
+        "structuralYield": 1,
+        "scriptConsistency": 0.8
+      },
+      "reading": {
+        "falseAccepts": 4,
+        "falseRejects": 4
+      },
+      "structural": {
+        "falseAccepts": 6,
+        "falseRejects": 4
+      },
+      "totalFalseAccepts": 10,
+      "worstAxisFalseAccepts": 6,
+      "totalFalseRejects": 8,
+      "worstAxisFalseRejects": 4
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.9,
+        "textRetention": 0.5,
+        "usablePageRatio": 0.25,
+        "structuralYield": 1,
+        "scriptConsistency": 0.8
+      },
+      "reading": {
+        "falseAccepts": 4,
+        "falseRejects": 4
+      },
+      "structural": {
+        "falseAccepts": 6,
+        "falseRejects": 4
+      },
+      "totalFalseAccepts": 10,
+      "worstAxisFalseAccepts": 6,
+      "totalFalseRejects": 8,
+      "worstAxisFalseRejects": 4
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.9,
+        "textRetention": 0.25,
+        "usablePageRatio": 0.75,
+        "structuralYield": 1,
+        "scriptConsistency": 0.8
+      },
+      "reading": {
+        "falseAccepts": 4,
+        "falseRejects": 4
+      },
+      "structural": {
+        "falseAccepts": 6,
+        "falseRejects": 4
+      },
+      "totalFalseAccepts": 10,
+      "worstAxisFalseAccepts": 6,
+      "totalFalseRejects": 8,
+      "worstAxisFalseRejects": 4
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.9,
+        "textRetention": 0.25,
+        "usablePageRatio": 0.5,
+        "structuralYield": 1,
+        "scriptConsistency": 0.8
+      },
+      "reading": {
+        "falseAccepts": 4,
+        "falseRejects": 4
+      },
+      "structural": {
+        "falseAccepts": 6,
+        "falseRejects": 4
+      },
+      "totalFalseAccepts": 10,
+      "worstAxisFalseAccepts": 6,
+      "totalFalseRejects": 8,
+      "worstAxisFalseRejects": 4
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.9,
+        "textRetention": 0.25,
+        "usablePageRatio": 0.25,
+        "structuralYield": 1,
+        "scriptConsistency": 0.8
+      },
+      "reading": {
+        "falseAccepts": 4,
+        "falseRejects": 4
+      },
+      "structural": {
+        "falseAccepts": 6,
+        "falseRejects": 4
+      },
+      "totalFalseAccepts": 10,
+      "worstAxisFalseAccepts": 6,
+      "totalFalseRejects": 8,
+      "worstAxisFalseRejects": 4
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.9,
+        "textRetention": 0.5,
+        "usablePageRatio": 0.75,
+        "structuralYield": 1,
+        "scriptConsistency": 0.5
+      },
+      "reading": {
+        "falseAccepts": 5,
+        "falseRejects": 4
+      },
+      "structural": {
+        "falseAccepts": 7,
+        "falseRejects": 4
+      },
+      "totalFalseAccepts": 12,
+      "worstAxisFalseAccepts": 7,
+      "totalFalseRejects": 8,
+      "worstAxisFalseRejects": 4
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.9,
+        "textRetention": 0.5,
+        "usablePageRatio": 0.5,
+        "structuralYield": 1,
+        "scriptConsistency": 0.5
+      },
+      "reading": {
+        "falseAccepts": 5,
+        "falseRejects": 4
+      },
+      "structural": {
+        "falseAccepts": 7,
+        "falseRejects": 4
+      },
+      "totalFalseAccepts": 12,
+      "worstAxisFalseAccepts": 7,
+      "totalFalseRejects": 8,
+      "worstAxisFalseRejects": 4
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.9,
+        "textRetention": 0.5,
+        "usablePageRatio": 0.25,
+        "structuralYield": 1,
+        "scriptConsistency": 0.5
+      },
+      "reading": {
+        "falseAccepts": 5,
+        "falseRejects": 4
+      },
+      "structural": {
+        "falseAccepts": 7,
+        "falseRejects": 4
+      },
+      "totalFalseAccepts": 12,
+      "worstAxisFalseAccepts": 7,
+      "totalFalseRejects": 8,
+      "worstAxisFalseRejects": 4
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.9,
+        "textRetention": 0.25,
+        "usablePageRatio": 0.75,
+        "structuralYield": 1,
+        "scriptConsistency": 0.5
+      },
+      "reading": {
+        "falseAccepts": 5,
+        "falseRejects": 4
+      },
+      "structural": {
+        "falseAccepts": 7,
+        "falseRejects": 4
+      },
+      "totalFalseAccepts": 12,
+      "worstAxisFalseAccepts": 7,
+      "totalFalseRejects": 8,
+      "worstAxisFalseRejects": 4
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.9,
+        "textRetention": 0.25,
+        "usablePageRatio": 0.5,
+        "structuralYield": 1,
+        "scriptConsistency": 0.5
+      },
+      "reading": {
+        "falseAccepts": 5,
+        "falseRejects": 4
+      },
+      "structural": {
+        "falseAccepts": 7,
+        "falseRejects": 4
+      },
+      "totalFalseAccepts": 12,
+      "worstAxisFalseAccepts": 7,
+      "totalFalseRejects": 8,
+      "worstAxisFalseRejects": 4
+    },
+    {
+      "thresholds": {
+        "characterSanity": 0.9,
+        "textRetention": 0.25,
+        "usablePageRatio": 0.25,
+        "structuralYield": 1,
+        "scriptConsistency": 0.5
+      },
+      "reading": {
+        "falseAccepts": 5,
+        "falseRejects": 4
+      },
+      "structural": {
+        "falseAccepts": 7,
+        "falseRejects": 4
+      },
+      "totalFalseAccepts": 12,
+      "worstAxisFalseAccepts": 7,
+      "totalFalseRejects": 8,
+      "worstAxisFalseRejects": 4
+    }
+  ],
+  "objective": [
+    "minimise-total-false-accepts-across-both-axes",
+    "minimise-worst-axis-false-accepts",
+    "minimise-total-false-rejects-across-both-axes",
+    "minimise-worst-axis-false-rejects"
+  ],
+  "tieBreak": "higher-thresholds-in-component-order",
+  "oracleAggregation": "A tier is accepted for a calibration document on an axis only when both predeclared pages accept it on that axis.",
+  "limitations": [
+    "Calibration and evaluation documents are disjoint, but evaluation examples were inspected before the final quality-gate contract was frozen.",
+    "Only two calibration pages are oracle-labelled Thai; script-conditioned gate behaviour is weakly determined.",
+    "T3 consists of independent page submissions and is terminal, so it is excluded from document-artifact threshold fitting."
+  ],
+  "policyHash": "3f8d9674a8ecbb39a17bb1aeab4fe77e814fef0de8c693965064a0d54685cd8d"
+}

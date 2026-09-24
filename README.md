@@ -1,48 +1,73 @@
-# Quality-Gated Extraction
+# Quality-gated extraction — release artefacts
 
-Companion repository for the paper **Cheap First, Escalate on Evidence: Quality-Gated
-Extraction for Heterogeneous Research Collections**, by Anthony Bouch (Infonomic) and
-Steve Elliott (Forest Restoration Research Unit, Chiang Mai University), accepted as a
-demo/poster paper at [ICADL 2026](https://icadl.net/icadl2026/), Khon Kaen University,
-2–4 December 2026, to appear in the Springer LNCS proceedings.
+Companion release for *Cheap First, Escalate on Evidence: Quality-Gated
+Extraction for Heterogeneous Research Collections* (Bouch, Lipsky and Elliott,
+ICADL 2026, demo/poster track).
 
-## Status
+This repository publishes what the paper commits to in §5: the quality-gate
+implementation, the frozen routing and gate policies with their thresholds,
+sanitised routing traces from the evaluation run, and the two-axis oracle
+annotations. Source documents from the FORRU-CMU repository are not
+redistributed, and no extracted text appears here. Documents and pages are
+identified by case ID and content hash only.
 
-**Release pending.** The materials below will be published here before the conference
-(2–4 December 2026), alongside the live demonstration. Until then this repository is a
-placeholder so that the address printed in the paper is stable.
+## Frozen artefacts and their hashes
 
-## What will be published
+Every number in the paper traces to `results/phase5-paper-20260806/`, which
+records the hashes below. `node tools/verify-release.mjs` recomputes them.
 
-- The post-extraction quality gate implementation: the five component scorers
-  (character sanity, text retention, usable-page ratio, structural yield, script
-  consistency) and the routing policy that acts on them.
-- The frozen policy configuration and thresholds used in the paper, with the policy
-  hash reported there, so the evaluation can be reproduced against the same gate.
-- The document inspection signals and tier-assignment rules.
-- Sanitised routing traces from the benchmark, including the F003 replay shown in the
-  paper's figure: inspection signals, assigned tier, gate scores and reasons, escalation
-  steps and provider provenance, with document content redacted.
-- The human-oracle annotations for the 32 held-out evaluation pages on both criteria
-  (reading sufficiency, structural adequacy), and the calibration-set annotations.
-- Derived benchmark tables: the policy comparison, per-tier timings and the
-  higher-tier degradation cases.
+| Artefact | File | SHA-256 |
+|---|---|---|
+| Gate policy (paper §3.2) | `policy/gate-calibration.frozen.json` | `3f8d9674a8ecbb39a17bb1aeab4fe77e814fef0de8c693965064a0d54685cd8d` |
+| Initial routing policy | `policy/routing-calibration.frozen.json` | `c1f14b50218c6ccb242af166ad660ea1bcb9af64e8b9f86d0c9c30985e9976fb` |
+| Gate calibration contract | `config/gate-calibration-v1.json` | `3de5171cf9b78c04431dfb3130c20d5c5422b5b80926959919ec4498c437bdc3` |
+| Evaluation oracle (32 pages) | `annotations/oracle-evaluation.json` | `70d6d9a266cc87b6d886e0b582c67be5d0db8ad1df12564b8a3d8e93fd2e792b` |
+| Calibration oracle (16 pages) | `annotations/oracle-calibration.json` | `28cdd730f8e3175e560c985028cd4f3d8038cfb790fc388c6f142e6cf0bcd055` |
 
-## What will not be published
+The gate policy hash is `sha256` of the canonical JSON of
+`gate-calibration.frozen.json` with its `policyHash` field removed. The frozen
+thresholds are character sanity 0.99, text retention 0.75, usable-page ratio
+0.75, structural yield 1.0 and script consistency 0.95.
 
-The source PDFs. The benchmark corpus is the working repository of the Forest
-Restoration Research Unit at Chiang Mai University; its documents are not redistributed
-here. Where a document is publicly available it is identified by a stable reference.
+## Layout
 
-## Citation
+- `src/` — inspection signals, quality gate, routing policies, calibration,
+  policy analysis and paper-value export, with unit tests on synthetic fixtures.
+- `policy/` — the two frozen policy files, verbatim from the evaluation run.
+- `traces/policy-analysis.json` — the routing trace for the 16 evaluation
+  documents: initial tier and rationale, each gate step with component scores,
+  escalation reasons and the selected tier. `traces/cells/` and
+  `traces/t3-page-cells/` hold the per-cell provider and timing records
+  (72 T0–T2 document cells, 48 T3 page submissions); the `*.jsonl` files are
+  the raw run logs behind the timing summaries.
+- `annotations/` — the folded oracle judgements per page (reading sufficiency
+  and structural adequacy, lowest passing tier on each axis, degraded tiers),
+  the page manifest with image hashes, and `ORACLE-RUBRIC.md` at the root.
+- `results/` — the sanitised aggregate results by phase, including the
+  labelled paper values and CSV tables.
+- `schemas/` — JSON Schemas for every artefact above.
+- `ROUTING-FLOW.md` — the cheap-first routing and escalation policy as a diagram.
+- `HARDWARE-CONTEXT.md` — the measurement machine, what ran on GPU versus CPU,
+  and which timing conclusions survive a change of hardware.
+- `PROVIDER-RUNBOOK.md` — pinned provider versions, service settings and the
+  resolved model commits behind the evaluation run.
 
-A citation entry with the Springer DOI will be added when the proceedings appear.
+## Running the code
+
+The benchmark was developed inside a pnpm workspace. `src/corpus.ts` and
+`src/providers/tika.ts` import the workspace package `@byline/extract-tika`
+and `pg`, which are only needed to read a live corpus; the gate, routing,
+calibration and analysis modules and their tests do not. Tier providers
+(Docling, Tesseract, PaddleOCR-VL) run as local services; see
+`PROVIDER-RUNBOOK.md`.
 
 ## Licence
 
-To be confirmed on release. Code and configuration are expected to be released under
-an open-source licence and the annotations and traces under an open data licence.
+Copyright (C) 2026 Infonomic Company Limited and Chiang Mai University
+Forest Restoration Research Unit.
 
-## Contact
-
-Anthony Bouch, Infonomic — anthony@infonomic.io
+This repository is released under the GNU Affero General Public License,
+version 3 (see `LICENSE`). It is a research-results release: the code is
+published so that the benchmark can be inspected and reproduced, not as a
+maintained library. Source documents from the FORRU-CMU repository are not
+part of this release and are not covered by this licence.

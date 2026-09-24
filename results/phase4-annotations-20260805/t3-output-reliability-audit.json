@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "status": "sampled-human-audit",
+  "scope": "All 48 predeclared T3 page submissions, compared with their page images during oracle and calibration review.",
+  "providerCompletion": {
+    "numerator": 48,
+    "denominator": 48,
+    "excludedCount": 0,
+    "status": "succeeded"
+  },
+  "seriousOutputDefects": {
+    "numerator": 6,
+    "denominator": 48,
+    "excludedCount": 0,
+    "value": 0.125
+  },
+  "modes": [
+    {
+      "id": "degenerate-repetition",
+      "count": 3,
+      "cases": ["F155:2", "F155:153", "F313:27"]
+    },
+    {
+      "id": "text-bearing-image-misclassification",
+      "count": 2,
+      "cases": ["F067:3", "F067:27"]
+    },
+    {
+      "id": "generation-collapse",
+      "count": 1,
+      "cases": ["F003:40"]
+    }
+  ],
+  "partitions": {
+    "calibrationDefects": 2,
+    "evaluationDefects": 4
+  },
+  "accounting": "Provider completion and human-observed output defects are separate quantities. This audit is not the Criterion B pass rate and does not relabel provider run statuses."
+}

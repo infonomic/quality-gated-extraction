@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:forru:extraction-benchmark:provider-run:v1",
+  "title": "Provider matrix cell",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "caseId", "tier", "provider", "status", "cache", "startedAt"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "caseId": { "type": "string", "pattern": "^F[0-9]{3,}$" },
+    "page": { "type": "integer", "minimum": 1 },
+    "inputContentHash": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "tier": { "enum": ["T0", "T1", "T2", "T3"] },
+    "provider": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "version", "execution"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "version": { "type": "string", "minLength": 1 },
+        "model": { "type": "string", "minLength": 1 },
+        "execution": { "enum": ["local", "private", "hosted"] }
+      }
+    },
+    "status": { "enum": ["succeeded", "failed", "unavailable", "censored"] },
+    "cache": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["hit"],
+      "properties": {
+        "hit": { "type": "boolean" },
+        "key": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "lookupMs": { "type": "number", "minimum": 0 }
+      }
+    },
+    "startedAt": { "type": "string", "minLength": 1 },
+    "finishedAt": { "type": "string", "minLength": 1 },
+    "artifactKey": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "wallMs": { "type": "number", "minimum": 0 },
+    "observedMinimumWallMs": { "type": "number", "exclusiveMinimum": 0 },
+    "error": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["code", "message"],
+      "properties": {
+        "code": { "type": "string", "minLength": 1 },
+        "message": { "type": "string", "minLength": 1 }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "status": { "const": "succeeded" } } },
+      "then": { "required": ["finishedAt", "artifactKey", "wallMs"] },
+      "else": { "required": ["finishedAt", "error"] }
+    },
+    {
+      "if": { "properties": { "status": { "const": "unavailable" } } },
+      "then": {
+        "not": {
+          "anyOf": [{ "required": ["artifactKey"] }, { "required": ["wallMs"] }]
+        }
+      }
+    },
+    {
+      "if": {
+        "required": ["status"],
+        "properties": { "status": { "const": "censored" } }
+      },
+      "then": {
+        "required": ["observedMinimumWallMs"],
+        "not": {
+          "anyOf": [{ "required": ["artifactKey"] }, { "required": ["wallMs"] }]
+        }
+      },
+      "else": {
+        "not": { "required": ["observedMinimumWallMs"] }
+      }
+    }
+  ]
+}

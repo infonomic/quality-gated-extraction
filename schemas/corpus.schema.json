@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:forru:extraction-benchmark:corpus:v1",
+  "title": "Anonymised corpus record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "caseId", "contentHash", "mediaType", "sizeBytes", "status"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "caseId": { "$ref": "#/$defs/caseId" },
+    "contentHash": {
+      "anyOf": [{ "$ref": "#/$defs/sha256" }, { "type": "null" }]
+    },
+    "mediaType": { "type": "string", "minLength": 1 },
+    "sizeBytes": { "type": "integer", "minimum": 0 },
+    "status": { "enum": ["included", "excluded", "unreadable"] },
+    "exclusionReason": { "type": "string", "minLength": 1 },
+    "attachmentOrdinal": { "type": "integer", "minimum": 0 }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": { "status": { "const": "included" } },
+        "required": ["status"]
+      },
+      "then": { "properties": { "contentHash": { "$ref": "#/$defs/sha256" } } }
+    },
+    {
+      "if": {
+        "properties": { "status": { "enum": ["excluded", "unreadable"] } },
+        "required": ["status"]
+      },
+      "then": { "required": ["exclusionReason"] }
+    }
+  ],
+  "$defs": {
+    "caseId": { "type": "string", "pattern": "^F[0-9]{3,}$" },
+    "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+  }
+}

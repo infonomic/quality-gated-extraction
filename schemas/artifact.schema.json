@@ -1,0 +1,128 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:forru:extraction-benchmark:artifact:v1",
+  "title": "Benchmark extraction artifact",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "caseId",
+    "cacheKey",
+    "tier",
+    "provider",
+    "parameters",
+    "representations",
+    "timings",
+    "warnings"
+  ],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "caseId": { "type": "string", "pattern": "^F[0-9]{3,}$" },
+    "cacheKey": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "tier": { "enum": ["T0", "T1", "T2", "T3"] },
+    "provider": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "version", "execution"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "version": { "type": "string", "minLength": 1 },
+        "model": { "type": "string", "minLength": 1 },
+        "execution": { "enum": ["local", "private", "hosted"] }
+      }
+    },
+    "parameters": {
+      "type": "object",
+      "propertyNames": { "pattern": "^[a-zA-Z][a-zA-Z0-9._-]*$" },
+      "additionalProperties": { "$ref": "#/$defs/parameterValue" }
+    },
+    "representations": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["text"],
+      "properties": {
+        "text": { "type": "string" },
+        "markdown": { "type": "string" },
+        "structure": { "$ref": "#/$defs/safeJson" }
+      }
+    },
+    "pages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["page"],
+        "properties": {
+          "page": { "type": "integer", "minimum": 1 },
+          "text": { "type": "string" },
+          "blocks": {
+            "type": "array",
+            "items": { "$ref": "#/$defs/safeJson" }
+          }
+        }
+      }
+    },
+    "timings": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["wallMs", "providerMs", "providerTimingStatus"],
+      "properties": {
+        "wallMs": { "type": "number", "minimum": 0 },
+        "providerMs": { "type": ["number", "null"], "minimum": 0 },
+        "providerTimingStatus": { "enum": ["observed", "unavailable"] }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "providerTimingStatus": { "const": "observed" } } },
+          "then": { "properties": { "providerMs": { "type": "number" } } },
+          "else": { "properties": { "providerMs": { "type": "null" } } }
+        }
+      ]
+    },
+    "usage": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "cpuSeconds": { "type": "number", "minimum": 0 },
+        "gpuSeconds": { "type": "number", "minimum": 0 },
+        "inputTokens": { "type": "integer", "minimum": 0 },
+        "outputTokens": { "type": "integer", "minimum": 0 },
+        "billedCost": { "type": "number", "minimum": 0 },
+        "currency": { "type": "string", "pattern": "^[A-Z]{3}$" }
+      }
+    },
+    "warnings": { "type": "array", "items": { "type": "string" } }
+  },
+  "$defs": {
+    "safeJson": {
+      "anyOf": [
+        { "type": ["string", "number", "boolean", "null"] },
+        {
+          "type": "array",
+          "items": { "$ref": "#/$defs/safeJson" }
+        },
+        {
+          "type": "object",
+          "propertyNames": {
+            "not": {
+              "enum": ["filename", "origin", "path", "sourceUrl", "storagePath", "uri", "url"]
+            }
+          },
+          "additionalProperties": { "$ref": "#/$defs/safeJson" }
+        }
+      ]
+    },
+    "parameterValue": {
+      "anyOf": [
+        {
+          "type": "string",
+          "maxLength": 128,
+          "pattern": "^(?!.*[/\\\\])(?!.*(?:https?|s3|file):).*$"
+        },
+        { "type": "number" },
+        { "type": "boolean" },
+        { "type": "null" }
+      ]
+    }
+  }
+}

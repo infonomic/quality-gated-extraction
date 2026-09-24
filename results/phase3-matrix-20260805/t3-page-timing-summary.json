@@ -1,0 +1,205 @@
+{
+  "schemaVersion": 1,
+  "status": "sampled",
+  "scope": "Independent predeclared 128-DPI page-image submissions; not full-document T3.",
+  "provider": {
+    "id": "paddleocr-vl",
+    "version": "paddleocr@3.7.0;paddlepaddle@3.2.1;paddlex@3.7.2;api@0.1.0",
+    "model": "PaddleOCR-VL-0.9B",
+    "execution": "local"
+  },
+  "labels": {
+    "pageDurations": "sampled",
+    "fullDocumentDuration": "censored"
+  },
+  "denominators": {
+    "calibrationPages": 16,
+    "evaluationPages": 32,
+    "totalPages": 48
+  },
+  "overall": {
+    "pages": {
+      "numerator": 48,
+      "denominator": 48,
+      "excludedCount": 0
+    },
+    "statuses": {
+      "succeeded": 48,
+      "failed": 0,
+      "unavailable": 0,
+      "censored": 0
+    },
+    "timing": {
+      "label": "sampled",
+      "totalWallMs": 3846886.050168,
+      "totalWallMinutes": 64.114768,
+      "meanWallMsPerSucceededPage": 80143.459379,
+      "medianWallMsPerSucceededPage": 34479.577417,
+      "minimumWallMsPerSucceededPage": 1252.850625,
+      "maximumWallMsPerSucceededPage": 649041.120375,
+      "providerTimingStatus": "unavailable",
+      "basis": "Client-observed local wall time for independent 128-DPI page-image submissions."
+    }
+  },
+  "byPartition": {
+    "calibration": {
+      "pages": {
+        "numerator": 16,
+        "denominator": 16,
+        "excludedCount": 0
+      },
+      "statuses": {
+        "succeeded": 16,
+        "failed": 0,
+        "unavailable": 0,
+        "censored": 0
+      },
+      "timing": {
+        "label": "sampled",
+        "totalWallMs": 1800433.24225,
+        "totalWallMinutes": 30.007221,
+        "meanWallMsPerSucceededPage": 112527.077641,
+        "medianWallMsPerSucceededPage": 34479.577417,
+        "minimumWallMsPerSucceededPage": 2951.503625,
+        "maximumWallMsPerSucceededPage": 649041.120375,
+        "providerTimingStatus": "unavailable",
+        "basis": "Client-observed local wall time for independent 128-DPI page-image submissions."
+      }
+    },
+    "evaluation": {
+      "pages": {
+        "numerator": 32,
+        "denominator": 32,
+        "excludedCount": 0
+      },
+      "statuses": {
+        "succeeded": 32,
+        "failed": 0,
+        "unavailable": 0,
+        "censored": 0
+      },
+      "timing": {
+        "label": "sampled",
+        "totalWallMs": 2046452.807918,
+        "totalWallMinutes": 34.107547,
+        "meanWallMsPerSucceededPage": 63951.650247,
+        "medianWallMsPerSucceededPage": 25222.543167,
+        "minimumWallMsPerSucceededPage": 1252.850625,
+        "maximumWallMsPerSucceededPage": 442776.042083,
+        "providerTimingStatus": "unavailable",
+        "basis": "Client-observed local wall time for independent 128-DPI page-image submissions."
+      }
+    }
+  },
+  "evaluationByStratum": {
+    "born-digital-en": {
+      "pages": {
+        "numerator": 8,
+        "denominator": 8,
+        "excludedCount": 0
+      },
+      "statuses": {
+        "succeeded": 8,
+        "failed": 0,
+        "unavailable": 0,
+        "censored": 0
+      },
+      "timing": {
+        "label": "sampled",
+        "totalWallMs": 336353.951624,
+        "totalWallMinutes": 5.605899,
+        "meanWallMsPerSucceededPage": 42044.243953,
+        "medianWallMsPerSucceededPage": 25222.543167,
+        "minimumWallMsPerSucceededPage": 7885.376375,
+        "maximumWallMsPerSucceededPage": 160362.215958,
+        "providerTimingStatus": "unavailable",
+        "basis": "Client-observed local wall time for independent 128-DPI page-image submissions."
+      }
+    },
+    "layout-heavy-born-digital": {
+      "pages": {
+        "numerator": 8,
+        "denominator": 8,
+        "excludedCount": 0
+      },
+      "statuses": {
+        "succeeded": 8,
+        "failed": 0,
+        "unavailable": 0,
+        "censored": 0
+      },
+      "timing": {
+        "label": "sampled",
+        "totalWallMs": 757288.6115,
+        "totalWallMinutes": 12.621477,
+        "meanWallMsPerSucceededPage": 94661.076438,
+        "medianWallMsPerSucceededPage": 44726.296333,
+        "minimumWallMsPerSucceededPage": 8702.4035,
+        "maximumWallMsPerSucceededPage": 442776.042083,
+        "providerTimingStatus": "unavailable",
+        "basis": "Client-observed local wall time for independent 128-DPI page-image submissions."
+      }
+    },
+    "scanned-degraded-en": {
+      "pages": {
+        "numerator": 8,
+        "denominator": 8,
+        "excludedCount": 0
+      },
+      "statuses": {
+        "succeeded": 8,
+        "failed": 0,
+        "unavailable": 0,
+        "censored": 0
+      },
+      "timing": {
+        "label": "sampled",
+        "totalWallMs": 470347.27696,
+        "totalWallMinutes": 7.839121,
+        "meanWallMsPerSucceededPage": 58793.40962,
+        "medianWallMsPerSucceededPage": 12886.974417,
+        "minimumWallMsPerSucceededPage": 1252.850625,
+        "maximumWallMsPerSucceededPage": 308145.434208,
+        "providerTimingStatus": "unavailable",
+        "basis": "Client-observed local wall time for independent 128-DPI page-image submissions."
+      }
+    },
+    "scanned-degraded-thai-mixed": {
+      "pages": {
+        "numerator": 8,
+        "denominator": 8,
+        "excludedCount": 0
+      },
+      "statuses": {
+        "succeeded": 8,
+        "failed": 0,
+        "unavailable": 0,
+        "censored": 0
+      },
+      "timing": {
+        "label": "sampled",
+        "totalWallMs": 482462.967834,
+        "totalWallMinutes": 8.041049,
+        "meanWallMsPerSucceededPage": 60307.870979,
+        "medianWallMsPerSucceededPage": 8820.926958,
+        "minimumWallMsPerSucceededPage": 4802.6865,
+        "maximumWallMsPerSucceededPage": 325341.14875,
+        "providerTimingStatus": "unavailable",
+        "basis": "Client-observed local wall time for independent 128-DPI page-image submissions."
+      }
+    }
+  },
+  "censoredFullDocumentObservation": {
+    "caseId": "F129",
+    "pageCount": 10,
+    "observedMinimumWallMs": 1461000,
+    "status": "censored",
+    "includedInPageTiming": false
+  },
+  "limitations": [
+    "Provider-side Paddle duration is unavailable; every timing is client-observed local wall time.",
+    "Calibration and evaluation remain separately reported; calibration contributes no evaluation numerator.",
+    "Per-stratum evaluation results are raw counts over eight pages, not population rates.",
+    "The censored full-document lower bound is not pooled with the completed page-wise durations."
+  ]
+}

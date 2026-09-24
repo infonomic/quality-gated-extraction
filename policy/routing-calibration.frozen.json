@@ -1,0 +1,275 @@
+{
+  "schemaVersion": 1,
+  "status": "frozen",
+  "scope": "initial-inspection-routing-only",
+  "matrixRunId": "phase3-matrix-20260805",
+  "sampleRunId": "phase2-authoritative-20260805",
+  "configHash": "0149dd9809fa448c4d22071208878106bce70251792f2b62a1ffe789905a3516",
+  "sampleHash": "024cdcfeb35fbc0bf1acdb7b2b0b51e0f5a269797c3cdca970a03f1e0a2da3b1",
+  "evaluationMatrixCellsPresentAtFreeze": 0,
+  "tuningSet": "calibration",
+  "calibrationCaseIds": [
+    "F129",
+    "F047",
+    "F155",
+    "F120",
+    "F085",
+    "F015",
+    "F318",
+    "F279"
+  ],
+  "evaluationCaseIdsOpened": [],
+  "candidateCount": 27,
+  "selected": {
+    "minimumTextLayerCoverage": 0.75,
+    "maximumFullPageImageRatio": 0.25,
+    "maximumEncodingAnomalyRatio": 0.01
+  },
+  "candidates": [
+    {
+      "thresholds": {
+        "minimumTextLayerCoverage": 0.75,
+        "maximumFullPageImageRatio": 0.25,
+        "maximumEncodingAnomalyRatio": 0.01
+      },
+      "correct": 8,
+      "denominator": 8
+    },
+    {
+      "thresholds": {
+        "minimumTextLayerCoverage": 0.75,
+        "maximumFullPageImageRatio": 0.25,
+        "maximumEncodingAnomalyRatio": 0.02
+      },
+      "correct": 8,
+      "denominator": 8
+    },
+    {
+      "thresholds": {
+        "minimumTextLayerCoverage": 0.75,
+        "maximumFullPageImageRatio": 0.5,
+        "maximumEncodingAnomalyRatio": 0.01
+      },
+      "correct": 8,
+      "denominator": 8
+    },
+    {
+      "thresholds": {
+        "minimumTextLayerCoverage": 0.75,
+        "maximumFullPageImageRatio": 0.5,
+        "maximumEncodingAnomalyRatio": 0.02
+      },
+      "correct": 8,
+      "denominator": 8
+    },
+    {
+      "thresholds": {
+        "minimumTextLayerCoverage": 0.75,
+        "maximumFullPageImageRatio": 0.75,
+        "maximumEncodingAnomalyRatio": 0.01
+      },
+      "correct": 8,
+      "denominator": 8
+    },
+    {
+      "thresholds": {
+        "minimumTextLayerCoverage": 0.75,
+        "maximumFullPageImageRatio": 0.75,
+        "maximumEncodingAnomalyRatio": 0.02
+      },
+      "correct": 8,
+      "denominator": 8
+    },
+    {
+      "thresholds": {
+        "minimumTextLayerCoverage": 0.5,
+        "maximumFullPageImageRatio": 0.25,
+        "maximumEncodingAnomalyRatio": 0.01
+      },
+      "correct": 8,
+      "denominator": 8
+    },
+    {
+      "thresholds": {
+        "minimumTextLayerCoverage": 0.5,
+        "maximumFullPageImageRatio": 0.25,
+        "maximumEncodingAnomalyRatio": 0.02
+      },
+      "correct": 8,
+      "denominator": 8
+    },
+    {
+      "thresholds": {
+        "minimumTextLayerCoverage": 0.5,
+        "maximumFullPageImageRatio": 0.5,
+        "maximumEncodingAnomalyRatio": 0.01
+      },
+      "correct": 8,
+      "denominator": 8
+    },
+    {
+      "thresholds": {
+        "minimumTextLayerCoverage": 0.5,
+        "maximumFullPageImageRatio": 0.5,
+        "maximumEncodingAnomalyRatio": 0.02
+      },
+      "correct": 8,
+      "denominator": 8
+    },
+    {
+      "thresholds": {
+        "minimumTextLayerCoverage": 0.5,
+        "maximumFullPageImageRatio": 0.75,
+        "maximumEncodingAnomalyRatio": 0.01
+      },
+      "correct": 8,
+      "denominator": 8
+    },
+    {
+      "thresholds": {
+        "minimumTextLayerCoverage": 0.5,
+        "maximumFullPageImageRatio": 0.75,
+        "maximumEncodingAnomalyRatio": 0.02
+      },
+      "correct": 8,
+      "denominator": 8
+    },
+    {
+      "thresholds": {
+        "minimumTextLayerCoverage": 0.25,
+        "maximumFullPageImageRatio": 0.25,
+        "maximumEncodingAnomalyRatio": 0.01
+      },
+      "correct": 8,
+      "denominator": 8
+    },
+    {
+      "thresholds": {
+        "minimumTextLayerCoverage": 0.25,
+        "maximumFullPageImageRatio": 0.25,
+        "maximumEncodingAnomalyRatio": 0.02
+      },
+      "correct": 8,
+      "denominator": 8
+    },
+    {
+      "thresholds": {
+        "minimumTextLayerCoverage": 0.25,
+        "maximumFullPageImageRatio": 0.5,
+        "maximumEncodingAnomalyRatio": 0.01
+      },
+      "correct": 8,
+      "denominator": 8
+    },
+    {
+      "thresholds": {
+        "minimumTextLayerCoverage": 0.25,
+        "maximumFullPageImageRatio": 0.5,
+        "maximumEncodingAnomalyRatio": 0.02
+      },
+      "correct": 8,
+      "denominator": 8
+    },
+    {
+      "thresholds": {
+        "minimumTextLayerCoverage": 0.25,
+        "maximumFullPageImageRatio": 0.75,
+        "maximumEncodingAnomalyRatio": 0.01
+      },
+      "correct": 8,
+      "denominator": 8
+    },
+    {
+      "thresholds": {
+        "minimumTextLayerCoverage": 0.25,
+        "maximumFullPageImageRatio": 0.75,
+        "maximumEncodingAnomalyRatio": 0.02
+      },
+      "correct": 8,
+      "denominator": 8
+    },
+    {
+      "thresholds": {
+        "minimumTextLayerCoverage": 0.75,
+        "maximumFullPageImageRatio": 0.25,
+        "maximumEncodingAnomalyRatio": 0.05
+      },
+      "correct": 7,
+      "denominator": 8
+    },
+    {
+      "thresholds": {
+        "minimumTextLayerCoverage": 0.75,
+        "maximumFullPageImageRatio": 0.5,
+        "maximumEncodingAnomalyRatio": 0.05
+      },
+      "correct": 7,
+      "denominator": 8
+    },
+    {
+      "thresholds": {
+        "minimumTextLayerCoverage": 0.75,
+        "maximumFullPageImageRatio": 0.75,
+        "maximumEncodingAnomalyRatio": 0.05
+      },
+      "correct": 7,
+      "denominator": 8
+    },
+    {
+      "thresholds": {
+        "minimumTextLayerCoverage": 0.5,
+        "maximumFullPageImageRatio": 0.25,
+        "maximumEncodingAnomalyRatio": 0.05
+      },
+      "correct": 7,
+      "denominator": 8
+    },
+    {
+      "thresholds": {
+        "minimumTextLayerCoverage": 0.5,
+        "maximumFullPageImageRatio": 0.5,
+        "maximumEncodingAnomalyRatio": 0.05
+      },
+      "correct": 7,
+      "denominator": 8
+    },
+    {
+      "thresholds": {
+        "minimumTextLayerCoverage": 0.5,
+        "maximumFullPageImageRatio": 0.75,
+        "maximumEncodingAnomalyRatio": 0.05
+      },
+      "correct": 7,
+      "denominator": 8
+    },
+    {
+      "thresholds": {
+        "minimumTextLayerCoverage": 0.25,
+        "maximumFullPageImageRatio": 0.25,
+        "maximumEncodingAnomalyRatio": 0.05
+      },
+      "correct": 7,
+      "denominator": 8
+    },
+    {
+      "thresholds": {
+        "minimumTextLayerCoverage": 0.25,
+        "maximumFullPageImageRatio": 0.5,
+        "maximumEncodingAnomalyRatio": 0.05
+      },
+      "correct": 7,
+      "denominator": 8
+    },
+    {
+      "thresholds": {
+        "minimumTextLayerCoverage": 0.25,
+        "maximumFullPageImageRatio": 0.75,
+        "maximumEncodingAnomalyRatio": 0.05
+      },
+      "correct": 7,
+      "denominator": 8
+    }
+  ],
+  "policyHash": "c1f14b50218c6ccb242af166ad660ea1bcb9af64e8b9f86d0c9c30985e9976fb",
+  "limitation": "The stratum label is a calibration proxy for initial-tier suitability. Quality-gate thresholds remain unfrozen until private annotations exist."
+}

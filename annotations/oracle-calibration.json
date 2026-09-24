@@ -1,0 +1,405 @@
+{
+  "acceptanceCriterion": {
+    "id": "reading-sufficiency-v1",
+    "summary": "Accept a tier's output for a page if a reader could obtain the page's content from it without material loss or corruption.",
+    "accept": [
+      "all substantive content blocks present",
+      "reading order preserves meaning",
+      "characters correct",
+      "lost table structure acceptable when values remain readable and in order",
+      "running headers, folios and hyphenation artifacts ignored"
+    ],
+    "reject": [
+      "content blocks missing or empty",
+      "columns interleaved so sentences run into unrelated text",
+      "character corruption: replacement glyphs, wrong script, systematic substitutions",
+      "table values no longer attributable to a row"
+    ],
+    "note": "Structural fidelity is not required by this criterion."
+  },
+  "structuralCriterion": {
+    "id": "structural-adequacy-v1",
+    "summary": "Accept a tier's output for a page if the page's structure survives well enough to drive section-aware chunking, table attribution and retrieval.",
+    "accept": [
+      "headings recoverable as headings, not folded into body text",
+      "table cells attributable to their row and column",
+      "captions distinguishable from surrounding body text",
+      "reading order correct across columns and around floats"
+    ],
+    "reject": [
+      "structure flattened into an undifferentiated text run",
+      "table collapsed so values cannot be attributed",
+      "caption merged into body text or into an unrelated block",
+      "column or float order scrambled"
+    ],
+    "note": "Independent of reading sufficiency. A tier may satisfy one criterion and not the other."
+  },
+  "derivation": {
+    "fields": [
+      "higherTierDegraded",
+      "degradedTiers"
+    ],
+    "rule": "A tier skipped between the lowest and highest accepted tier, on either axis, means a more expensive tier produced worse output than a cheaper one.",
+    "basis": "Derived from usableTiers and structurallyAdequateTiers. Not entered by the annotator; the checkbox was left unticked on all 32 pages.",
+    "appliedAt": "2026-08-06"
+  },
+  "F129:1": {
+    "caseId": "F129",
+    "page": 1,
+    "stratum": "born-digital-en",
+    "script": "english",
+    "lowestUsableTier": "T0",
+    "usableTiers": [
+      "T0",
+      "T1",
+      "T3"
+    ],
+    "lowestStructurallyAdequateTier": "T0",
+    "structurallyAdequateTiers": [
+      "T0",
+      "T1",
+      "T3"
+    ],
+    "structuralAssessmentConfirmed": true,
+    "higherTierDegraded": true,
+    "degradedTiers": [
+      "T2"
+    ],
+    "notes": null,
+    "annotator": "Anthony Bouch",
+    "judgedAt": "2026-08-06T04:39:44.660Z"
+  },
+  "F129:10": {
+    "caseId": "F129",
+    "page": 10,
+    "stratum": "born-digital-en",
+    "script": "english",
+    "lowestUsableTier": "T0",
+    "usableTiers": [
+      "T0",
+      "T1",
+      "T3"
+    ],
+    "lowestStructurallyAdequateTier": "T1",
+    "structurallyAdequateTiers": [
+      "T1",
+      "T3"
+    ],
+    "structuralAssessmentConfirmed": true,
+    "higherTierDegraded": true,
+    "degradedTiers": [
+      "T2"
+    ],
+    "notes": null,
+    "annotator": "Anthony Bouch",
+    "judgedAt": "2026-08-06T04:55:58.719Z"
+  },
+  "F047:18": {
+    "caseId": "F047",
+    "page": 18,
+    "stratum": "born-digital-en",
+    "script": "english",
+    "lowestUsableTier": "T0",
+    "usableTiers": [
+      "T0",
+      "T1",
+      "T2",
+      "T3"
+    ],
+    "lowestStructurallyAdequateTier": "T1",
+    "structurallyAdequateTiers": [
+      "T1",
+      "T2",
+      "T3"
+    ],
+    "structuralAssessmentConfirmed": true,
+    "higherTierDegraded": false,
+    "degradedTiers": [],
+    "notes": null,
+    "annotator": "Anthony Bouch",
+    "judgedAt": "2026-08-06T04:41:27.328Z"
+  },
+  "F047:21": {
+    "caseId": "F047",
+    "page": 21,
+    "stratum": "born-digital-en",
+    "script": "english",
+    "lowestUsableTier": "T0",
+    "usableTiers": [
+      "T0",
+      "T1",
+      "T2",
+      "T3"
+    ],
+    "lowestStructurallyAdequateTier": "T1",
+    "structurallyAdequateTiers": [
+      "T1",
+      "T2",
+      "T3"
+    ],
+    "structuralAssessmentConfirmed": true,
+    "higherTierDegraded": false,
+    "degradedTiers": [],
+    "notes": null,
+    "annotator": "Anthony Bouch",
+    "judgedAt": "2026-08-06T04:41:45.248Z"
+  },
+  "F155:2": {
+    "caseId": "F155",
+    "page": 2,
+    "stratum": "layout-heavy-born-digital",
+    "script": "english",
+    "lowestUsableTier": "T0",
+    "usableTiers": [
+      "T0",
+      "T1",
+      "T2"
+    ],
+    "lowestStructurallyAdequateTier": "T1",
+    "structurallyAdequateTiers": [
+      "T1",
+      "T2"
+    ],
+    "structuralAssessmentConfirmed": true,
+    "higherTierDegraded": false,
+    "degradedTiers": [],
+    "notes": null,
+    "annotator": "Anthony Bouch",
+    "judgedAt": "2026-08-06T04:42:24.354Z"
+  },
+  "F155:153": {
+    "caseId": "F155",
+    "page": 153,
+    "stratum": "layout-heavy-born-digital",
+    "script": "english",
+    "lowestUsableTier": "T1",
+    "usableTiers": [
+      "T1",
+      "T2"
+    ],
+    "lowestStructurallyAdequateTier": "T1",
+    "structurallyAdequateTiers": [
+      "T1",
+      "T2"
+    ],
+    "structuralAssessmentConfirmed": true,
+    "higherTierDegraded": false,
+    "degradedTiers": [],
+    "notes": null,
+    "annotator": "Anthony Bouch",
+    "judgedAt": "2026-08-06T04:43:09.839Z"
+  },
+  "F120:7": {
+    "caseId": "F120",
+    "page": 7,
+    "stratum": "layout-heavy-born-digital",
+    "script": "mixed",
+    "lowestUsableTier": "T0",
+    "usableTiers": [
+      "T0",
+      "T1"
+    ],
+    "lowestStructurallyAdequateTier": "T1",
+    "structurallyAdequateTiers": [
+      "T1"
+    ],
+    "structuralAssessmentConfirmed": true,
+    "higherTierDegraded": false,
+    "degradedTiers": [],
+    "notes": null,
+    "annotator": "Anthony Bouch",
+    "judgedAt": "2026-08-06T04:44:20.296Z"
+  },
+  "F120:8": {
+    "caseId": "F120",
+    "page": 8,
+    "stratum": "layout-heavy-born-digital",
+    "script": "mixed",
+    "lowestUsableTier": "T3",
+    "usableTiers": [
+      "T3"
+    ],
+    "lowestStructurallyAdequateTier": "T3",
+    "structurallyAdequateTiers": [
+      "T3"
+    ],
+    "structuralAssessmentConfirmed": true,
+    "higherTierDegraded": false,
+    "degradedTiers": [],
+    "notes": null,
+    "annotator": "Anthony Bouch",
+    "judgedAt": "2026-08-06T04:44:59.468Z"
+  },
+  "F085:379": {
+    "caseId": "F085",
+    "page": 379,
+    "stratum": "scanned-degraded-en",
+    "script": "english",
+    "lowestUsableTier": "T2",
+    "usableTiers": [
+      "T2",
+      "T3"
+    ],
+    "lowestStructurallyAdequateTier": "T2",
+    "structurallyAdequateTiers": [
+      "T2",
+      "T3"
+    ],
+    "structuralAssessmentConfirmed": true,
+    "higherTierDegraded": false,
+    "degradedTiers": [],
+    "notes": null,
+    "annotator": "Anthony Bouch",
+    "judgedAt": "2026-08-06T04:45:20.222Z"
+  },
+  "F085:410": {
+    "caseId": "F085",
+    "page": 410,
+    "stratum": "scanned-degraded-en",
+    "script": "english",
+    "lowestUsableTier": "T2",
+    "usableTiers": [
+      "T2",
+      "T3"
+    ],
+    "lowestStructurallyAdequateTier": "T2",
+    "structurallyAdequateTiers": [
+      "T2",
+      "T3"
+    ],
+    "structuralAssessmentConfirmed": true,
+    "higherTierDegraded": false,
+    "degradedTiers": [],
+    "notes": null,
+    "annotator": "Anthony Bouch",
+    "judgedAt": "2026-08-06T04:45:36.972Z"
+  },
+  "F015:3": {
+    "caseId": "F015",
+    "page": 3,
+    "stratum": "scanned-degraded-en",
+    "script": "english",
+    "lowestUsableTier": "T2",
+    "usableTiers": [
+      "T2",
+      "T3"
+    ],
+    "lowestStructurallyAdequateTier": "T2",
+    "structurallyAdequateTiers": [
+      "T2",
+      "T3"
+    ],
+    "structuralAssessmentConfirmed": true,
+    "higherTierDegraded": false,
+    "degradedTiers": [],
+    "notes": null,
+    "annotator": "Anthony Bouch",
+    "judgedAt": "2026-08-06T04:45:59.502Z"
+  },
+  "F015:4": {
+    "caseId": "F015",
+    "page": 4,
+    "stratum": "scanned-degraded-en",
+    "script": "english",
+    "lowestUsableTier": "T2",
+    "usableTiers": [
+      "T2",
+      "T3"
+    ],
+    "lowestStructurallyAdequateTier": "T2",
+    "structurallyAdequateTiers": [
+      "T2",
+      "T3"
+    ],
+    "structuralAssessmentConfirmed": true,
+    "higherTierDegraded": false,
+    "degradedTiers": [],
+    "notes": null,
+    "annotator": "Anthony Bouch",
+    "judgedAt": "2026-08-06T04:46:17.672Z"
+  },
+  "F318:3": {
+    "caseId": "F318",
+    "page": 3,
+    "stratum": "scanned-degraded-thai-mixed",
+    "script": "mixed",
+    "lowestUsableTier": "T3",
+    "usableTiers": [
+      "T3"
+    ],
+    "lowestStructurallyAdequateTier": "T3",
+    "structurallyAdequateTiers": [
+      "T3"
+    ],
+    "structuralAssessmentConfirmed": true,
+    "higherTierDegraded": false,
+    "degradedTiers": [],
+    "notes": null,
+    "annotator": "Anthony Bouch",
+    "judgedAt": "2026-08-06T04:46:40.776Z"
+  },
+  "F318:84": {
+    "caseId": "F318",
+    "page": 84,
+    "stratum": "scanned-degraded-thai-mixed",
+    "script": "thai",
+    "lowestUsableTier": "T1",
+    "usableTiers": [
+      "T1",
+      "T2",
+      "T3"
+    ],
+    "lowestStructurallyAdequateTier": "T1",
+    "structurallyAdequateTiers": [
+      "T1",
+      "T2",
+      "T3"
+    ],
+    "structuralAssessmentConfirmed": true,
+    "higherTierDegraded": false,
+    "degradedTiers": [],
+    "notes": null,
+    "annotator": "Anthony Bouch",
+    "judgedAt": "2026-08-06T04:46:56.562Z"
+  },
+  "F279:1": {
+    "caseId": "F279",
+    "page": 1,
+    "stratum": "scanned-degraded-thai-mixed",
+    "script": "thai",
+    "lowestUsableTier": "T3",
+    "usableTiers": [
+      "T3"
+    ],
+    "lowestStructurallyAdequateTier": "T3",
+    "structurallyAdequateTiers": [
+      "T3"
+    ],
+    "structuralAssessmentConfirmed": true,
+    "higherTierDegraded": false,
+    "degradedTiers": [],
+    "notes": null,
+    "annotator": "Anthony Bouch",
+    "judgedAt": "2026-08-06T04:47:14.120Z"
+  },
+  "F279:2": {
+    "caseId": "F279",
+    "page": 2,
+    "stratum": "scanned-degraded-thai-mixed",
+    "script": "mixed",
+    "lowestUsableTier": "T3",
+    "usableTiers": [
+      "T3"
+    ],
+    "lowestStructurallyAdequateTier": "T3",
+    "structurallyAdequateTiers": [
+      "T3"
+    ],
+    "structuralAssessmentConfirmed": true,
+    "higherTierDegraded": false,
+    "degradedTiers": [],
+    "notes": null,
+    "annotator": "Anthony Bouch",
+    "judgedAt": "2026-08-06T04:47:31.958Z"
+  }
+}

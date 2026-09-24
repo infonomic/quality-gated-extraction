@@ -1,0 +1,172 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:forru:extraction-benchmark:benchmark-config:v1",
+  "title": "Extraction benchmark configuration",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "experimentId",
+    "seed",
+    "sample",
+    "inspection",
+    "routing",
+    "metrics",
+    "execution",
+    "cost"
+  ],
+  "properties": {
+    "$schema": { "type": "string" },
+    "schemaVersion": { "const": 1 },
+    "experimentId": { "type": "string", "minLength": 1 },
+    "seed": { "type": "string", "minLength": 1 },
+    "sample": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "strata",
+        "calibrationPerStratum",
+        "evaluationPerStratum",
+        "annotatedPagesPerDocument"
+      ],
+      "properties": {
+        "strata": {
+          "type": "array",
+          "minItems": 4,
+          "uniqueItems": true,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "calibrationPerStratum": { "type": "integer", "minimum": 1 },
+        "evaluationPerStratum": { "type": "integer", "minimum": 1 },
+        "annotatedPagesPerDocument": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "inspection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["minimumTextCharsPerPage", "fullPageImageAreaRatio", "mixedScriptMinimumRatio"],
+      "properties": {
+        "minimumTextCharsPerPage": { "type": "integer", "minimum": 0 },
+        "fullPageImageAreaRatio": { "type": "number", "minimum": 0, "maximum": 1 },
+        "mixedScriptMinimumRatio": { "type": "number", "minimum": 0, "maximum": 1 }
+      }
+    },
+    "routing": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["defaults", "thresholdGrid", "tuning", "maxEscalations"],
+      "properties": {
+        "defaults": { "$ref": "#/$defs/routingThresholds" },
+        "thresholdGrid": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "minimumTextLayerCoverage",
+            "maximumFullPageImageRatio",
+            "maximumEncodingAnomalyRatio"
+          ],
+          "properties": {
+            "minimumTextLayerCoverage": { "$ref": "#/$defs/ratioGrid" },
+            "maximumFullPageImageRatio": { "$ref": "#/$defs/ratioGrid" },
+            "maximumEncodingAnomalyRatio": { "$ref": "#/$defs/ratioGrid" }
+          }
+        },
+        "tuning": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["recordAllCandidates", "tieBreak"],
+          "properties": {
+            "recordAllCandidates": { "const": true },
+            "tieBreak": { "const": "conservative" }
+          }
+        },
+        "maxEscalations": { "type": "integer", "minimum": 0, "maximum": 3 }
+      }
+    },
+    "metrics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["textNormalisation"],
+      "properties": {
+        "textNormalisation": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "contractVersion",
+            "markup",
+            "unicodeForm",
+            "cerWhitespace",
+            "cerPunctuation",
+            "thaiWerWhitespace",
+            "englishWerWhitespace",
+            "mixedWerWhitespace",
+            "thaiWerSegmenter",
+            "englishWerSegmenter",
+            "mixedWerSegmenter",
+            "werPunctuation",
+            "case"
+          ],
+          "properties": {
+            "contractVersion": { "const": "text-comparison-v2" },
+            "markup": {
+              "const": "strip-html-tags-and-unwrap-paired-math-delimiters"
+            },
+            "unicodeForm": { "const": "NFC" },
+            "cerWhitespace": { "const": "strip-all-unicode-whitespace" },
+            "cerPunctuation": { "const": "preserve" },
+            "thaiWerWhitespace": { "const": "strip-all-before-segmentation" },
+            "englishWerWhitespace": { "const": "collapse-and-trim" },
+            "mixedWerWhitespace": { "const": "collapse-and-trim" },
+            "thaiWerSegmenter": { "const": "Intl.Segmenter:th:word:isWordLike" },
+            "englishWerSegmenter": { "const": "Intl.Segmenter:en:word:isWordLike" },
+            "mixedWerSegmenter": { "const": "Intl.Segmenter:th:word:isWordLike" },
+            "werPunctuation": { "const": "exclude-non-word-like-segments" },
+            "case": { "const": "preserve" }
+          }
+        }
+      }
+    },
+    "execution": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["concurrency", "timeoutMs"],
+      "properties": {
+        "concurrency": { "const": 1 },
+        "timeoutMs": { "type": "integer", "minimum": 1000 }
+      }
+    },
+    "cost": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["currency", "cpuMachineHour", "gpuMachineHour", "basis"],
+      "properties": {
+        "currency": { "type": "string", "pattern": "^[A-Z]{3}$" },
+        "cpuMachineHour": { "type": "number", "exclusiveMinimum": 0 },
+        "gpuMachineHour": { "type": "number", "exclusiveMinimum": 0 },
+        "basis": { "type": "string", "minLength": 1 }
+      }
+    }
+  },
+  "$defs": {
+    "ratioGrid": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "type": "number", "minimum": 0, "maximum": 1 }
+    },
+    "routingThresholds": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "minimumTextLayerCoverage",
+        "maximumFullPageImageRatio",
+        "maximumEncodingAnomalyRatio"
+      ],
+      "properties": {
+        "minimumTextLayerCoverage": { "type": "number", "minimum": 0, "maximum": 1 },
+        "maximumFullPageImageRatio": { "type": "number", "minimum": 0, "maximum": 1 },
+        "maximumEncodingAnomalyRatio": { "type": "number", "minimum": 0, "maximum": 1 }
+      }
+    }
+  }
+}

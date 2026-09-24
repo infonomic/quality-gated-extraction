@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "caseId": "F003",
+  "page": 40,
+  "partition": "evaluation",
+  "tier": "T3",
+  "providerStatus": "succeeded",
+  "providerWarnings": 0,
+  "providerTimingStatus": "unavailable",
+  "wallMs": 442776.042083,
+  "inspectionTextChars": 2623,
+  "outputCodePoints": 230,
+  "textRetention": {
+    "score": 0.08768585589020206,
+    "diagnosticThreshold": {
+      "value": 0.5,
+      "status": "provisional-test-fixture-not-frozen"
+    },
+    "wouldFlagAtDiagnosticThreshold": true
+  },
+  "outputThroughput": {
+    "value": 0.5194499659872872,
+    "unit": "output-unicode-codepoints-per-client-wall-second",
+    "status": "observed-client-side"
+  },
+  "interpretation": "Held-out diagnostic: the existing text-retention component flags the observed 91% shortfall at its provisional fixture threshold. F003 is evaluation evidence and was not used to tune the component, threshold, gate or routing policy."
+}

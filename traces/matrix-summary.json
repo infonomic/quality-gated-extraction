@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "runId": "phase3-matrix-20260805",
+  "sampleRunId": "phase2-authoritative-20260805",
+  "executionOrder": "calibration-first; provider-grouped-within-partition; concurrency-one",
+  "timeoutMs": 7200000,
+  "warmUp": true,
+  "denominators": {
+    "documents": 24,
+    "expectedDocumentCells": 72,
+    "supplementalFullDocumentT3Observations": 1,
+    "observedRecords": 73
+  },
+  "statuses": {
+    "succeeded": 72,
+    "failed": 0,
+    "unavailable": 0,
+    "censored": 1
+  }
+}

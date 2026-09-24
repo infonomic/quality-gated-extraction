@@ -1,0 +1,203 @@
+{
+  "schemaVersion": 1,
+  "status": "pending-human-annotation",
+  "subsetSha256": "ee618cc17acbcc1dd7099f96bdf9b8dfafc35f9024c92a835e02cff9db40c1b6",
+  "denominators": {
+    "evaluationDocuments": 16,
+    "evaluationPages": 32
+  },
+  "annotations": [
+    {
+      "caseId": "F307",
+      "page": 8,
+      "stratum": "born-digital-en",
+      "imageSha256": "e7753c1a346e44d8fcf573241da1c69cddccf8200e670867de1c16977e1721f4"
+    },
+    {
+      "caseId": "F307",
+      "page": 10,
+      "stratum": "born-digital-en",
+      "imageSha256": "ab5d084c720c29a7f2900d3587ee77b7e1d033651fd870a3b9748e9afe98d505"
+    },
+    {
+      "caseId": "F196",
+      "page": 5,
+      "stratum": "born-digital-en",
+      "imageSha256": "45a27222e3639acd21831faeea70de00ac88f682b7357991531645e9beeda1ca"
+    },
+    {
+      "caseId": "F196",
+      "page": 10,
+      "stratum": "born-digital-en",
+      "imageSha256": "8f48e48441ca9d37506e30f32698cd0bb312046f87f28d22703e79fa33fe3d2e"
+    },
+    {
+      "caseId": "F232",
+      "page": 7,
+      "stratum": "born-digital-en",
+      "imageSha256": "8d6de0d6b46cf2d6c071d34d9422d64e712d0144898d3092587eee205a3b8769"
+    },
+    {
+      "caseId": "F232",
+      "page": 47,
+      "stratum": "born-digital-en",
+      "imageSha256": "887b020115175e54c15ec23ca14e3bafaaaed2c3ea1a1bd10293e83c716e34da"
+    },
+    {
+      "caseId": "F023",
+      "page": 10,
+      "stratum": "born-digital-en",
+      "imageSha256": "e3ce5dcb54991ee871a578885e59145ae8b4a381a5a438df6f903b8b017a29b7"
+    },
+    {
+      "caseId": "F023",
+      "page": 15,
+      "stratum": "born-digital-en",
+      "imageSha256": "c6ffcd8267f291cb88052b04edc2aa8f187787a47d2e9553f9f510d33f2f5b21"
+    },
+    {
+      "caseId": "F296",
+      "page": 19,
+      "stratum": "layout-heavy-born-digital",
+      "imageSha256": "9b2d051714f7d018b882178090db94cd2e26024c7fc081245e29f5bcbd1a7907"
+    },
+    {
+      "caseId": "F296",
+      "page": 38,
+      "stratum": "layout-heavy-born-digital",
+      "imageSha256": "c980ec7b6b27eba24a05b4700405fe75d81e7fc02afdd184fa7d9cc87644370c"
+    },
+    {
+      "caseId": "F003",
+      "page": 38,
+      "stratum": "layout-heavy-born-digital",
+      "imageSha256": "05e1f31355cbea911b15e0ee2d213630b6f98884245d3619f8e0903f66bb1f92"
+    },
+    {
+      "caseId": "F003",
+      "page": 40,
+      "stratum": "layout-heavy-born-digital",
+      "imageSha256": "6b47d03bd8cb8dcd56a146b23d366956971eed099d62d39605f9ee33b2926a6b"
+    },
+    {
+      "caseId": "F314",
+      "page": 5,
+      "stratum": "layout-heavy-born-digital",
+      "imageSha256": "fbba6caee3af6ec0ab95cad671565d9edc39900231bd176a8905a1951257be99"
+    },
+    {
+      "caseId": "F314",
+      "page": 6,
+      "stratum": "layout-heavy-born-digital",
+      "imageSha256": "d0a398ee7e54d020867c98a6dafbcf1ea17bb292e802b3330aff507676ba147a"
+    },
+    {
+      "caseId": "F300",
+      "page": 50,
+      "stratum": "layout-heavy-born-digital",
+      "imageSha256": "a2a3129a879b909a9441d642fdc45c40437afd9bc2d2ae09e0d2b4bc182f639a"
+    },
+    {
+      "caseId": "F300",
+      "page": 54,
+      "stratum": "layout-heavy-born-digital",
+      "imageSha256": "4d681104fa2e493f597fd6b0779b2c4c22060d807d505f25d250f278d8b9dad3"
+    },
+    {
+      "caseId": "F313",
+      "page": 16,
+      "stratum": "scanned-degraded-en",
+      "imageSha256": "7f80807ff06b838c19dd3e3149d61104a9ac7df5c57f8b78b9c092cc11b2a3ac"
+    },
+    {
+      "caseId": "F313",
+      "page": 27,
+      "stratum": "scanned-degraded-en",
+      "imageSha256": "fa40ef5a1689fee2cb19a761da866af9453e375dfda72df8c520298f07f23ee7"
+    },
+    {
+      "caseId": "F227",
+      "page": 27,
+      "stratum": "scanned-degraded-en",
+      "imageSha256": "0c03165248dc9338228fdbc0a85fa868d9fe86a78abbaabc2cd8f90cea5f5057"
+    },
+    {
+      "caseId": "F227",
+      "page": 46,
+      "stratum": "scanned-degraded-en",
+      "imageSha256": "f4a336b347e50327380099e7c4294967ca577b0dc90d3328ae5701c980309ab7"
+    },
+    {
+      "caseId": "F067",
+      "page": 3,
+      "stratum": "scanned-degraded-en",
+      "imageSha256": "736d97ad96ecc35aa42c0a29c8e0217228d960cd296ee73541987a9c684afdef"
+    },
+    {
+      "caseId": "F067",
+      "page": 27,
+      "stratum": "scanned-degraded-en",
+      "imageSha256": "9a15ba309627133ae6780a56509f2efcf9b478e83e0b518c939d894193ed7c78"
+    },
+    {
+      "caseId": "F152",
+      "page": 5,
+      "stratum": "scanned-degraded-en",
+      "imageSha256": "d2cd7412f42d645263b914545950c17f3e37062616f41057374c0b4f0220cd98"
+    },
+    {
+      "caseId": "F152",
+      "page": 8,
+      "stratum": "scanned-degraded-en",
+      "imageSha256": "58e1d098b6354ad5cf22af5070e79e0a5bada3453e6f5aea12737881b4276d55"
+    },
+    {
+      "caseId": "F131",
+      "page": 45,
+      "stratum": "scanned-degraded-thai-mixed",
+      "imageSha256": "5cc7e16b87528acc850a465b684422e8b7e60d303b7ae55f146ad4dfae651703"
+    },
+    {
+      "caseId": "F131",
+      "page": 85,
+      "stratum": "scanned-degraded-thai-mixed",
+      "imageSha256": "5a6eab0fce6b8945ae120672352d9ba04178573277dc68c50449ee3de8256b94"
+    },
+    {
+      "caseId": "F236",
+      "page": 1,
+      "stratum": "scanned-degraded-thai-mixed",
+      "imageSha256": "d982ae0a06168338dcf91a9fad51515d55dbc0d3e7b088adadde140e155bd32c"
+    },
+    {
+      "caseId": "F236",
+      "page": 7,
+      "stratum": "scanned-degraded-thai-mixed",
+      "imageSha256": "8401a047351a4713e10627a85f94d4141405bbecb2a5ba5f8f063d9c14ca11d7"
+    },
+    {
+      "caseId": "F273",
+      "page": 3,
+      "stratum": "scanned-degraded-thai-mixed",
+      "imageSha256": "f2969a81f265aa1996c871c17f75913e84f21d1a278b46ed041eade0eb72a5d4"
+    },
+    {
+      "caseId": "F273",
+      "page": 131,
+      "stratum": "scanned-degraded-thai-mixed",
+      "imageSha256": "a690934ff610462716eed9506cbaadcc5613dac15bbaf13df84b256b9192a563"
+    },
+    {
+      "caseId": "F148",
+      "page": 2,
+      "stratum": "scanned-degraded-thai-mixed",
+      "imageSha256": "129e7be807681599a5ee29e946f927f49bf9be94c844f166ab88e396258c551c"
+    },
+    {
+      "caseId": "F148",
+      "page": 3,
+      "stratum": "scanned-degraded-thai-mixed",
+      "imageSha256": "6d238f04743a7e3c56c5092e913e1c654c80073cc2479ac3c86b09b60c822e28"
+    }
+  ]
+}

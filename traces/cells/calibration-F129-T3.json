@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "caseId": "F129",
+  "tier": "T3",
+  "provider": {
+    "id": "paddleocr-vl",
+    "version": "paddleocr@3.7.0;paddlepaddle@3.2.1;paddlex@3.7.2;api@0.1.0",
+    "model": "PaddleOCR-VL-0.9B",
+    "execution": "local"
+  },
+  "status": "censored",
+  "cache": {
+    "hit": false
+  },
+  "startedAt": "2026-08-05T17:07:00+07:00",
+  "finishedAt": "2026-08-05T17:31:21+07:00",
+  "observedMinimumWallMs": 1461000,
+  "error": {
+    "code": "CLIENT_ABORTED_DIAGNOSTIC",
+    "message": "Client aborted after at least 24 minutes 21 seconds; the server continued computing until restart. The observation bracket is reconstructed to the recorded lower-bound precision because exact request timestamps were not retained."
+  }
+}

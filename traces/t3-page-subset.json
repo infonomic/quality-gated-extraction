@@ -1,0 +1,282 @@
+{
+  "schemaVersion": 1,
+  "status": "frozen",
+  "declaredAt": "2026-08-05",
+  "scope": "T3 independent page-image submissions only; full-document T3 remains censored",
+  "selectionRule": {
+    "id": "frozen-sample-page-score-v1",
+    "countPerDocument": 2,
+    "implementation": "src/sample.ts#selectPages",
+    "seed": "forru-icadl-2026-v1",
+    "tieBreak": "sha256(seed, caseId:page, page number)",
+    "note": "The identical rule that froze evaluation annotation pages is applied to calibration; frozen evaluation pages are independently reproduced and asserted unchanged."
+  },
+  "provenance": {
+    "configHash": "0149dd9809fa448c4d22071208878106bce70251792f2b62a1ffe789905a3516",
+    "inspectionHash": "ce836f0994387d322807e6b8eb44188879ea2ea89df3e4025d547c20f8c17594",
+    "sampleHash": "024cdcfeb35fbc0bf1acdb7b2b0b51e0f5a269797c3cdca970a03f1e0a2da3b1",
+    "policyArtifactHash": "85b09fb750ae6601deff6644f3c52ec697573354bb18d5f3ddd1781d46457c25",
+    "policyHash": "c1f14b50218c6ccb242af166ad660ea1bcb9af64e8b9f86d0c9c30985e9976fb"
+  },
+  "evaluationBoundary": {
+    "evaluationMatrixCellsPresentAtPolicyFreeze": 0,
+    "evaluationMatrixCellsPresentAtDeclaration": 0,
+    "evaluationCaseIdsOpened": [],
+    "evaluationArtifactsOpenedAtDeclaration": []
+  },
+  "denominators": {
+    "calibrationDocuments": 8,
+    "calibrationPages": 16,
+    "evaluationDocuments": 16,
+    "evaluationPages": 32,
+    "totalDocuments": 24,
+    "totalPages": 48,
+    "byStratum": {
+      "born-digital-en": {
+        "calibrationDocuments": 2,
+        "calibrationPages": 4,
+        "evaluationDocuments": 4,
+        "evaluationPages": 8
+      },
+      "layout-heavy-born-digital": {
+        "calibrationDocuments": 2,
+        "calibrationPages": 4,
+        "evaluationDocuments": 4,
+        "evaluationPages": 8
+      },
+      "scanned-degraded-en": {
+        "calibrationDocuments": 2,
+        "calibrationPages": 4,
+        "evaluationDocuments": 4,
+        "evaluationPages": 8
+      },
+      "scanned-degraded-thai-mixed": {
+        "calibrationDocuments": 2,
+        "calibrationPages": 4,
+        "evaluationDocuments": 4,
+        "evaluationPages": 8
+      }
+    }
+  },
+  "calibration": [
+    {
+      "caseId": "F129",
+      "stratum": "born-digital-en",
+      "documentPageCount": 10,
+      "pages": [
+        1,
+        10
+      ]
+    },
+    {
+      "caseId": "F047",
+      "stratum": "born-digital-en",
+      "documentPageCount": 56,
+      "pages": [
+        18,
+        21
+      ]
+    },
+    {
+      "caseId": "F155",
+      "stratum": "layout-heavy-born-digital",
+      "documentPageCount": 154,
+      "pages": [
+        2,
+        153
+      ]
+    },
+    {
+      "caseId": "F120",
+      "stratum": "layout-heavy-born-digital",
+      "documentPageCount": 8,
+      "pages": [
+        7,
+        8
+      ]
+    },
+    {
+      "caseId": "F085",
+      "stratum": "scanned-degraded-en",
+      "documentPageCount": 450,
+      "pages": [
+        379,
+        410
+      ]
+    },
+    {
+      "caseId": "F015",
+      "stratum": "scanned-degraded-en",
+      "documentPageCount": 4,
+      "pages": [
+        3,
+        4
+      ]
+    },
+    {
+      "caseId": "F318",
+      "stratum": "scanned-degraded-thai-mixed",
+      "documentPageCount": 94,
+      "pages": [
+        3,
+        84
+      ]
+    },
+    {
+      "caseId": "F279",
+      "stratum": "scanned-degraded-thai-mixed",
+      "documentPageCount": 36,
+      "pages": [
+        1,
+        2
+      ]
+    }
+  ],
+  "evaluation": [
+    {
+      "caseId": "F307",
+      "stratum": "born-digital-en",
+      "documentPageCount": 10,
+      "pages": [
+        8,
+        10
+      ]
+    },
+    {
+      "caseId": "F196",
+      "stratum": "born-digital-en",
+      "documentPageCount": 10,
+      "pages": [
+        5,
+        10
+      ]
+    },
+    {
+      "caseId": "F232",
+      "stratum": "born-digital-en",
+      "documentPageCount": 184,
+      "pages": [
+        7,
+        47
+      ]
+    },
+    {
+      "caseId": "F023",
+      "stratum": "born-digital-en",
+      "documentPageCount": 122,
+      "pages": [
+        10,
+        15
+      ]
+    },
+    {
+      "caseId": "F296",
+      "stratum": "layout-heavy-born-digital",
+      "documentPageCount": 63,
+      "pages": [
+        19,
+        38
+      ]
+    },
+    {
+      "caseId": "F003",
+      "stratum": "layout-heavy-born-digital",
+      "documentPageCount": 52,
+      "pages": [
+        38,
+        40
+      ]
+    },
+    {
+      "caseId": "F314",
+      "stratum": "layout-heavy-born-digital",
+      "documentPageCount": 103,
+      "pages": [
+        5,
+        6
+      ]
+    },
+    {
+      "caseId": "F300",
+      "stratum": "layout-heavy-born-digital",
+      "documentPageCount": 141,
+      "pages": [
+        50,
+        54
+      ]
+    },
+    {
+      "caseId": "F313",
+      "stratum": "scanned-degraded-en",
+      "documentPageCount": 28,
+      "pages": [
+        16,
+        27
+      ]
+    },
+    {
+      "caseId": "F227",
+      "stratum": "scanned-degraded-en",
+      "documentPageCount": 173,
+      "pages": [
+        27,
+        46
+      ]
+    },
+    {
+      "caseId": "F067",
+      "stratum": "scanned-degraded-en",
+      "documentPageCount": 36,
+      "pages": [
+        3,
+        27
+      ]
+    },
+    {
+      "caseId": "F152",
+      "stratum": "scanned-degraded-en",
+      "documentPageCount": 12,
+      "pages": [
+        5,
+        8
+      ]
+    },
+    {
+      "caseId": "F131",
+      "stratum": "scanned-degraded-thai-mixed",
+      "documentPageCount": 122,
+      "pages": [
+        45,
+        85
+      ]
+    },
+    {
+      "caseId": "F236",
+      "stratum": "scanned-degraded-thai-mixed",
+      "documentPageCount": 28,
+      "pages": [
+        1,
+        7
+      ]
+    },
+    {
+      "caseId": "F273",
+      "stratum": "scanned-degraded-thai-mixed",
+      "documentPageCount": 154,
+      "pages": [
+        3,
+        131
+      ]
+    },
+    {
+      "caseId": "F148",
+      "stratum": "scanned-degraded-thai-mixed",
+      "documentPageCount": 4,
+      "pages": [
+        2,
+        3
+      ]
+    }
+  ],
+  "reportingDecision": "Retain four evaluation documents and eight evaluation pages per stratum. Report per-stratum outcomes as raw counts with denominators, not population rates."
+}

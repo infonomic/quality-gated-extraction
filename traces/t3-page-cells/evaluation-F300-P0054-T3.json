@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "caseId": "F300",
+  "page": 54,
+  "inputContentHash": "4d681104fa2e493f597fd6b0779b2c4c22060d807d505f25d250f278d8b9dad3",
+  "tier": "T3",
+  "provider": {
+    "id": "paddleocr-vl",
+    "version": "paddleocr@3.7.0;paddlepaddle@3.2.1;paddlex@3.7.2;api@0.1.0",
+    "model": "PaddleOCR-VL-0.9B",
+    "execution": "local"
+  },
+  "status": "succeeded",
+  "cache": {
+    "hit": false,
+    "key": "fff4ab7ebc9486f8a37d9ec7fca95de86e51ff2d8efb7eb886d638ca2da27bbb",
+    "lookupMs": 0.06162500008940697
+  },
+  "startedAt": "2026-08-05T13:59:32.524Z",
+  "finishedAt": "2026-08-05T13:59:44.642Z",
+  "artifactKey": "fff4ab7ebc9486f8a37d9ec7fca95de86e51ff2d8efb7eb886d638ca2da27bbb",
+  "wallMs": 12107.852667000145
+}

@@ -1,0 +1,48 @@
+{
+  "name": "@forru/extraction-benchmark",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "scripts": {
+    "capture:environment": "tsx src/capture-environment.ts",
+    "probe:providers": "tsx src/probe-providers.ts",
+    "freeze:sample": "tsx src/sample.ts",
+    "budget:t3": "tsx src/t3-budget.ts",
+    "budget:t3-pages": "tsx src/t3-page-budget.ts",
+    "predeclare:t3-pages": "tsx src/predeclare-t3-pages.ts",
+    "finalise:phase2": "tsx src/phase2-run.ts",
+    "run:matrix": "tsx src/run-matrix.ts",
+    "run:t3-pages": "tsx src/run-t3-pages.ts",
+    "tune:policy": "tsx src/tune-policy.ts",
+    "calibrate:gate": "tsx src/calibrate-quality-gate.ts",
+    "analyse:policies": "tsx src/run-policy-analysis.ts",
+    "export:paper": "tsx src/export-paper-values.ts",
+    "summarise:matrix": "tsx src/summarise-matrix.ts",
+    "summarise:t3-pages": "tsx src/summarise-t3-pages.ts",
+    "prepare:annotations": "tsx src/prepare-annotations.ts",
+    "adjudicate": "tsx tools/adjudicate.ts",
+    "fold:oracle": "tsx src/fold-oracle.ts",
+    "validate:annotations": "tsx src/validate-annotations.ts",
+    "audit:character-sanity": "tsx src/audit-character-sanity.ts",
+    "test": "vitest run --mode=node",
+    "test:watch": "vitest --mode=node",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@byline/extract-tika": "workspace:*",
+    "ajv": "^8.20.0",
+    "pdfjs-dist": "6.3.289",
+    "pg": "8.23.0",
+    "undici": "8.10.2"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.2",
+    "@types/pg": "8.23.1",
+    "tsx": "^4.23.15",
+    "typescript": "7.0.2",
+    "vitest": "^5.0.1"
+  }
+}

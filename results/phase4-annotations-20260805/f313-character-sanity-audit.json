@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "caseId": "F313",
+  "page": 27,
+  "tier": "T3",
+  "component": "characterSanity",
+  "score": 1,
+  "diagnosticThreshold": {
+    "value": 0.95,
+    "status": "provisional-test-fixture-not-frozen"
+  },
+  "wouldFlagAtDiagnosticThreshold": false,
+  "input": "raw-provider-text-before-comparison-normalisation",
+  "interpretation": "Held-out diagnostic: the current component detects long identical-character runs but not the observed spaced-symbol repetition loop. F313 is evaluation evidence and was not used to tune the threshold, gate or routing semantics."
+}

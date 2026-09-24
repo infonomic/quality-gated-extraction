@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "status": "oracle-complete",
+  "oracle": {
+    "numerator": 32,
+    "denominator": 32,
+    "excludedCount": 0
+  },
+  "structure": {
+    "partial": 0,
+    "complete": 0,
+    "unavailable": 32,
+    "pending": 0,
+    "denominator": 32,
+    "excludedCount": 32
+  },
+  "textReference": {
+    "numerator": 0,
+    "denominator": 32,
+    "excludedCount": 32,
+    "decision": "real-document CER/WER unavailable"
+  },
+  "byStratum": {
+    "born-digital-en": { "expected": 8, "oracleComplete": 8, "pending": 0 },
+    "layout-heavy-born-digital": { "expected": 8, "oracleComplete": 8, "pending": 0 },
+    "scanned-degraded-en": { "expected": 8, "oracleComplete": 8, "pending": 0 },
+    "scanned-degraded-thai-mixed": { "expected": 8, "oracleComplete": 8, "pending": 0 }
+  },
+  "analysisGate": "open",
+  "reason": "Both required human-oracle axes are complete for all 32 frozen evaluation pages."
+}

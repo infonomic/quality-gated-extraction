@@ -1,0 +1,1190 @@
+{
+  "schemaVersion": 1,
+  "status": "complete",
+  "runId": "phase3-matrix-20260805",
+  "routingPolicyHash": "c1f14b50218c6ccb242af166ad660ea1bcb9af64e8b9f86d0c9c30985e9976fb",
+  "gatePolicyHash": "3f8d9674a8ecbb39a17bb1aeab4fe77e814fef0de8c693965064a0d54685cd8d",
+  "evaluationOracleHash": "70d6d9a266cc87b6d886e0b582c67be5d0db8ad1df12564b8a3d8e93fd2e792b",
+  "analysis": {
+    "schemaVersion": 1,
+    "denominator": {
+      "documents": 16,
+      "qualityPages": 32
+    },
+    "policies": {
+      "allT0": {
+        "selectedDocuments": {
+          "numerator": 16,
+          "denominator": 16,
+          "excludedCount": 0,
+          "value": 16
+        },
+        "observedTimingDocuments": {
+          "numerator": 16,
+          "denominator": 16,
+          "excludedCount": 0,
+          "value": 16
+        },
+        "timingCoverage": {
+          "numerator": 16,
+          "denominator": 16,
+          "excludedCount": 0,
+          "value": 1
+        },
+        "tierCounts": {
+          "T0": {
+            "numerator": 16,
+            "denominator": 16,
+            "excludedCount": 0,
+            "value": 16
+          },
+          "T1": {
+            "numerator": 0,
+            "denominator": 16,
+            "excludedCount": 0,
+            "value": 0
+          },
+          "T2": {
+            "numerator": 0,
+            "denominator": 16,
+            "excludedCount": 0,
+            "value": 0
+          },
+          "T3": {
+            "numerator": 0,
+            "denominator": 16,
+            "excludedCount": 0,
+            "value": 0
+          }
+        },
+        "observedWallMs": {
+          "numerator": 7621.621043000002,
+          "denominator": 16,
+          "excludedCount": 0,
+          "value": 7621.621043000002,
+          "label": "observed"
+        },
+        "meanWallMs": {
+          "numerator": 7621.621043000002,
+          "denominator": 16,
+          "excludedCount": 0,
+          "value": 476.3513151875001
+        },
+        "quality": {
+          "scope": "predeclared-evaluation-pages",
+          "pages": {
+            "numerator": 32,
+            "denominator": 32,
+            "excludedCount": 0,
+            "value": 1
+          },
+          "gateErrors": {
+            "readingSufficiency": {
+              "falseAccepts": {
+                "numerator": 18,
+                "denominator": 32,
+                "excludedCount": 0,
+                "value": 0.5625
+              },
+              "falseEscalations": {
+                "numerator": 0,
+                "denominator": 32,
+                "excludedCount": 0,
+                "value": 0
+              }
+            },
+            "structuralAdequacy": {
+              "falseAccepts": {
+                "numerator": 30,
+                "denominator": 32,
+                "excludedCount": 0,
+                "value": 0.9375
+              },
+              "falseEscalations": {
+                "numerator": 0,
+                "denominator": 32,
+                "excludedCount": 0,
+                "value": 0
+              }
+            }
+          }
+        }
+      },
+      "staticInspection": {
+        "selectedDocuments": {
+          "numerator": 16,
+          "denominator": 16,
+          "excludedCount": 0,
+          "value": 16
+        },
+        "observedTimingDocuments": {
+          "numerator": 16,
+          "denominator": 16,
+          "excludedCount": 0,
+          "value": 16
+        },
+        "timingCoverage": {
+          "numerator": 16,
+          "denominator": 16,
+          "excludedCount": 0,
+          "value": 1
+        },
+        "tierCounts": {
+          "T0": {
+            "numerator": 4,
+            "denominator": 16,
+            "excludedCount": 0,
+            "value": 4
+          },
+          "T1": {
+            "numerator": 4,
+            "denominator": 16,
+            "excludedCount": 0,
+            "value": 4
+          },
+          "T2": {
+            "numerator": 8,
+            "denominator": 16,
+            "excludedCount": 0,
+            "value": 8
+          },
+          "T3": {
+            "numerator": 0,
+            "denominator": 16,
+            "excludedCount": 0,
+            "value": 0
+          }
+        },
+        "observedWallMs": {
+          "numerator": 906740.900875,
+          "denominator": 16,
+          "excludedCount": 0,
+          "value": 906740.900875,
+          "label": "observed"
+        },
+        "meanWallMs": {
+          "numerator": 906740.900875,
+          "denominator": 16,
+          "excludedCount": 0,
+          "value": 56671.3063046875
+        },
+        "quality": {
+          "scope": "predeclared-evaluation-pages",
+          "pages": {
+            "numerator": 32,
+            "denominator": 32,
+            "excludedCount": 0,
+            "value": 1
+          },
+          "gateErrors": {
+            "readingSufficiency": {
+              "falseAccepts": {
+                "numerator": 12,
+                "denominator": 32,
+                "excludedCount": 0,
+                "value": 0.375
+              },
+              "falseEscalations": {
+                "numerator": 9,
+                "denominator": 32,
+                "excludedCount": 0,
+                "value": 0.28125
+              }
+            },
+            "structuralAdequacy": {
+              "falseAccepts": {
+                "numerator": 16,
+                "denominator": 32,
+                "excludedCount": 0,
+                "value": 0.5
+              },
+              "falseEscalations": {
+                "numerator": 2,
+                "denominator": 32,
+                "excludedCount": 0,
+                "value": 0.0625
+              }
+            }
+          }
+        }
+      },
+      "gated": {
+        "selectedDocuments": {
+          "numerator": 16,
+          "denominator": 16,
+          "excludedCount": 0,
+          "value": 16
+        },
+        "observedTimingDocuments": {
+          "numerator": 7,
+          "denominator": 16,
+          "excludedCount": 9,
+          "value": 7
+        },
+        "timingCoverage": {
+          "numerator": 7,
+          "denominator": 16,
+          "excludedCount": 9,
+          "value": 0.4375
+        },
+        "tierCounts": {
+          "T0": {
+            "numerator": 4,
+            "denominator": 16,
+            "excludedCount": 0,
+            "value": 4
+          },
+          "T1": {
+            "numerator": 0,
+            "denominator": 16,
+            "excludedCount": 0,
+            "value": 0
+          },
+          "T2": {
+            "numerator": 3,
+            "denominator": 16,
+            "excludedCount": 0,
+            "value": 3
+          },
+          "T3": {
+            "numerator": 9,
+            "denominator": 16,
+            "excludedCount": 0,
+            "value": 9
+          }
+        },
+        "observedWallMs": {
+          "numerator": 101464.79808400027,
+          "denominator": 7,
+          "excludedCount": 9,
+          "value": 101464.79808400027,
+          "label": "observed"
+        },
+        "meanWallMs": {
+          "numerator": 101464.79808400027,
+          "denominator": 7,
+          "excludedCount": 9,
+          "value": 14494.971154857181
+        },
+        "quality": {
+          "scope": "predeclared-evaluation-pages",
+          "pages": {
+            "numerator": 32,
+            "denominator": 32,
+            "excludedCount": 0,
+            "value": 1
+          },
+          "gateErrors": {
+            "readingSufficiency": {
+              "falseAccepts": {
+                "numerator": 9,
+                "denominator": 32,
+                "excludedCount": 0,
+                "value": 0.28125
+              },
+              "falseEscalations": {
+                "numerator": 14,
+                "denominator": 32,
+                "excludedCount": 0,
+                "value": 0.4375
+              }
+            },
+            "structuralAdequacy": {
+              "falseAccepts": {
+                "numerator": 13,
+                "denominator": 32,
+                "excludedCount": 0,
+                "value": 0.40625
+              },
+              "falseEscalations": {
+                "numerator": 13,
+                "denominator": 32,
+                "excludedCount": 0,
+                "value": 0.40625
+              }
+            }
+          }
+        }
+      }
+    },
+    "allT3PageBaseline": {
+      "scope": "predeclared-independent-page-submissions",
+      "label": "sampled",
+      "pages": {
+        "numerator": 32,
+        "denominator": 32,
+        "excludedCount": 0,
+        "value": 32
+      },
+      "observedWallMs": {
+        "numerator": 2046452.8079180005,
+        "denominator": 32,
+        "excludedCount": 0,
+        "value": 2046452.8079180005
+      },
+      "limitation": "Not a completed full-document all-T3 policy arm.",
+      "quality": {
+        "readingSufficiency": {
+          "falseAccepts": {
+            "numerator": 3,
+            "denominator": 32,
+            "excludedCount": 0,
+            "value": 0.09375
+          },
+          "falseEscalations": {
+            "numerator": 22,
+            "denominator": 32,
+            "excludedCount": 0,
+            "value": 0.6875
+          }
+        },
+        "structuralAdequacy": {
+          "falseAccepts": {
+            "numerator": 3,
+            "denominator": 32,
+            "excludedCount": 0,
+            "value": 0.09375
+          },
+          "falseEscalations": {
+            "numerator": 22,
+            "denominator": 32,
+            "excludedCount": 0,
+            "value": 0.6875
+          }
+        }
+      }
+    }
+  },
+  "decisions": [
+    {
+      "caseId": "F307",
+      "stratum": "born-digital-en",
+      "initial": {
+        "initialTier": "T0",
+        "rationale": [
+          "TEXT_LAYER_INTACT"
+        ],
+        "confidence": 1
+      },
+      "status": "accepted",
+      "selectedTier": "T0",
+      "steps": [
+        {
+          "tier": "T0",
+          "artifactKey": "71b508746e84b1a16dc17f232ec9c10477f3062991d65490bc24a29634daabb1",
+          "gate": {
+            "passed": true,
+            "components": {
+              "characterSanity": 1,
+              "textRetention": 1,
+              "usablePageRatio": null,
+              "structuralYield": null,
+              "scriptConsistency": 0.9999596073837702
+            },
+            "reasons": []
+          },
+          "reasons": []
+        }
+      ],
+      "t3Scope": "two-predeclared-page-submissions-not-full-document"
+    },
+    {
+      "caseId": "F196",
+      "stratum": "born-digital-en",
+      "initial": {
+        "initialTier": "T0",
+        "rationale": [
+          "TEXT_LAYER_INTACT"
+        ],
+        "confidence": 1
+      },
+      "status": "accepted",
+      "selectedTier": "T0",
+      "steps": [
+        {
+          "tier": "T0",
+          "artifactKey": "b6d03cb3dc136bca91530b8b0b4b214c033506789654483bd31768400de3e2e1",
+          "gate": {
+            "passed": true,
+            "components": {
+              "characterSanity": 0.9986398700771417,
+              "textRetention": 1,
+              "usablePageRatio": null,
+              "structuralYield": null,
+              "scriptConsistency": 1
+            },
+            "reasons": []
+          },
+          "reasons": []
+        }
+      ],
+      "t3Scope": "two-predeclared-page-submissions-not-full-document"
+    },
+    {
+      "caseId": "F232",
+      "stratum": "born-digital-en",
+      "initial": {
+        "initialTier": "T0",
+        "rationale": [
+          "TEXT_LAYER_INTACT"
+        ],
+        "confidence": 1
+      },
+      "status": "accepted",
+      "selectedTier": "T0",
+      "steps": [
+        {
+          "tier": "T0",
+          "artifactKey": "be87a736569785b73242cff5d111145e5af9da7cf268d04472fae867e12dab7a",
+          "gate": {
+            "passed": true,
+            "components": {
+              "characterSanity": 0.9961067092018517,
+              "textRetention": 1,
+              "usablePageRatio": null,
+              "structuralYield": null,
+              "scriptConsistency": 0.9973545906502472
+            },
+            "reasons": []
+          },
+          "reasons": []
+        }
+      ],
+      "t3Scope": "two-predeclared-page-submissions-not-full-document"
+    },
+    {
+      "caseId": "F023",
+      "stratum": "born-digital-en",
+      "initial": {
+        "initialTier": "T0",
+        "rationale": [
+          "TEXT_LAYER_INTACT"
+        ],
+        "confidence": 1
+      },
+      "status": "accepted",
+      "selectedTier": "T0",
+      "steps": [
+        {
+          "tier": "T0",
+          "artifactKey": "7567a9000f7ec7741542f7f7ba93112e8195c08c69ff196f104f3f22fcb29613",
+          "gate": {
+            "passed": true,
+            "components": {
+              "characterSanity": 0.9967116371507498,
+              "textRetention": 1,
+              "usablePageRatio": null,
+              "structuralYield": null,
+              "scriptConsistency": 0.9972616246681016
+            },
+            "reasons": []
+          },
+          "reasons": []
+        }
+      ],
+      "t3Scope": "two-predeclared-page-submissions-not-full-document"
+    },
+    {
+      "caseId": "F296",
+      "stratum": "layout-heavy-born-digital",
+      "initial": {
+        "initialTier": "T1",
+        "rationale": [
+          "STRUCTURE_COMPLEXITY"
+        ],
+        "confidence": 1
+      },
+      "status": "accepted",
+      "selectedTier": "T3",
+      "steps": [
+        {
+          "tier": "T1",
+          "artifactKey": "9ccb5653db861796bca0175bf6b0ca2bfeceaa7ca97f8524095306c0ade2aa49",
+          "gate": {
+            "passed": false,
+            "components": {
+              "characterSanity": 0.848581251694081,
+              "textRetention": 1,
+              "usablePageRatio": 0.873015873015873,
+              "structuralYield": 1,
+              "scriptConsistency": 0.9925097358665977
+            },
+            "reasons": [
+              "CHARACTER_SANITY_FAILED"
+            ]
+          },
+          "reasons": [
+            "CHARACTER_SANITY_FAILED"
+          ],
+          "nextTier": "T2"
+        },
+        {
+          "tier": "T2",
+          "artifactKey": "406bf87ca19322e2eb3bd6a2dbdd0b81c4fa515772845ec322387f61e6b5faf2",
+          "gate": {
+            "passed": false,
+            "components": {
+              "characterSanity": 0.848036123853211,
+              "textRetention": 1,
+              "usablePageRatio": 0.8571428571428571,
+              "structuralYield": 1,
+              "scriptConsistency": 0.9926855023110098
+            },
+            "reasons": [
+              "CHARACTER_SANITY_FAILED"
+            ]
+          },
+          "reasons": [
+            "CHARACTER_SANITY_FAILED"
+          ],
+          "nextTier": "T3"
+        },
+        {
+          "tier": "T3",
+          "artifactKey": "f233d633feee4d63c4925629dba79ecab4d94559257900ac97fd5263e2749f8d",
+          "gate": {
+            "passed": true,
+            "components": {
+              "characterSanity": 1,
+              "textRetention": 1,
+              "usablePageRatio": 1,
+              "structuralYield": 1,
+              "scriptConsistency": 1
+            },
+            "reasons": []
+          },
+          "reasons": []
+        }
+      ],
+      "t3Scope": "two-predeclared-page-submissions-not-full-document"
+    },
+    {
+      "caseId": "F003",
+      "stratum": "layout-heavy-born-digital",
+      "initial": {
+        "initialTier": "T1",
+        "rationale": [
+          "STRUCTURE_COMPLEXITY"
+        ],
+        "confidence": 1
+      },
+      "status": "low-confidence",
+      "selectedTier": "T3",
+      "steps": [
+        {
+          "tier": "T1",
+          "artifactKey": "bb2cae08adfcfea42ec8466c26f50fa7e077fff2777d242a1fd9d497483468fe",
+          "gate": {
+            "passed": false,
+            "components": {
+              "characterSanity": 0.8736398044472481,
+              "textRetention": 1,
+              "usablePageRatio": 0.9038461538461539,
+              "structuralYield": 1,
+              "scriptConsistency": 0.8448025959126597
+            },
+            "reasons": [
+              "CHARACTER_SANITY_FAILED",
+              "SCRIPT_CONSISTENCY_FAILED"
+            ]
+          },
+          "reasons": [
+            "CHARACTER_SANITY_FAILED",
+            "SCRIPT_CONSISTENCY_FAILED"
+          ],
+          "nextTier": "T2"
+        },
+        {
+          "tier": "T2",
+          "artifactKey": "b192d8d1cf6a236b3df7a7e0edcafb4cd243e0bfcb93a2d4fd88e78ef79bcdb2",
+          "gate": {
+            "passed": false,
+            "components": {
+              "characterSanity": 0.8193358801057891,
+              "textRetention": 1,
+              "usablePageRatio": 0.9038461538461539,
+              "structuralYield": 1,
+              "scriptConsistency": 0.8834592492639026
+            },
+            "reasons": [
+              "CHARACTER_SANITY_FAILED",
+              "SCRIPT_CONSISTENCY_FAILED"
+            ]
+          },
+          "reasons": [
+            "CHARACTER_SANITY_FAILED",
+            "SCRIPT_CONSISTENCY_FAILED"
+          ],
+          "nextTier": "T3"
+        },
+        {
+          "tier": "T3",
+          "artifactKey": "e16c046181d7911c5403cdcbd141ebc12b68f7b352929a38257973a645d50a1d",
+          "gate": {
+            "passed": false,
+            "components": {
+              "characterSanity": 1,
+              "textRetention": 0.5703618609994257,
+              "usablePageRatio": 1,
+              "structuralYield": 1,
+              "scriptConsistency": 0.8207123375581582
+            },
+            "reasons": [
+              "TEXT_RETENTION_FAILED",
+              "SCRIPT_CONSISTENCY_FAILED"
+            ]
+          },
+          "reasons": [
+            "TEXT_RETENTION_FAILED",
+            "SCRIPT_CONSISTENCY_FAILED",
+            "TERMINAL_TIER_FAILED"
+          ]
+        }
+      ],
+      "t3Scope": "two-predeclared-page-submissions-not-full-document"
+    },
+    {
+      "caseId": "F314",
+      "stratum": "layout-heavy-born-digital",
+      "initial": {
+        "initialTier": "T1",
+        "rationale": [
+          "STRUCTURE_COMPLEXITY"
+        ],
+        "confidence": 1
+      },
+      "status": "accepted",
+      "selectedTier": "T3",
+      "steps": [
+        {
+          "tier": "T1",
+          "artifactKey": "c78f3f202df676affa6882acc858bd63c9a8b7d7a0dd087a07e0c6aacc8d03fa",
+          "gate": {
+            "passed": false,
+            "components": {
+              "characterSanity": 0.977613498213255,
+              "textRetention": 1,
+              "usablePageRatio": 1,
+              "structuralYield": 1,
+              "scriptConsistency": 0.986057741680589
+            },
+            "reasons": [
+              "CHARACTER_SANITY_FAILED"
+            ]
+          },
+          "reasons": [
+            "CHARACTER_SANITY_FAILED"
+          ],
+          "nextTier": "T2"
+        },
+        {
+          "tier": "T2",
+          "artifactKey": "c97a5e805ede1f9a1e83d70d0815fe417dbfd8a58b050cde7c423626f45bd626",
+          "gate": {
+            "passed": false,
+            "components": {
+              "characterSanity": 0.9481497843449551,
+              "textRetention": 1,
+              "usablePageRatio": 1,
+              "structuralYield": 1,
+              "scriptConsistency": 0.9417704085648826
+            },
+            "reasons": [
+              "CHARACTER_SANITY_FAILED",
+              "SCRIPT_CONSISTENCY_FAILED"
+            ]
+          },
+          "reasons": [
+            "CHARACTER_SANITY_FAILED",
+            "SCRIPT_CONSISTENCY_FAILED"
+          ],
+          "nextTier": "T3"
+        },
+        {
+          "tier": "T3",
+          "artifactKey": "a7a075b577e7336a5267f9593c96c942aaa0125649ce82350c19427e93707ef6",
+          "gate": {
+            "passed": true,
+            "components": {
+              "characterSanity": 1,
+              "textRetention": 1,
+              "usablePageRatio": 1,
+              "structuralYield": 1,
+              "scriptConsistency": 1
+            },
+            "reasons": []
+          },
+          "reasons": []
+        }
+      ],
+      "t3Scope": "two-predeclared-page-submissions-not-full-document"
+    },
+    {
+      "caseId": "F300",
+      "stratum": "layout-heavy-born-digital",
+      "initial": {
+        "initialTier": "T1",
+        "rationale": [
+          "STRUCTURE_COMPLEXITY"
+        ],
+        "confidence": 1
+      },
+      "status": "accepted",
+      "selectedTier": "T3",
+      "steps": [
+        {
+          "tier": "T1",
+          "artifactKey": "46c839d44406ddf2df7fb9994b2ea1c7d2cd69b2a4e49e49b9956ab8df8e465f",
+          "gate": {
+            "passed": false,
+            "components": {
+              "characterSanity": 0.8871346993617736,
+              "textRetention": 1,
+              "usablePageRatio": 0.9432624113475178,
+              "structuralYield": 1,
+              "scriptConsistency": 0.9966081661483527
+            },
+            "reasons": [
+              "CHARACTER_SANITY_FAILED"
+            ]
+          },
+          "reasons": [
+            "CHARACTER_SANITY_FAILED"
+          ],
+          "nextTier": "T2"
+        },
+        {
+          "tier": "T2",
+          "artifactKey": "db3ca16c90eced1eddb45f38ac667fd4077e1fd6ed42fe0537b0e8005c410395",
+          "gate": {
+            "passed": false,
+            "components": {
+              "characterSanity": 0.8879893223774188,
+              "textRetention": 1,
+              "usablePageRatio": 0.9432624113475178,
+              "structuralYield": 1,
+              "scriptConsistency": 0.9948678803275108
+            },
+            "reasons": [
+              "CHARACTER_SANITY_FAILED"
+            ]
+          },
+          "reasons": [
+            "CHARACTER_SANITY_FAILED"
+          ],
+          "nextTier": "T3"
+        },
+        {
+          "tier": "T3",
+          "artifactKey": "50296e807f880238fb5769f4c2b8c4822babc0bb8bc8b1fff2a120e002427d00",
+          "gate": {
+            "passed": true,
+            "components": {
+              "characterSanity": 1,
+              "textRetention": 1,
+              "usablePageRatio": 1,
+              "structuralYield": 1,
+              "scriptConsistency": 1
+            },
+            "reasons": []
+          },
+          "reasons": []
+        }
+      ],
+      "t3Scope": "two-predeclared-page-submissions-not-full-document"
+    },
+    {
+      "caseId": "F313",
+      "stratum": "scanned-degraded-en",
+      "initial": {
+        "initialTier": "T2",
+        "rationale": [
+          "HIGH_FULL_PAGE_IMAGE_RATIO"
+        ],
+        "confidence": 1
+      },
+      "status": "accepted",
+      "selectedTier": "T2",
+      "steps": [
+        {
+          "tier": "T2",
+          "artifactKey": "df7813fae40f4cbea7c29a2bbd28c510da333efdcb703a1ff347379373f35b7f",
+          "gate": {
+            "passed": true,
+            "components": {
+              "characterSanity": 1,
+              "textRetention": 1,
+              "usablePageRatio": 0.8214285714285714,
+              "structuralYield": 1,
+              "scriptConsistency": 0.9771048744460856
+            },
+            "reasons": []
+          },
+          "reasons": []
+        }
+      ],
+      "t3Scope": "two-predeclared-page-submissions-not-full-document"
+    },
+    {
+      "caseId": "F227",
+      "stratum": "scanned-degraded-en",
+      "initial": {
+        "initialTier": "T2",
+        "rationale": [
+          "LOW_TEXT_LAYER_COVERAGE",
+          "HIGH_FULL_PAGE_IMAGE_RATIO"
+        ],
+        "confidence": 1
+      },
+      "status": "accepted",
+      "selectedTier": "T3",
+      "steps": [
+        {
+          "tier": "T2",
+          "artifactKey": "8d18e5795d74b7a382b2f79d35830b13d050b8406299b26ba9f7c47520dfee5a",
+          "gate": {
+            "passed": false,
+            "components": {
+              "characterSanity": 0,
+              "textRetention": null,
+              "usablePageRatio": 0.8265895953757225,
+              "structuralYield": 1,
+              "scriptConsistency": null
+            },
+            "reasons": [
+              "CHARACTER_SANITY_FAILED"
+            ]
+          },
+          "reasons": [
+            "CHARACTER_SANITY_FAILED"
+          ],
+          "nextTier": "T3"
+        },
+        {
+          "tier": "T3",
+          "artifactKey": "979d5742fd42a235c26e65828f3372e68c9e28b33267d7eccdc673b9c8816931",
+          "gate": {
+            "passed": true,
+            "components": {
+              "characterSanity": 1,
+              "textRetention": null,
+              "usablePageRatio": 1,
+              "structuralYield": 1,
+              "scriptConsistency": null
+            },
+            "reasons": []
+          },
+          "reasons": []
+        }
+      ],
+      "t3Scope": "two-predeclared-page-submissions-not-full-document"
+    },
+    {
+      "caseId": "F067",
+      "stratum": "scanned-degraded-en",
+      "initial": {
+        "initialTier": "T2",
+        "rationale": [
+          "LOW_TEXT_LAYER_COVERAGE",
+          "HIGH_FULL_PAGE_IMAGE_RATIO"
+        ],
+        "confidence": 1
+      },
+      "status": "accepted",
+      "selectedTier": "T2",
+      "steps": [
+        {
+          "tier": "T2",
+          "artifactKey": "63e1033131ccfa3c27e850c1ca1f14a0d31f4816ec7c959819b34b17ea52eacd",
+          "gate": {
+            "passed": true,
+            "components": {
+              "characterSanity": 1,
+              "textRetention": 1,
+              "usablePageRatio": 0.9722222222222222,
+              "structuralYield": 1,
+              "scriptConsistency": 0.9987525189521159
+            },
+            "reasons": []
+          },
+          "reasons": []
+        }
+      ],
+      "t3Scope": "two-predeclared-page-submissions-not-full-document"
+    },
+    {
+      "caseId": "F152",
+      "stratum": "scanned-degraded-en",
+      "initial": {
+        "initialTier": "T2",
+        "rationale": [
+          "LOW_TEXT_LAYER_COVERAGE",
+          "HIGH_FULL_PAGE_IMAGE_RATIO"
+        ],
+        "confidence": 1
+      },
+      "status": "accepted",
+      "selectedTier": "T3",
+      "steps": [
+        {
+          "tier": "T2",
+          "artifactKey": "55bb2d9ceefbfb61947eb70382d73f5c1067a8221f597fa15ceaea585329d91e",
+          "gate": {
+            "passed": false,
+            "components": {
+              "characterSanity": 0.6606865447256327,
+              "textRetention": null,
+              "usablePageRatio": 1,
+              "structuralYield": 1,
+              "scriptConsistency": null
+            },
+            "reasons": [
+              "CHARACTER_SANITY_FAILED"
+            ]
+          },
+          "reasons": [
+            "CHARACTER_SANITY_FAILED"
+          ],
+          "nextTier": "T3"
+        },
+        {
+          "tier": "T3",
+          "artifactKey": "4760d29799fb8c09b701bb8f7301baeec9b9c4e3c6f4c7b6f2e960ce8b7d2c00",
+          "gate": {
+            "passed": true,
+            "components": {
+              "characterSanity": 1,
+              "textRetention": null,
+              "usablePageRatio": 1,
+              "structuralYield": 1,
+              "scriptConsistency": null
+            },
+            "reasons": []
+          },
+          "reasons": []
+        }
+      ],
+      "t3Scope": "two-predeclared-page-submissions-not-full-document"
+    },
+    {
+      "caseId": "F131",
+      "stratum": "scanned-degraded-thai-mixed",
+      "initial": {
+        "initialTier": "T2",
+        "rationale": [
+          "HIGH_FULL_PAGE_IMAGE_RATIO",
+          "MIXED_SCRIPT"
+        ],
+        "confidence": 1
+      },
+      "status": "low-confidence",
+      "selectedTier": "T3",
+      "steps": [
+        {
+          "tier": "T2",
+          "artifactKey": "062e5c88dc0f12f500183a04f255919dbf5ccf17521aaf49e42b01de7a311b95",
+          "gate": {
+            "passed": false,
+            "components": {
+              "characterSanity": 0.6908562611104594,
+              "textRetention": 1,
+              "usablePageRatio": 0.9426229508196722,
+              "structuralYield": 1,
+              "scriptConsistency": 0.010325886506138363
+            },
+            "reasons": [
+              "CHARACTER_SANITY_FAILED",
+              "SCRIPT_CONSISTENCY_FAILED"
+            ]
+          },
+          "reasons": [
+            "CHARACTER_SANITY_FAILED",
+            "SCRIPT_CONSISTENCY_FAILED"
+          ],
+          "nextTier": "T3"
+        },
+        {
+          "tier": "T3",
+          "artifactKey": "c40d308008467b8e0c296e2673ad62b9eb5da4242cae44fa07d56fbb3f0b9082",
+          "gate": {
+            "passed": false,
+            "components": {
+              "characterSanity": 1,
+              "textRetention": 1,
+              "usablePageRatio": 1,
+              "structuralYield": 1,
+              "scriptConsistency": 0.16119999999999998
+            },
+            "reasons": [
+              "SCRIPT_CONSISTENCY_FAILED"
+            ]
+          },
+          "reasons": [
+            "SCRIPT_CONSISTENCY_FAILED",
+            "TERMINAL_TIER_FAILED"
+          ]
+        }
+      ],
+      "t3Scope": "two-predeclared-page-submissions-not-full-document"
+    },
+    {
+      "caseId": "F236",
+      "stratum": "scanned-degraded-thai-mixed",
+      "initial": {
+        "initialTier": "T2",
+        "rationale": [
+          "ENCODING_ANOMALY"
+        ],
+        "confidence": 1
+      },
+      "status": "accepted",
+      "selectedTier": "T2",
+      "steps": [
+        {
+          "tier": "T2",
+          "artifactKey": "7905a0114ea213161aa239a2935bc43bb2775b880c8ea16f617456a9f4368cfd",
+          "gate": {
+            "passed": true,
+            "components": {
+              "characterSanity": 1,
+              "textRetention": 1,
+              "usablePageRatio": 0.9642857142857143,
+              "structuralYield": 1,
+              "scriptConsistency": 1
+            },
+            "reasons": []
+          },
+          "reasons": []
+        }
+      ],
+      "t3Scope": "two-predeclared-page-submissions-not-full-document"
+    },
+    {
+      "caseId": "F273",
+      "stratum": "scanned-degraded-thai-mixed",
+      "initial": {
+        "initialTier": "T2",
+        "rationale": [
+          "ENCODING_ANOMALY",
+          "MIXED_SCRIPT"
+        ],
+        "confidence": 1
+      },
+      "status": "low-confidence",
+      "selectedTier": "T3",
+      "steps": [
+        {
+          "tier": "T2",
+          "artifactKey": "de6349c5ce99b81a3ce3aa4d0e93bf5f0a490cce343fc830b584558065608da4",
+          "gate": {
+            "passed": false,
+            "components": {
+              "characterSanity": 0.4940354445422033,
+              "textRetention": 1,
+              "usablePageRatio": 0.7142857142857143,
+              "structuralYield": 1,
+              "scriptConsistency": 0.8885499855565219
+            },
+            "reasons": [
+              "CHARACTER_SANITY_FAILED",
+              "USABLE_PAGE_RATIO_FAILED",
+              "SCRIPT_CONSISTENCY_FAILED"
+            ]
+          },
+          "reasons": [
+            "CHARACTER_SANITY_FAILED",
+            "USABLE_PAGE_RATIO_FAILED",
+            "SCRIPT_CONSISTENCY_FAILED"
+          ],
+          "nextTier": "T3"
+        },
+        {
+          "tier": "T3",
+          "artifactKey": "2a9030cba7bfd1a68369087dba42c7a7ab6a6bc33fcb3880a10e1d08cfb0975c",
+          "gate": {
+            "passed": false,
+            "components": {
+              "characterSanity": 1,
+              "textRetention": 1,
+              "usablePageRatio": 1,
+              "structuralYield": 1,
+              "scriptConsistency": 0.6827309236947792
+            },
+            "reasons": [
+              "SCRIPT_CONSISTENCY_FAILED"
+            ]
+          },
+          "reasons": [
+            "SCRIPT_CONSISTENCY_FAILED",
+            "TERMINAL_TIER_FAILED"
+          ]
+        }
+      ],
+      "t3Scope": "two-predeclared-page-submissions-not-full-document"
+    },
+    {
+      "caseId": "F148",
+      "stratum": "scanned-degraded-thai-mixed",
+      "initial": {
+        "initialTier": "T2",
+        "rationale": [
+          "ENCODING_ANOMALY",
+          "MIXED_SCRIPT"
+        ],
+        "confidence": 1
+      },
+      "status": "low-confidence",
+      "selectedTier": "T3",
+      "steps": [
+        {
+          "tier": "T2",
+          "artifactKey": "30e260cd33804e5a33d2244221d26bc4d5e78ce353bafd958e1f06fdbac103a3",
+          "gate": {
+            "passed": false,
+            "components": {
+              "characterSanity": 1,
+              "textRetention": 1,
+              "usablePageRatio": 1,
+              "structuralYield": 1,
+              "scriptConsistency": 0.8766314163999546
+            },
+            "reasons": [
+              "SCRIPT_CONSISTENCY_FAILED"
+            ]
+          },
+          "reasons": [
+            "SCRIPT_CONSISTENCY_FAILED"
+          ],
+          "nextTier": "T3"
+        },
+        {
+          "tier": "T3",
+          "artifactKey": "56e830eab79a63507360c566f56a7cfaf475ce7a50b653b9af9f012d2f098191",
+          "gate": {
+            "passed": false,
+            "components": {
+              "characterSanity": 1,
+              "textRetention": 1,
+              "usablePageRatio": 1,
+              "structuralYield": 1,
+              "scriptConsistency": 0.8840068159688413
+            },
+            "reasons": [
+              "SCRIPT_CONSISTENCY_FAILED"
+            ]
+          },
+          "reasons": [
+            "SCRIPT_CONSISTENCY_FAILED",
+            "TERMINAL_TIER_FAILED"
+          ]
+        }
+      ],
+      "t3Scope": "two-predeclared-page-submissions-not-full-document"
+    }
+  ],
+  "limitations": [
+    "Quality is measured on 32 predeclared pages; T0-T2 timing is measured on 16 full documents.",
+    "T3 quality and its terminal gate use two independent page submissions per document; no full-document T3 timing is imputed.",
+    "A selected T3 tier is therefore excluded from observed document timing while remaining available to page-level oracle metrics."
+  ]
+}

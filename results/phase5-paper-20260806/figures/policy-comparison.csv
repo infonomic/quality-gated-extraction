@@ -1,0 +1,9 @@
+policy,axis,false_accepts,denominator,false_accept_rate,false_escalations,false_escalation_rate,timed_documents,selected_documents,timing_scope
+allT0,readingSufficiency,18,32,0.5625,0,0,16,16,complete full-document timing
+allT0,structuralAdequacy,30,32,0.9375,0,0,16,16,complete full-document timing
+staticInspection,readingSufficiency,12,32,0.375,9,0.28125,16,16,complete full-document timing
+staticInspection,structuralAdequacy,16,32,0.5,2,0.0625,16,16,complete full-document timing
+gated,readingSufficiency,9,32,0.28125,14,0.4375,7,16,partial: selected T3 arms have page timing only
+gated,structuralAdequacy,13,32,0.40625,13,0.40625,7,16,partial: selected T3 arms have page timing only
+allT3PageBaseline,readingSufficiency,3,32,0.09375,22,0.6875,32,32,independent page submissions; not full documents
+allT3PageBaseline,structuralAdequacy,3,32,0.09375,22,0.6875,32,32,independent page submissions; not full documents

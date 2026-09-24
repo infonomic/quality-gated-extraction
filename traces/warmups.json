@@ -1,0 +1,30 @@
+[
+  {
+    "tier": "T0",
+    "status": "succeeded",
+    "startedAt": "2026-08-05T09:38:55.347Z",
+    "finishedAt": "2026-08-05T09:38:55.358Z",
+    "wallMs": 11.447334000000012
+  },
+  {
+    "tier": "T1",
+    "status": "succeeded",
+    "startedAt": "2026-08-05T09:38:55.358Z",
+    "finishedAt": "2026-08-05T09:38:57.377Z",
+    "wallMs": 2017.123083
+  },
+  {
+    "tier": "T2",
+    "status": "succeeded",
+    "startedAt": "2026-08-05T09:38:57.377Z",
+    "finishedAt": "2026-08-05T09:38:59.390Z",
+    "wallMs": 2012.159709
+  },
+  {
+    "tier": "T3",
+    "status": "succeeded",
+    "startedAt": "2026-08-05T09:38:59.390Z",
+    "finishedAt": "2026-08-05T09:39:06.977Z",
+    "wallMs": 7584.800791999999
+  }
+]

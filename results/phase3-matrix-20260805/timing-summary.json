@@ -1,0 +1,1023 @@
+{
+  "schemaVersion": 1,
+  "status": "sampled",
+  "denominators": {
+    "documents": 24,
+    "matrixCells": 73,
+    "calibrationDocuments": 8,
+    "evaluationDocuments": 16
+  },
+  "byTier": {
+    "T0": {
+      "overall": {
+        "documents": {
+          "numerator": 24,
+          "denominator": 24,
+          "excludedCount": 0,
+          "failed": 0,
+          "unavailable": 0,
+          "censored": 0
+        },
+        "pages": {
+          "numerator": 2054,
+          "denominator": 2054,
+          "excludedCount": 0
+        },
+        "cacheHits": 0,
+        "timing": {
+          "label": "sampled",
+          "wallMs": 8065.234876,
+          "marginalMs": 7985.331751,
+          "meanWallMsPerSucceededDocument": 336.051453,
+          "marginalMsPerSucceededPage": 3.887698,
+          "providerReportedDocuments": 0,
+          "clientObservedProxyDocuments": 24,
+          "censoredDocuments": 0,
+          "censoredObservedMinimumWallMs": 0,
+          "excludedWarmupCount": 1
+        },
+        "costProxy": {
+          "label": "sampled",
+          "value": 0.000222,
+          "unit": "USD",
+          "basis": "Observed marginal duration multiplied by the declared CPU-hour comparison tariff.",
+          "billedSpend": false
+        }
+      },
+      "byPartition": {
+        "calibration": {
+          "documents": {
+            "numerator": 8,
+            "denominator": 8,
+            "excludedCount": 0,
+            "failed": 0,
+            "unavailable": 0,
+            "censored": 0
+          },
+          "pages": {
+            "numerator": 812,
+            "denominator": 812,
+            "excludedCount": 0
+          },
+          "cacheHits": 0,
+          "timing": {
+            "label": "sampled",
+            "wallMs": 443.613833,
+            "marginalMs": 416.589833,
+            "meanWallMsPerSucceededDocument": 55.451729,
+            "marginalMsPerSucceededPage": 0.513042,
+            "providerReportedDocuments": 0,
+            "clientObservedProxyDocuments": 8,
+            "censoredDocuments": 0,
+            "censoredObservedMinimumWallMs": 0,
+            "excludedWarmupCount": 1
+          },
+          "costProxy": {
+            "label": "sampled",
+            "value": 0.000012,
+            "unit": "USD",
+            "basis": "Observed marginal duration multiplied by the declared CPU-hour comparison tariff.",
+            "billedSpend": false
+          }
+        },
+        "evaluation": {
+          "documents": {
+            "numerator": 16,
+            "denominator": 16,
+            "excludedCount": 0,
+            "failed": 0,
+            "unavailable": 0,
+            "censored": 0
+          },
+          "pages": {
+            "numerator": 1242,
+            "denominator": 1242,
+            "excludedCount": 0
+          },
+          "cacheHits": 0,
+          "timing": {
+            "label": "sampled",
+            "wallMs": 7621.621043,
+            "marginalMs": 7568.741918,
+            "meanWallMsPerSucceededDocument": 476.351315,
+            "marginalMsPerSucceededPage": 6.093995,
+            "providerReportedDocuments": 0,
+            "clientObservedProxyDocuments": 16,
+            "censoredDocuments": 0,
+            "censoredObservedMinimumWallMs": 0,
+            "excludedWarmupCount": 1
+          },
+          "costProxy": {
+            "label": "sampled",
+            "value": 0.00021,
+            "unit": "USD",
+            "basis": "Observed marginal duration multiplied by the declared CPU-hour comparison tariff.",
+            "billedSpend": false
+          }
+        }
+      },
+      "byStratum": {
+        "born-digital-en": {
+          "documents": {
+            "numerator": 6,
+            "denominator": 6,
+            "excludedCount": 0,
+            "failed": 0,
+            "unavailable": 0,
+            "censored": 0
+          },
+          "pages": {
+            "numerator": 392,
+            "denominator": 392,
+            "excludedCount": 0
+          },
+          "cacheHits": 0,
+          "timing": {
+            "label": "sampled",
+            "wallMs": 885.922959,
+            "marginalMs": 865.654959,
+            "meanWallMsPerSucceededDocument": 147.653827,
+            "marginalMsPerSucceededPage": 2.208303,
+            "providerReportedDocuments": 0,
+            "clientObservedProxyDocuments": 6,
+            "censoredDocuments": 0,
+            "censoredObservedMinimumWallMs": 0,
+            "excludedWarmupCount": 1
+          },
+          "costProxy": {
+            "label": "sampled",
+            "value": 0.000024,
+            "unit": "USD",
+            "basis": "Observed marginal duration multiplied by the declared CPU-hour comparison tariff.",
+            "billedSpend": false
+          }
+        },
+        "layout-heavy-born-digital": {
+          "documents": {
+            "numerator": 6,
+            "denominator": 6,
+            "excludedCount": 0,
+            "failed": 0,
+            "unavailable": 0,
+            "censored": 0
+          },
+          "pages": {
+            "numerator": 521,
+            "denominator": 521,
+            "excludedCount": 0
+          },
+          "cacheHits": 0,
+          "timing": {
+            "label": "sampled",
+            "wallMs": 539.978293,
+            "marginalMs": 519.710293,
+            "meanWallMsPerSucceededDocument": 89.996382,
+            "marginalMsPerSucceededPage": 0.997525,
+            "providerReportedDocuments": 0,
+            "clientObservedProxyDocuments": 6,
+            "censoredDocuments": 0,
+            "censoredObservedMinimumWallMs": 0,
+            "excludedWarmupCount": 1
+          },
+          "costProxy": {
+            "label": "sampled",
+            "value": 0.000014,
+            "unit": "USD",
+            "basis": "Observed marginal duration multiplied by the declared CPU-hour comparison tariff.",
+            "billedSpend": false
+          }
+        },
+        "scanned-degraded-en": {
+          "documents": {
+            "numerator": 6,
+            "denominator": 6,
+            "excludedCount": 0,
+            "failed": 0,
+            "unavailable": 0,
+            "censored": 0
+          },
+          "pages": {
+            "numerator": 703,
+            "denominator": 703,
+            "excludedCount": 0
+          },
+          "cacheHits": 0,
+          "timing": {
+            "label": "sampled",
+            "wallMs": 3457.765207,
+            "marginalMs": 3438.666082,
+            "meanWallMsPerSucceededDocument": 576.294201,
+            "marginalMsPerSucceededPage": 4.891417,
+            "providerReportedDocuments": 0,
+            "clientObservedProxyDocuments": 6,
+            "censoredDocuments": 0,
+            "censoredObservedMinimumWallMs": 0,
+            "excludedWarmupCount": 1
+          },
+          "costProxy": {
+            "label": "sampled",
+            "value": 0.000096,
+            "unit": "USD",
+            "basis": "Observed marginal duration multiplied by the declared CPU-hour comparison tariff.",
+            "billedSpend": false
+          }
+        },
+        "scanned-degraded-thai-mixed": {
+          "documents": {
+            "numerator": 6,
+            "denominator": 6,
+            "excludedCount": 0,
+            "failed": 0,
+            "unavailable": 0,
+            "censored": 0
+          },
+          "pages": {
+            "numerator": 438,
+            "denominator": 438,
+            "excludedCount": 0
+          },
+          "cacheHits": 0,
+          "timing": {
+            "label": "sampled",
+            "wallMs": 3181.568417,
+            "marginalMs": 3161.300417,
+            "meanWallMsPerSucceededDocument": 530.261403,
+            "marginalMsPerSucceededPage": 7.217581,
+            "providerReportedDocuments": 0,
+            "clientObservedProxyDocuments": 6,
+            "censoredDocuments": 0,
+            "censoredObservedMinimumWallMs": 0,
+            "excludedWarmupCount": 1
+          },
+          "costProxy": {
+            "label": "sampled",
+            "value": 0.000088,
+            "unit": "USD",
+            "basis": "Observed marginal duration multiplied by the declared CPU-hour comparison tariff.",
+            "billedSpend": false
+          }
+        }
+      }
+    },
+    "T1": {
+      "overall": {
+        "documents": {
+          "numerator": 24,
+          "denominator": 24,
+          "excludedCount": 0,
+          "failed": 0,
+          "unavailable": 0,
+          "censored": 0
+        },
+        "pages": {
+          "numerator": 2054,
+          "denominator": 2054,
+          "excludedCount": 0
+        },
+        "cacheHits": 0,
+        "timing": {
+          "label": "sampled",
+          "wallMs": 742738.873916,
+          "marginalMs": 722831.324378,
+          "meanWallMsPerSucceededDocument": 30947.45308,
+          "marginalMsPerSucceededPage": 351.913985,
+          "providerReportedDocuments": 24,
+          "clientObservedProxyDocuments": 0,
+          "censoredDocuments": 0,
+          "censoredObservedMinimumWallMs": 0,
+          "excludedWarmupCount": 1
+        },
+        "costProxy": {
+          "label": "sampled",
+          "value": 0.020079,
+          "unit": "USD",
+          "basis": "Observed marginal duration multiplied by the declared CPU-hour comparison tariff.",
+          "billedSpend": false
+        }
+      },
+      "byPartition": {
+        "calibration": {
+          "documents": {
+            "numerator": 8,
+            "denominator": 8,
+            "excludedCount": 0,
+            "failed": 0,
+            "unavailable": 0,
+            "censored": 0
+          },
+          "pages": {
+            "numerator": 812,
+            "denominator": 812,
+            "excludedCount": 0
+          },
+          "cacheHits": 0,
+          "timing": {
+            "label": "sampled",
+            "wallMs": 213243.6795,
+            "marginalMs": 204574.608668,
+            "meanWallMsPerSucceededDocument": 26655.459938,
+            "marginalMsPerSucceededPage": 251.939173,
+            "providerReportedDocuments": 8,
+            "clientObservedProxyDocuments": 0,
+            "censoredDocuments": 0,
+            "censoredObservedMinimumWallMs": 0,
+            "excludedWarmupCount": 1
+          },
+          "costProxy": {
+            "label": "sampled",
+            "value": 0.005683,
+            "unit": "USD",
+            "basis": "Observed marginal duration multiplied by the declared CPU-hour comparison tariff.",
+            "billedSpend": false
+          }
+        },
+        "evaluation": {
+          "documents": {
+            "numerator": 16,
+            "denominator": 16,
+            "excludedCount": 0,
+            "failed": 0,
+            "unavailable": 0,
+            "censored": 0
+          },
+          "pages": {
+            "numerator": 1242,
+            "denominator": 1242,
+            "excludedCount": 0
+          },
+          "cacheHits": 0,
+          "timing": {
+            "label": "sampled",
+            "wallMs": 529495.194416,
+            "marginalMs": 518256.71571,
+            "meanWallMsPerSucceededDocument": 33093.449651,
+            "marginalMsPerSucceededPage": 417.275939,
+            "providerReportedDocuments": 16,
+            "clientObservedProxyDocuments": 0,
+            "censoredDocuments": 0,
+            "censoredObservedMinimumWallMs": 0,
+            "excludedWarmupCount": 1
+          },
+          "costProxy": {
+            "label": "sampled",
+            "value": 0.014396,
+            "unit": "USD",
+            "basis": "Observed marginal duration multiplied by the declared CPU-hour comparison tariff.",
+            "billedSpend": false
+          }
+        }
+      },
+      "byStratum": {
+        "born-digital-en": {
+          "documents": {
+            "numerator": 6,
+            "denominator": 6,
+            "excludedCount": 0,
+            "failed": 0,
+            "unavailable": 0,
+            "censored": 0
+          },
+          "pages": {
+            "numerator": 392,
+            "denominator": 392,
+            "excludedCount": 0
+          },
+          "cacheHits": 0,
+          "timing": {
+            "label": "sampled",
+            "wallMs": 107943.080915,
+            "marginalMs": 101617.334375,
+            "meanWallMsPerSucceededDocument": 17990.513486,
+            "marginalMsPerSucceededPage": 259.227894,
+            "providerReportedDocuments": 6,
+            "clientObservedProxyDocuments": 0,
+            "censoredDocuments": 0,
+            "censoredObservedMinimumWallMs": 0,
+            "excludedWarmupCount": 1
+          },
+          "costProxy": {
+            "label": "sampled",
+            "value": 0.002823,
+            "unit": "USD",
+            "basis": "Observed marginal duration multiplied by the declared CPU-hour comparison tariff.",
+            "billedSpend": false
+          }
+        },
+        "layout-heavy-born-digital": {
+          "documents": {
+            "numerator": 6,
+            "denominator": 6,
+            "excludedCount": 0,
+            "failed": 0,
+            "unavailable": 0,
+            "censored": 0
+          },
+          "pages": {
+            "numerator": 521,
+            "denominator": 521,
+            "excludedCount": 0
+          },
+          "cacheHits": 0,
+          "timing": {
+            "label": "sampled",
+            "wallMs": 90005.252333,
+            "marginalMs": 83616.552292,
+            "meanWallMsPerSucceededDocument": 15000.875389,
+            "marginalMsPerSucceededPage": 160.492423,
+            "providerReportedDocuments": 6,
+            "clientObservedProxyDocuments": 0,
+            "censoredDocuments": 0,
+            "censoredObservedMinimumWallMs": 0,
+            "excludedWarmupCount": 1
+          },
+          "costProxy": {
+            "label": "sampled",
+            "value": 0.002323,
+            "unit": "USD",
+            "basis": "Observed marginal duration multiplied by the declared CPU-hour comparison tariff.",
+            "billedSpend": false
+          }
+        },
+        "scanned-degraded-en": {
+          "documents": {
+            "numerator": 6,
+            "denominator": 6,
+            "excludedCount": 0,
+            "failed": 0,
+            "unavailable": 0,
+            "censored": 0
+          },
+          "pages": {
+            "numerator": 703,
+            "denominator": 703,
+            "excludedCount": 0
+          },
+          "cacheHits": 0,
+          "timing": {
+            "label": "sampled",
+            "wallMs": 296885.05375,
+            "marginalMs": 292634.712125,
+            "meanWallMsPerSucceededDocument": 49480.842292,
+            "marginalMsPerSucceededPage": 416.265593,
+            "providerReportedDocuments": 6,
+            "clientObservedProxyDocuments": 0,
+            "censoredDocuments": 0,
+            "censoredObservedMinimumWallMs": 0,
+            "excludedWarmupCount": 1
+          },
+          "costProxy": {
+            "label": "sampled",
+            "value": 0.008129,
+            "unit": "USD",
+            "basis": "Observed marginal duration multiplied by the declared CPU-hour comparison tariff.",
+            "billedSpend": false
+          }
+        },
+        "scanned-degraded-thai-mixed": {
+          "documents": {
+            "numerator": 6,
+            "denominator": 6,
+            "excludedCount": 0,
+            "failed": 0,
+            "unavailable": 0,
+            "censored": 0
+          },
+          "pages": {
+            "numerator": 438,
+            "denominator": 438,
+            "excludedCount": 0
+          },
+          "cacheHits": 0,
+          "timing": {
+            "label": "sampled",
+            "wallMs": 247905.486918,
+            "marginalMs": 244962.725586,
+            "meanWallMsPerSucceededDocument": 41317.581153,
+            "marginalMsPerSucceededPage": 559.275629,
+            "providerReportedDocuments": 6,
+            "clientObservedProxyDocuments": 0,
+            "censoredDocuments": 0,
+            "censoredObservedMinimumWallMs": 0,
+            "excludedWarmupCount": 1
+          },
+          "costProxy": {
+            "label": "sampled",
+            "value": 0.006805,
+            "unit": "USD",
+            "basis": "Observed marginal duration multiplied by the declared CPU-hour comparison tariff.",
+            "billedSpend": false
+          }
+        }
+      }
+    },
+    "T2": {
+      "overall": {
+        "documents": {
+          "numerator": 24,
+          "denominator": 24,
+          "excludedCount": 0,
+          "failed": 0,
+          "unavailable": 0,
+          "censored": 0
+        },
+        "pages": {
+          "numerator": 2054,
+          "denominator": 2054,
+          "excludedCount": 0
+        },
+        "cacheHits": 0,
+        "timing": {
+          "label": "sampled",
+          "wallMs": 3090012.110748,
+          "marginalMs": 3011364.947039,
+          "meanWallMsPerSucceededDocument": 128750.504615,
+          "marginalMsPerSucceededPage": 1466.097832,
+          "providerReportedDocuments": 24,
+          "clientObservedProxyDocuments": 0,
+          "censoredDocuments": 0,
+          "censoredObservedMinimumWallMs": 0,
+          "excludedWarmupCount": 1
+        },
+        "costProxy": {
+          "label": "sampled",
+          "value": 0.083649,
+          "unit": "USD",
+          "basis": "Observed marginal duration multiplied by the declared CPU-hour comparison tariff.",
+          "billedSpend": false
+        }
+      },
+      "byPartition": {
+        "calibration": {
+          "documents": {
+            "numerator": 8,
+            "denominator": 8,
+            "excludedCount": 0,
+            "failed": 0,
+            "unavailable": 0,
+            "censored": 0
+          },
+          "pages": {
+            "numerator": 812,
+            "denominator": 812,
+            "excludedCount": 0
+          },
+          "cacheHits": 0,
+          "timing": {
+            "label": "sampled",
+            "wallMs": 1259183.579083,
+            "marginalMs": 1189516.098582,
+            "meanWallMsPerSucceededDocument": 157397.947385,
+            "marginalMsPerSucceededPage": 1464.921304,
+            "providerReportedDocuments": 8,
+            "clientObservedProxyDocuments": 0,
+            "censoredDocuments": 0,
+            "censoredObservedMinimumWallMs": 0,
+            "excludedWarmupCount": 1
+          },
+          "costProxy": {
+            "label": "sampled",
+            "value": 0.033042,
+            "unit": "USD",
+            "basis": "Observed marginal duration multiplied by the declared CPU-hour comparison tariff.",
+            "billedSpend": false
+          }
+        },
+        "evaluation": {
+          "documents": {
+            "numerator": 16,
+            "denominator": 16,
+            "excludedCount": 0,
+            "failed": 0,
+            "unavailable": 0,
+            "censored": 0
+          },
+          "pages": {
+            "numerator": 1242,
+            "denominator": 1242,
+            "excludedCount": 0
+          },
+          "cacheHits": 0,
+          "timing": {
+            "label": "sampled",
+            "wallMs": 1830828.531665,
+            "marginalMs": 1821848.848457,
+            "meanWallMsPerSucceededDocument": 114426.783229,
+            "marginalMsPerSucceededPage": 1466.867028,
+            "providerReportedDocuments": 16,
+            "clientObservedProxyDocuments": 0,
+            "censoredDocuments": 0,
+            "censoredObservedMinimumWallMs": 0,
+            "excludedWarmupCount": 1
+          },
+          "costProxy": {
+            "label": "sampled",
+            "value": 0.050607,
+            "unit": "USD",
+            "basis": "Observed marginal duration multiplied by the declared CPU-hour comparison tariff.",
+            "billedSpend": false
+          }
+        }
+      },
+      "byStratum": {
+        "born-digital-en": {
+          "documents": {
+            "numerator": 6,
+            "denominator": 6,
+            "excludedCount": 0,
+            "failed": 0,
+            "unavailable": 0,
+            "censored": 0
+          },
+          "pages": {
+            "numerator": 392,
+            "denominator": 392,
+            "excludedCount": 0
+          },
+          "cacheHits": 0,
+          "timing": {
+            "label": "sampled",
+            "wallMs": 539194.084958,
+            "marginalMs": 536095.444292,
+            "meanWallMsPerSucceededDocument": 89865.680826,
+            "marginalMsPerSucceededPage": 1367.590419,
+            "providerReportedDocuments": 6,
+            "clientObservedProxyDocuments": 0,
+            "censoredDocuments": 0,
+            "censoredObservedMinimumWallMs": 0,
+            "excludedWarmupCount": 1
+          },
+          "costProxy": {
+            "label": "sampled",
+            "value": 0.014892,
+            "unit": "USD",
+            "basis": "Observed marginal duration multiplied by the declared CPU-hour comparison tariff.",
+            "billedSpend": false
+          }
+        },
+        "layout-heavy-born-digital": {
+          "documents": {
+            "numerator": 6,
+            "denominator": 6,
+            "excludedCount": 0,
+            "failed": 0,
+            "unavailable": 0,
+            "censored": 0
+          },
+          "pages": {
+            "numerator": 521,
+            "denominator": 521,
+            "excludedCount": 0
+          },
+          "cacheHits": 0,
+          "timing": {
+            "label": "sampled",
+            "wallMs": 799194.530875,
+            "marginalMs": 795947.943458,
+            "meanWallMsPerSucceededDocument": 133199.088479,
+            "marginalMsPerSucceededPage": 1527.731177,
+            "providerReportedDocuments": 6,
+            "clientObservedProxyDocuments": 0,
+            "censoredDocuments": 0,
+            "censoredObservedMinimumWallMs": 0,
+            "excludedWarmupCount": 1
+          },
+          "costProxy": {
+            "label": "sampled",
+            "value": 0.02211,
+            "unit": "USD",
+            "basis": "Observed marginal duration multiplied by the declared CPU-hour comparison tariff.",
+            "billedSpend": false
+          }
+        },
+        "scanned-degraded-en": {
+          "documents": {
+            "numerator": 6,
+            "denominator": 6,
+            "excludedCount": 0,
+            "failed": 0,
+            "unavailable": 0,
+            "censored": 0
+          },
+          "pages": {
+            "numerator": 703,
+            "denominator": 703,
+            "excludedCount": 0
+          },
+          "cacheHits": 0,
+          "timing": {
+            "label": "sampled",
+            "wallMs": 1050951.171542,
+            "marginalMs": 1045568.063957,
+            "meanWallMsPerSucceededDocument": 175158.52859,
+            "marginalMsPerSucceededPage": 1487.294543,
+            "providerReportedDocuments": 6,
+            "clientObservedProxyDocuments": 0,
+            "censoredDocuments": 0,
+            "censoredObservedMinimumWallMs": 0,
+            "excludedWarmupCount": 1
+          },
+          "costProxy": {
+            "label": "sampled",
+            "value": 0.029044,
+            "unit": "USD",
+            "basis": "Observed marginal duration multiplied by the declared CPU-hour comparison tariff.",
+            "billedSpend": false
+          }
+        },
+        "scanned-degraded-thai-mixed": {
+          "documents": {
+            "numerator": 6,
+            "denominator": 6,
+            "excludedCount": 0,
+            "failed": 0,
+            "unavailable": 0,
+            "censored": 0
+          },
+          "pages": {
+            "numerator": 438,
+            "denominator": 438,
+            "excludedCount": 0
+          },
+          "cacheHits": 0,
+          "timing": {
+            "label": "sampled",
+            "wallMs": 700672.323373,
+            "marginalMs": 633753.495332,
+            "meanWallMsPerSucceededDocument": 116778.720562,
+            "marginalMsPerSucceededPage": 1446.925788,
+            "providerReportedDocuments": 6,
+            "clientObservedProxyDocuments": 0,
+            "censoredDocuments": 0,
+            "censoredObservedMinimumWallMs": 0,
+            "excludedWarmupCount": 1
+          },
+          "costProxy": {
+            "label": "sampled",
+            "value": 0.017604,
+            "unit": "USD",
+            "basis": "Observed marginal duration multiplied by the declared CPU-hour comparison tariff.",
+            "billedSpend": false
+          }
+        }
+      }
+    },
+    "T3": {
+      "overall": {
+        "documents": {
+          "numerator": 0,
+          "denominator": 1,
+          "excludedCount": 1,
+          "failed": 0,
+          "unavailable": 0,
+          "censored": 1
+        },
+        "pages": {
+          "numerator": 0,
+          "denominator": 10,
+          "excludedCount": 10
+        },
+        "cacheHits": 0,
+        "timing": {
+          "label": "sampled",
+          "wallMs": 0,
+          "marginalMs": 0,
+          "meanWallMsPerSucceededDocument": null,
+          "marginalMsPerSucceededPage": null,
+          "providerReportedDocuments": 0,
+          "clientObservedProxyDocuments": 0,
+          "censoredDocuments": 1,
+          "censoredObservedMinimumWallMs": 1461000,
+          "excludedWarmupCount": 1
+        },
+        "costProxy": {
+          "label": "sampled",
+          "value": 0,
+          "unit": "USD",
+          "basis": "Observed local marginal wall-time proxy multiplied by the declared GPU-hour comparison tariff.",
+          "billedSpend": false
+        }
+      },
+      "byPartition": {
+        "calibration": {
+          "documents": {
+            "numerator": 0,
+            "denominator": 1,
+            "excludedCount": 1,
+            "failed": 0,
+            "unavailable": 0,
+            "censored": 1
+          },
+          "pages": {
+            "numerator": 0,
+            "denominator": 10,
+            "excludedCount": 10
+          },
+          "cacheHits": 0,
+          "timing": {
+            "label": "sampled",
+            "wallMs": 0,
+            "marginalMs": 0,
+            "meanWallMsPerSucceededDocument": null,
+            "marginalMsPerSucceededPage": null,
+            "providerReportedDocuments": 0,
+            "clientObservedProxyDocuments": 0,
+            "censoredDocuments": 1,
+            "censoredObservedMinimumWallMs": 1461000,
+            "excludedWarmupCount": 1
+          },
+          "costProxy": {
+            "label": "sampled",
+            "value": 0,
+            "unit": "USD",
+            "basis": "Observed local marginal wall-time proxy multiplied by the declared GPU-hour comparison tariff.",
+            "billedSpend": false
+          }
+        },
+        "evaluation": {
+          "documents": {
+            "numerator": 0,
+            "denominator": 0,
+            "excludedCount": 0,
+            "failed": 0,
+            "unavailable": 0,
+            "censored": 0
+          },
+          "pages": {
+            "numerator": 0,
+            "denominator": 0,
+            "excludedCount": 0
+          },
+          "cacheHits": 0,
+          "timing": {
+            "label": "sampled",
+            "wallMs": 0,
+            "marginalMs": 0,
+            "meanWallMsPerSucceededDocument": null,
+            "marginalMsPerSucceededPage": null,
+            "providerReportedDocuments": 0,
+            "clientObservedProxyDocuments": 0,
+            "censoredDocuments": 0,
+            "censoredObservedMinimumWallMs": 0,
+            "excludedWarmupCount": 1
+          },
+          "costProxy": {
+            "label": "sampled",
+            "value": 0,
+            "unit": "USD",
+            "basis": "Observed marginal duration multiplied by the declared CPU-hour comparison tariff.",
+            "billedSpend": false
+          }
+        }
+      },
+      "byStratum": {
+        "born-digital-en": {
+          "documents": {
+            "numerator": 0,
+            "denominator": 1,
+            "excludedCount": 1,
+            "failed": 0,
+            "unavailable": 0,
+            "censored": 1
+          },
+          "pages": {
+            "numerator": 0,
+            "denominator": 10,
+            "excludedCount": 10
+          },
+          "cacheHits": 0,
+          "timing": {
+            "label": "sampled",
+            "wallMs": 0,
+            "marginalMs": 0,
+            "meanWallMsPerSucceededDocument": null,
+            "marginalMsPerSucceededPage": null,
+            "providerReportedDocuments": 0,
+            "clientObservedProxyDocuments": 0,
+            "censoredDocuments": 1,
+            "censoredObservedMinimumWallMs": 1461000,
+            "excludedWarmupCount": 1
+          },
+          "costProxy": {
+            "label": "sampled",
+            "value": 0,
+            "unit": "USD",
+            "basis": "Observed local marginal wall-time proxy multiplied by the declared GPU-hour comparison tariff.",
+            "billedSpend": false
+          }
+        },
+        "layout-heavy-born-digital": {
+          "documents": {
+            "numerator": 0,
+            "denominator": 0,
+            "excludedCount": 0,
+            "failed": 0,
+            "unavailable": 0,
+            "censored": 0
+          },
+          "pages": {
+            "numerator": 0,
+            "denominator": 0,
+            "excludedCount": 0
+          },
+          "cacheHits": 0,
+          "timing": {
+            "label": "sampled",
+            "wallMs": 0,
+            "marginalMs": 0,
+            "meanWallMsPerSucceededDocument": null,
+            "marginalMsPerSucceededPage": null,
+            "providerReportedDocuments": 0,
+            "clientObservedProxyDocuments": 0,
+            "censoredDocuments": 0,
+            "censoredObservedMinimumWallMs": 0,
+            "excludedWarmupCount": 1
+          },
+          "costProxy": {
+            "label": "sampled",
+            "value": 0,
+            "unit": "USD",
+            "basis": "Observed marginal duration multiplied by the declared CPU-hour comparison tariff.",
+            "billedSpend": false
+          }
+        },
+        "scanned-degraded-en": {
+          "documents": {
+            "numerator": 0,
+            "denominator": 0,
+            "excludedCount": 0,
+            "failed": 0,
+            "unavailable": 0,
+            "censored": 0
+          },
+          "pages": {
+            "numerator": 0,
+            "denominator": 0,
+            "excludedCount": 0
+          },
+          "cacheHits": 0,
+          "timing": {
+            "label": "sampled",
+            "wallMs": 0,
+            "marginalMs": 0,
+            "meanWallMsPerSucceededDocument": null,
+            "marginalMsPerSucceededPage": null,
+            "providerReportedDocuments": 0,
+            "clientObservedProxyDocuments": 0,
+            "censoredDocuments": 0,
+            "censoredObservedMinimumWallMs": 0,
+            "excludedWarmupCount": 1
+          },
+          "costProxy": {
+            "label": "sampled",
+            "value": 0,
+            "unit": "USD",
+            "basis": "Observed marginal duration multiplied by the declared CPU-hour comparison tariff.",
+            "billedSpend": false
+          }
+        },
+        "scanned-degraded-thai-mixed": {
+          "documents": {
+            "numerator": 0,
+            "denominator": 0,
+            "excludedCount": 0,
+            "failed": 0,
+            "unavailable": 0,
+            "censored": 0
+          },
+          "pages": {
+            "numerator": 0,
+            "denominator": 0,
+            "excludedCount": 0
+          },
+          "cacheHits": 0,
+          "timing": {
+            "label": "sampled",
+            "wallMs": 0,
+            "marginalMs": 0,
+            "meanWallMsPerSucceededDocument": null,
+            "marginalMsPerSucceededPage": null,
+            "providerReportedDocuments": 0,
+            "clientObservedProxyDocuments": 0,
+            "censoredDocuments": 0,
+            "censoredObservedMinimumWallMs": 0,
+            "excludedWarmupCount": 1
+          },
+          "costProxy": {
+            "label": "sampled",
+            "value": 0,
+            "unit": "USD",
+            "basis": "Observed marginal duration multiplied by the declared CPU-hour comparison tariff.",
+            "billedSpend": false
+          }
+        }
+      }
+    }
+  },
+  "limitations": [
+    "Warm-up controls are excluded from all tier totals.",
+    "Provider-reported and client-observed marginal timing bases remain separately counted.",
+    "Censored lower bounds are reported separately and excluded from completed timing means and cost proxies.",
+    "Cost values are declared machine-time comparison proxies, not billed spend or energy measurements.",
+    "Calibration and evaluation are not accuracy-pooled; this timing summary covers the complete provider matrix only."
+  ]
+}
